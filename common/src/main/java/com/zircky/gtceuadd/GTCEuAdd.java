@@ -2,6 +2,7 @@ package com.zircky.gtceuadd;
 
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
 import com.zircky.gtceuadd.common.data.GTRItems;
+import com.zircky.gtceuadd.data.GTRDatagen;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,9 @@ public class GTCEuAdd {
 
     public static void init() {
         GTRItems.init();
+
+
+        GTRDatagen.init();
 
         GTRRegistries.REGISTRATE.registerRegistrate();
     }

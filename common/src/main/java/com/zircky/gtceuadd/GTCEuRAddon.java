@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.addon.events.KJSRecipeKeyEvent;
 import com.gregtechceu.gtceu.api.addon.events.MaterialCasingCollectionEvent;
 import com.zircky.gtceuadd.common.data.GTRMaterials;
+import com.zircky.gtceuadd.common.data.GTRRecipes;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 
@@ -69,7 +70,7 @@ public class GTCEuRAddon implements IGTAddon {
 
     @Override
     public void removeRecipes(Consumer<ResourceLocation> consumer) {
-        IGTAddon.super.removeRecipes(consumer);
+        GTRRecipes.recipeRemoval(consumer);
     }
 
     @Override
