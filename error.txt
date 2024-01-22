@@ -1,0 +1,7 @@
+[14:52:21] [main/INFO]: Access Transformer processor running version 8.0.5+67+master.d58c7dfe
+[14:52:21] [main/INFO]: Command line arguments [--inJar, C:\Users\ziran\.gradle\caches\fabric-loom\1.20.1\forge\1.20.1-47.1.3\minecraft-merged-srg-patched.jar, --outJar, C:\Users\ziran\.gradle\caches\fabric-loom\1.20.1\forge\1.20.1-47.1.3\minecraft-merged-srg-at-patched.jar, --atFile, C:\Users\ziran\AppData\Local\Temp\at-conf2838929108062302339.cfg]
+[14:52:21] [main/INFO]: Reading from C:\Users\ziran\.gradle\caches\fabric-loom\1.20.1\forge\1.20.1-47.1.3\minecraft-merged-srg-patched.jar
+[14:52:21] [main/INFO]: Writing to C:\Users\ziran\.gradle\caches\fabric-loom\1.20.1\forge\1.20.1-47.1.3\minecraft-merged-srg-at-patched.jar
+[14:52:21] [main/INFO]: Transformer file C:\Users\ziran\AppData\Local\Temp\at-conf2838929108062302339.cfg
+[14:52:21] [main/WARN]: Found existing output jar C:\Users\ziran\.gradle\caches\fabric-loom\1.20.1\forge\1.20.1-47.1.3\minecraft-merged-srg-at-patched.jar, overwriting
+[14:52:33] [main/INFO]: JAR transformation complete C:\Users\ziran\.gradle\caches\fabric-loom\1.20.1\forge\1.20.1-47.1.3\minecraft-merged-srg-at-patched.jar

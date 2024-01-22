@@ -1,0 +1,9 @@
+[X] - Motor
+[X] - conveyor_module
+[X] - pump
+[] - fluid_regulator
+[X] - piston
+[] - robot_arm
+[] - field_generator
+[] - sensor
+[] - emitter
