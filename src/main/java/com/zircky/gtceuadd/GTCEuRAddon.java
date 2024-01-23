@@ -4,6 +4,8 @@ import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.addon.events.KJSRecipeKeyEvent;
 import com.gregtechceu.gtceu.api.addon.events.MaterialCasingCollectionEvent;
+import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+import com.zircky.gtceuadd.api.registries.GTRRegistries;
 import com.zircky.gtceuadd.common.data.GTRMaterials;
 import com.zircky.gtceuadd.common.data.GTRRecipes;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -13,6 +15,11 @@ import java.util.function.Consumer;
 
 @GTAddon
 public class GTCEuRAddon implements IGTAddon {
+    @Override
+    public GTRegistrate getRegistrate() {
+        return GTRRegistries.REGISTRATE;
+    }
+
     @Override
     public void initializeAddon() {
 
@@ -33,10 +40,10 @@ public class GTCEuRAddon implements IGTAddon {
         IGTAddon.super.registerElements();
     }
 
-    @Override
-    public void registerMaterials() {
-        GTRMaterials.register();
-    }
+//    @Override
+//    public void registerMaterials() {
+//        GTRMaterials.register();
+//    }
 
     @Override
     public void registerSounds() {
@@ -46,6 +53,16 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void registerCovers() {
         IGTAddon.super.registerCovers();
+    }
+
+    @Override
+    public void registerRecipeCapabilities() {
+        IGTAddon.super.registerRecipeCapabilities();
+    }
+
+    @Override
+    public void registerRecipeConditions() {
+        IGTAddon.super.registerRecipeConditions();
     }
 
     @Override
@@ -74,6 +91,16 @@ public class GTCEuRAddon implements IGTAddon {
     }
 
     @Override
+    public void registerOreVeins() {
+        IGTAddon.super.registerOreVeins();
+    }
+
+    @Override
+    public void registerFluidVeins() {
+        IGTAddon.super.registerFluidVeins();
+    }
+
+    @Override
     public void collectMaterialCasings(MaterialCasingCollectionEvent event) {
         IGTAddon.super.collectMaterialCasings(event);
     }
@@ -85,6 +112,6 @@ public class GTCEuRAddon implements IGTAddon {
 
     @Override
     public boolean requiresHighTier() {
-        return IGTAddon.super.requiresHighTier();
+        return true;
     }
 }

@@ -11,7 +11,7 @@ loaderVersion="[47,)" #mandatory This is typically bumped every Minecraft versio
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="GNU GPL 3.0"
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL="https://github.com/ziran/GTCEuAdd/issues"
+issueTrackerURL="https://github.com/zircky/GTR/issues"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
@@ -46,21 +46,21 @@ description='''
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.gtceuadd]] #optional
-   # the modid of the dependency
-   modId="forge" #mandatory
-   # Does this dependency have to exist - if not, ordering below must be specified
-   mandatory=true #mandatory
-   # The version range of the dependency
-   versionRange="[47,)" #mandatory
-   # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-   ordering="NONE"
-   # Side this dependency is applied on - BOTH, CLIENT or SERVER
-   side="BOTH"
+# the modid of the dependency
+modId="forge" #mandatory
+# Does this dependency have to exist - if not, ordering below must be specified
+mandatory=true #mandatory
+# The version range of the dependency
+versionRange="[47,)" #mandatory
+# An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+ordering="NONE"
+# Side this dependency is applied on - BOTH, CLIENT or SERVER
+side="BOTH"
 # Here's another dependency
 [[dependencies.gtceuadd]]
-   modId="minecraft"
-   mandatory=true
-   # This version range declares a minimum of the current minecraft version up to but not including the next major version
-   versionRange="[1.20.1,1.21)"
-   ordering="NONE"
-   side="BOTH"
+modId="minecraft"
+mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

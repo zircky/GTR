@@ -1,5 +1,6 @@
 package com.zircky.gtceuadd.common.data;
 
+import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
@@ -47,7 +48,7 @@ public class GTRMaterials {
 
 
   public static void register() {
-    CuBe = new Material.Builder("cube")
+    CuBe = new Material.Builder(GTCEu.id("cube"))
       .ingot().dust()
       .color(0xAC4A09)
       .components()
@@ -55,7 +56,7 @@ public class GTRMaterials {
       .blastTemp(1000, BlastProperty.GasTier.LOW)
       .buildAndRegister();
 
-    ScAl = new Material.Builder("scal")
+    ScAl = new Material.Builder(GTCEu.id("scal"))
       .ingot().dust()
       .color(0xC9C9C9)
       .components()
@@ -63,7 +64,7 @@ public class GTRMaterials {
       .blastTemp(1300, BlastProperty.GasTier.LOW, GTValues.VA[GTValues.MV], 1300)
       .buildAndRegister();
 
-    BAM = new Material.Builder("bam")
+    BAM = new Material.Builder(GTCEu.id("bam"))
       .ingot().dust()
       .color(0x737373)
       .components()
@@ -71,14 +72,14 @@ public class GTRMaterials {
       .blastTemp(1250)
       .buildAndRegister();
 
-    YAG = new Material.Builder("yag")
+    YAG = new Material.Builder(GTCEu.id("yag"))
       .gem().dust()
       .color(0xE9B2FF)
       .components()
       .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD)
       .buildAndRegister();
 
-    Nimonic = new Material.Builder("nimonic")
+    Nimonic = new Material.Builder(GTCEu.id("nimonic"))
       .ingot().dust()
       .color(0x7A7168)
       .components()
@@ -86,7 +87,7 @@ public class GTRMaterials {
       .blastTemp(1350)
       .buildAndRegister();
 
-    Hastelloy = new Material.Builder("hastelloy")
+    Hastelloy = new Material.Builder(GTCEu.id("hastelloy"))
       .ingot().dust()
       .color(0x404040)
       .components()
@@ -94,7 +95,7 @@ public class GTRMaterials {
       .blastTemp(1340)
       .buildAndRegister();
 
-    CuNiFe = new Material.Builder("cunife")
+    CuNiFe = new Material.Builder(GTCEu.id("cunife"))
       .ingot().dust()
       .color(0xD6B689)
       .components()
@@ -102,21 +103,21 @@ public class GTRMaterials {
       .blastTemp(1356)
       .buildAndRegister();
 
-    SiliconNitride = new Material.Builder("silicon_nitride")
+    SiliconNitride = new Material.Builder(GTCEu.id("silicon_nitride"))
       .gem().dust()
       .color(0xAEAEAE)
       .components()
       .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD)
       .buildAndRegister();
 
-    SiliconCarbide = new Material.Builder("silicon_carbide")
+    SiliconCarbide = new Material.Builder(GTCEu.id("silicon_carbide"))
       .gem().dust()
       .color(0x282828)
       .components()
       .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD)
       .buildAndRegister();
 
-    TitaniumNitride = new Material.Builder("titanium_nitride")
+    TitaniumNitride = new Material.Builder(GTCEu.id("titanium_nitride"))
       .ingot().dust()
       .color(0xFFAE00)
       .components()
@@ -124,7 +125,7 @@ public class GTRMaterials {
       .blastTemp(1100)
       .buildAndRegister();
 
-    Hydronalium = new Material.Builder("hydronalium")
+    Hydronalium = new Material.Builder(GTCEu.id("hydronalium"))
       .ingot().dust()
       .color(0xACB0B3)
       .components()
@@ -132,7 +133,7 @@ public class GTRMaterials {
       .blastTemp(1100)
       .buildAndRegister();
 
-    Vanasteel = new Material.Builder("vanasteel")
+    Vanasteel = new Material.Builder(GTCEu.id("vanasteel"))
       .ingot().dust()
       .color(0x999E7B)
       .components()
@@ -140,7 +141,7 @@ public class GTRMaterials {
       .blastTemp(2100, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.EV],  2100)
       .buildAndRegister();
 
-    Mischmetal = new Material.Builder("mischmetal")
+    Mischmetal = new Material.Builder(GTCEu.id("mischmetal"))
       .ingot().dust()
       .color(0x111111)
       .components()
@@ -148,7 +149,7 @@ public class GTRMaterials {
       .blastTemp(2700, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.EV],  2100)
       .buildAndRegister();
 
-    GreenGold = new Material.Builder("green_gold")
+    GreenGold = new Material.Builder(GTCEu.id("green_gold"))
       .ingot().dust()
       .color(0xA1AC63)
       .components(Gold, 3, Silver, 1) //4
@@ -156,7 +157,7 @@ public class GTRMaterials {
       .blastTemp(2700, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.EV],  2100)
       .buildAndRegister();
 
-    WhiteGold = new Material.Builder("white_gold")
+    WhiteGold = new Material.Builder(GTCEu.id("white_gold"))
       .ingot().dust()
       .color(0x979797)
       .components(Gold, 6, Palladium, 1, Nickel, 1, Zinc, 1) //8
@@ -164,7 +165,7 @@ public class GTRMaterials {
       .blastTemp(2700, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.EV],  2100)
       .buildAndRegister();
 
-    Shibuichi = new Material.Builder("shibuichi")
+    Shibuichi = new Material.Builder(GTCEu.id("shibuichi"))
       .ingot().dust()
       .color(0x161616)
       .components()
@@ -172,7 +173,7 @@ public class GTRMaterials {
       .blastTemp(3254, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.EV],  2100)
       .buildAndRegister();
 
-    Tombak = new Material.Builder("tombak")
+    Tombak = new Material.Builder(GTCEu.id("tombak"))
       .ingot().dust()
       .color(0xB7671B)
       .components()
@@ -180,7 +181,7 @@ public class GTRMaterials {
       .blastTemp(3254, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.EV],  2100)
       .buildAndRegister();
 
-    Pewter = new Material.Builder("pewter")
+    Pewter = new Material.Builder(GTCEu.id("pewter"))
       .ingot().dust()
       .color(0xC8D1CA)
       .components()
@@ -188,7 +189,7 @@ public class GTRMaterials {
       .blastTemp(3541, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.IV],  2800)
       .buildAndRegister();
 
-    CortenSteel = new Material.Builder("corten_steel")
+    CortenSteel = new Material.Builder(GTCEu.id("corten_steel"))
       .ingot().dust()
       .color(0x7C370D)
       .components()
@@ -196,7 +197,7 @@ public class GTRMaterials {
       .blastTemp(3870, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.IV],  2800)
       .buildAndRegister();
 
-    Shakudo = new Material.Builder("shakudo")
+    Shakudo = new Material.Builder(GTCEu.id("shakudo"))
       .ingot().dust()
       .color(0x111024)
       .components()
@@ -204,7 +205,7 @@ public class GTRMaterials {
       .blastTemp(3870, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.IV],  2800)
       .buildAndRegister();
 
-    PurpleGold = new Material.Builder("purple_gold")
+    PurpleGold = new Material.Builder(GTCEu.id("purple_gold"))
       .ingot().dust()
       .color(0x844684)
       .components(Aluminium, 1, Gold, 3) //4
@@ -212,17 +213,17 @@ public class GTRMaterials {
       .blastTemp(4512, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.ZPM],  3600)
       .buildAndRegister();
 
-    RawSalt = new Material.Builder("raw_salt")
+    RawSalt = new Material.Builder(GTCEu.id("raw_salt"))
       .dust().ore()
       .color(0xB7B1A6)
       .buildAndRegister();
 
-    Syngas = new Material.Builder("syngas")
+    Syngas = new Material.Builder(GTCEu.id("syngas"))
       .fluid(FluidStorageKeys.GAS, new FluidBuilder().temperature(500))
       .color(0xFF484848)
       .buildAndRegister();
 
-    AcrylicAcid = new Material.Builder("acrylic_acid")
+    AcrylicAcid = new Material.Builder(GTCEu.id("acrylic_acid"))
       .fluid(FluidStorageKeys.LIQUID, new FluidBuilder().attribute(FluidAttributes.ACID))
       .color(0xFF919191)
       .buildAndRegister();
@@ -232,12 +233,12 @@ public class GTRMaterials {
 //      .color(0xFFC8C8C8)
 //      .buildAndRegister();
 
-    Silicone = new Material.Builder("silicone")
+    Silicone = new Material.Builder(GTCEu.id("silicone"))
       .fluid()
       .color(0xFF98A6B3)
       .buildAndRegister();
 
-    SodiumCyanide = new Material.Builder("sodium_cyanide")
+    SodiumCyanide = new Material.Builder(GTCEu.id("sodium_cyanide"))
       .fluid()
       .color(0xFFDCDCDC)
       .buildAndRegister();
