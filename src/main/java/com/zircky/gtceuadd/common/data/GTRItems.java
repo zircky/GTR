@@ -1,6 +1,9 @@
 package com.zircky.gtceuadd.common.data;
 
+import com.gregtechceu.gtceu.api.item.ComponentItem;
+import com.gregtechceu.gtceu.api.item.component.IItemComponent;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.nullness.NonNullConsumer;
 import net.minecraft.world.item.Item;
 
 import static com.zircky.gtceuadd.api.registries.GTRRegistries.REGISTRATE;
@@ -56,7 +59,9 @@ public class GTRItems {
     .register();
 
 
-
+  public static <T extends ComponentItem> NonNullConsumer<T> attach(IItemComponent... components) {
+    return item -> item.attachComponents(components);
+  }
 
   public static void init() {
 

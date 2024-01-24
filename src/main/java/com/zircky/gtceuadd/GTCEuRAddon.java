@@ -83,10 +83,12 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {
         IGTAddon.super.addRecipes(provider);
+        GTRRecipes.init(provider);
     }
 
     @Override
     public void removeRecipes(Consumer<ResourceLocation> consumer) {
+        IGTAddon.super.removeRecipes(consumer);
         GTRRecipes.recipeRemoval(consumer);
     }
 
