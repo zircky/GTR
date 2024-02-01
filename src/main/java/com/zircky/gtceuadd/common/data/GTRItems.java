@@ -58,6 +58,10 @@ public class GTRItems {
     .defaultModel()
     .register();
 
+  public static ItemEntry<Item> InfinityCatalyst = REGISTRATE.item("infinity_catalyst", Item::new)
+      .lang("Infinity Catalyst")
+      .defaultModel()
+      .register();
 
   public static <T extends ComponentItem> NonNullConsumer<T> attach(IItemComponent... components) {
     return item -> item.attachComponents(components);

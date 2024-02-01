@@ -87,6 +87,7 @@ repositories {
   // mavens for Forge-exclusives
   maven { url = "https://api.modrinth.com/maven" } // Jade
   maven { url = "https://maven.theillusivec4.top/" } // Curios
+  maven { url = "https://maven.terraformersmc.com/releases/" } // Mod Menu, EMI
   maven { // Create Forge and Registrate Forge
     url = "https://maven.tterrag.com/"
     content {
@@ -153,6 +154,15 @@ dependencies {
   modCompileOnly forge.rei.plugin
   modCompileOnly forge.rei.api
   modImplementation forge.rei.forge
+
+  modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
+  modCompileOnly forge.emi
+
+//  compileOnly "dev.emi:emi-forge:${emi_version}:api"
+//  runtimeOnly "dev.emi:emi-forge:${emi_version}"
+
+
+  modImplementation(forge.ae2) { transitive = false }
 
   // TOP
   modCompileOnly(forge.theoneprobe) { transitive = false }

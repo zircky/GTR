@@ -20,6 +20,8 @@ dependencyResolutionManagement {
     // Common
     def reiVersion = "12.0.625"
     def kjsVersion = "2001.6.3-build.37"
+    def emiVersion = "1.0.30"
+    def ae2Version = "15.0.18"
 
     // Forge
     def forgeVersion = "47.1.3"
@@ -55,6 +57,9 @@ dependencyResolutionManagement {
       library("rei-api", "me.shedaniel", "RoughlyEnoughItems-api-forge").versionRef(rei)
       library("rei-forge", "me.shedaniel", "RoughlyEnoughItems-forge").versionRef(rei)
 
+      def emi = version("emi", emiVersion + "+" + minecraftVersion)
+      library("emi", "dev.emi", "emi-forge").versionRef(emi)
+
       def theoneprobe = version("theoneprobe", topForgeVersion)
       library("theoneprobe", "mcjty.theoneprobe", "theoneprobe").versionRef(theoneprobe)
 
@@ -70,6 +75,9 @@ dependencyResolutionManagement {
       def mixinExtras = version("mixinExtras", mixinExtrasVersion)
       library("mixinExtras-common", "io.github.llamalad7", "mixinextras-common").versionRef(mixinExtras)
       library("mixinExtras-forge", "io.github.llamalad7", "mixinextras-forge").versionRef(mixinExtras)
+
+      def ae2 = version("ae2", ae2Version)
+      library("ae2", "appeng", "appliedenergistics2-forge").versionRef(ae2)
     }
 
     libs {

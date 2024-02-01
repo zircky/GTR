@@ -4,6 +4,7 @@ import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
+import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.registry.MaterialRegistry;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.utils.FormattingUtil;
@@ -28,27 +29,37 @@ public class GTCEuAdd {
 
   public GTCEuAdd() {
     GTCEuAdd.init();
-
-    GTRItems.init();
-    GTRDatagen.init();
-
-    GTRRegistries.REGISTRATE.registerRegistrate();
     var bus = FMLJavaModLoadingContext.get().getModEventBus();
+    bus.register(this);
 
 //    bus.addGenericListener(MachineDefinition.class, GTRRegistries::registerMachine);
   }
 
   public static void init() {
-//    GTRItems.init();
-//
-//    GTRDatagen.init();
-//
-//    GTRRegistries.REGISTRATE.registerRegistrate();
+    GTRItems.init();
+
+    GTRDatagen.init();
+
+    GTRRegistries.REGISTRATE.registerRegistrate();
   }
 
   public static ResourceLocation id(String path) {
     return new ResourceLocation(MOD_ID, FormattingUtil.toLowerCaseUnder(path));
   }
 
+  @SubscribeEvent
+  public void registerMaterialRegistryEvent(MaterialRegistryEvent event) {
+    MATERIAL_REGISTRY = GTCEuAPI.materialManager.createRegistry(GTCEuAdd.MOD_ID);
+  }
+
+  @SubscribeEvent
+  public void registerMaterials(MaterialEvent event) {
+    GTRMaterials.init();
+  }
+
+  @SubscribeEvent
+  public void modifyMaterials(PostMaterialEvent event) {
+    GTRMaterials.modifyMaterials();
+  }
 
 }

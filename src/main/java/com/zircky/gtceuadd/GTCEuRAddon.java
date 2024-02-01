@@ -40,11 +40,6 @@ public class GTCEuRAddon implements IGTAddon {
         IGTAddon.super.registerElements();
     }
 
-//    @Override
-//    public void registerMaterials() {
-//        GTRMaterials.register();
-//    }
-
     @Override
     public void registerSounds() {
         IGTAddon.super.registerSounds();
@@ -83,7 +78,7 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {
         IGTAddon.super.addRecipes(provider);
-        GTRRecipes.init(provider);
+        GTRRecipes.init(provider);;
     }
 
     @Override
