@@ -1,10 +1,7 @@
 package com.zircky.gtceuadd.common.data;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import com.zircky.gtceuadd.common.data.materials.GTRCemicalMaterial;
-import com.zircky.gtceuadd.common.data.materials.GTRModifyMaterials;
-import com.zircky.gtceuadd.common.data.materials.GTRMonazite;
-import com.zircky.gtceuadd.common.data.materials.GTRPlatinumLine;
+import com.zircky.gtceuadd.common.data.materials.*;
 
 
 @SuppressWarnings("unused")
@@ -13,6 +10,8 @@ public class GTRMaterials {
     GTRCemicalMaterial.register();
     GTRPlatinumLine.register();
     GTRMonazite.register();
+    GTRNaquadahLineStuff.register();
+    GTRTungstenLine.register();
 //    GTRFluid.register();
   }
 
@@ -55,7 +54,6 @@ public class GTRMaterials {
   public static Material SodiumCyanide;
 
   // PlatinumLine
-
   public static Material PlatinumMetallicPowder;
   public static Material PlatinumResidue;
   public static Material PlatinumConcentrate;
@@ -162,12 +160,16 @@ public class GTRMaterials {
   public static Material AntimonyPentachlorideSolution; //Formula: SbCl5 только жидкость
   public static Material AntimonyPentachloride; //Formula: SbCl5 только жидкость
   public static Material AntimonyPentafluoride; //Formula: SbF5 только жидкость
-  public static Material FluoroantimonicAcid; //Formula: HSbF6 только жидкость
+  public static Material AntimonyPentafluorideSolution; //Formula: SbF5 только жидкость
+  //public static Material FluoroantimonicAcid; //Formula: HSbF6 только жидкость
   public static Material LowQualityNaquadahEmulsion; //Formula: ??NqGaAd?? только жидкость
   public static Material LowQualityNaquadahSolution; //Formula: ~??NqAd??~ только жидкость
+  public static Material NaquadahOxideMixture; //Formula: ??NqTiGaAd?? только жидкость
   public static Material GalliumHydroxide; //Formula: Ga(OH)3 только пыль
   public static Material Ethyl1Hexanol; //Formula: C8H18O только жидкость (name 2-Ethyl-1-Hexanol)
   public static Material P507; //Formula: C8H18O только жидкость (name P-507)
+
+  //
   public static Material NaquadahAdamantiumSolution; //Formula: ~NqAd~ только жидкость (Naquadah-Adamantium Solution)
   public static Material FluorineRichWasteLiquid; // только жидкость (Fluorine-RichWasteLiquid)
   public static Material WasteLiquid; // только жидкость

@@ -125,7 +125,7 @@ public class GTRCustomeRecipes {
         .inputFluids(SolderingAlloy.getFluid(L * 15))
         .inputFluids(Lubricant.getFluid(L * 6))
         .inputFluids(Naquadria.getFluid(L * 10))
-        .outputItems(ELECTRIC_MOTOR_UV)
+        .outputItems(ELECTRIC_MOTOR_UHV)
         .duration(2400).EUt(VA[UV]).save(provider);
 
     VanillaRecipeHelper.addShapedRecipe(provider, "electric_piston_mv", ELECTRIC_MOTOR_MV.asStack(), "PPP", "CRR", "CMG", 'P', new UnificationEntry(plate, Aluminium), 'C', new UnificationEntry(cableGtSingle, AnnealedCopper), 'R', new UnificationEntry(rod, Aluminium), 'G', new UnificationEntry(gearSmall, Aluminium), 'M', ELECTRIC_PISTON_MV.asStack());
@@ -200,7 +200,7 @@ public class GTRCustomeRecipes {
         .duration(1200).EUt(VA[LuV]).save(provider);
 
     ASSEMBLY_LINE_RECIPES.recipeBuilder("conveyor_module_uv")
-        .inputItems(ELECTRIC_MOTOR_UV, 6)
+        .inputItems(ELECTRIC_MOTOR_UV, 2)
         .inputItems(plate, Neutronium, 2)
         .inputItems(ring, Neutronium, 4)
         .inputItems(round, Neutronium, 32)
@@ -214,7 +214,7 @@ public class GTRCustomeRecipes {
         .duration(1800).EUt(VA[ZPM]).save(provider);
 
     ASSEMBLY_LINE_RECIPES.recipeBuilder("conveyor_module_uhv")
-        .inputItems(ELECTRIC_MOTOR_UHV, 6)
+        .inputItems(ELECTRIC_MOTOR_UHV, 2)
         .inputItems(plate, CosmicNeutronium, 2)
         .inputItems(ring, CosmicNeutronium, 8)
         .inputItems(round, CosmicNeutronium, 64)
