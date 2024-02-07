@@ -7,10 +7,13 @@ import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEv
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.registry.MaterialRegistry;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
+import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.utils.FormattingUtil;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
 import com.zircky.gtceuadd.common.data.GTRItems;
+import com.zircky.gtceuadd.common.data.GTRMachines;
 import com.zircky.gtceuadd.common.data.GTRMaterials;
+import com.zircky.gtceuadd.common.data.GTRRecipeTypes;
 import com.zircky.gtceuadd.data.GTRDatagen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -60,6 +63,16 @@ public class GTCEuAdd {
   @SubscribeEvent
   public void modifyMaterials(PostMaterialEvent event) {
     GTRMaterials.modifyMaterials();
+  }
+
+  @SubscribeEvent
+  public void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
+    GTRRecipeTypes.init();
+  }
+
+  @SubscribeEvent
+  public void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
+    GTRMachines.init();
   }
 
 }

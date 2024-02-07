@@ -4,8 +4,10 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
+import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.gregtechceu.gtceu.common.data.GTElements;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
@@ -26,9 +28,11 @@ public class GTRCustomMaterial {
         .flags(DECOMPOSITION_BY_ELECTROLYZING, GENERATE_PLATE, GENERATE_ROD, GENERATE_GEAR, GENERATE_FINE_WIRE, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_SMALL_GEAR, GENERATE_FOIL, GENERATE_ROTOR, GENERATE_FOIL, GENERATE_DENSE, GENERATE_SPRING_SMALL)
         .color(0xFFFFFF).iconSet(InfinityIcon)
         .fluidPipeProperties(10000000, 200000, true)
-//        .element(GTNNElement.IF2)
+
         .blastTemp(10800, BlastProperty.GasTier.HIGHEST, GTValues.VA[GTValues.UHV], 54562)
         .cableProperties(GTValues.V[GTValues.MAX], 8192, 0, true, 30)
+        .rotorStats(256.0f, 21.0f,262144000)
+        .toolStats(ToolProperty.Builder.of(256.0f, 21.0f, 262144000, 17).enchantability(20).addTypes(GTToolType.MORTAR).build())
         .buildAndRegister();
 
     InfinityCatalyst = Builder("infinity_catalyst")
@@ -37,6 +41,8 @@ public class GTRCustomMaterial {
         .appendFlags(SNDART_FLAGS)
         //.element(GTNNElement.IF)
         .blastTemp(10800, BlastProperty.GasTier.MID, GTValues.VA[GTValues.UV], 26190)
+        .rotorStats(64.0f, 14.0f,131072000)
+        .toolStats(ToolProperty.Builder.of(64.0f, 14.0f, 131072000, 10).enchantability(20).addTypes(GTToolType.MORTAR).build())
         .buildAndRegister();
 
     CosmicNeutronium = Builder("cosmic_neutronium")
@@ -45,6 +51,8 @@ public class GTRCustomMaterial {
         .appendFlags(SNDART_FLAGS)
         //.element(GTNNElement.SpNt)
         .blastTemp(9900, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.ZPM], 21825)
+        .rotorStats(96.0f, 16.0f,16384000)
+        .toolStats(ToolProperty.Builder.of(96.0f, 16.0f, 16384000, 12).enchantability(20).addTypes(GTToolType.MORTAR).build())
         .buildAndRegister();
 
     Bedrockium = Builder("bedrockium")
