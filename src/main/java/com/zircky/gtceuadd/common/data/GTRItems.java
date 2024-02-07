@@ -63,6 +63,21 @@ public class GTRItems {
       .defaultModel()
       .register();
 
+  public static ItemEntry<Item> ItemChipCore = REGISTRATE.item("item_chip_core", Item::new)
+      .lang("Item Chip core")
+      .defaultModel()
+      .register();
+  public static ItemEntry<Item> FluidChipCore = REGISTRATE.item("fluid_chip_core", Item::new)
+      .lang("Fluid Chip core")
+      .defaultModel()
+      .register();
+
+  public static ItemEntry<Item> InfinityStar = REGISTRATE.item("infinity_star", Item::new)
+      .lang("Infinity Star")
+      .defaultModel()
+      .register();
+
+
   public static <T extends ComponentItem> NonNullConsumer<T> attach(IItemComponent... components) {
     return item -> item.attachComponents(components);
   }

@@ -7,11 +7,13 @@ import com.zircky.gtceuadd.common.data.materials.*;
 @SuppressWarnings("unused")
 public class GTRMaterials {
   public static void init() {
+    GTRCustomMaterial.register();
     GTRCemicalMaterial.register();
     GTRPlatinumLine.register();
     GTRMonazite.register();
     GTRNaquadahLineStuff.register();
     GTRTungstenLine.register();
+    GTRSuperconductor.register();
 //    GTRFluid.register();
   }
 
@@ -24,6 +26,8 @@ public class GTRMaterials {
   public static Material InfinityCatalyst;
   public static Material CosmicNeutronium;
   public static Material Bedrockium;
+  public static Material CobaltIINitrate; //Formula Co(NO3)2 только пыль
+  public static Material CobaltIIHydroxide; //Formula Co(OH)2 только пыль
 
   // Chemical
   public static Material CuBe;
@@ -171,6 +175,7 @@ public class GTRMaterials {
 
   //
   public static Material NaquadahAdamantiumSolution; //Formula: ~NqAd~ только жидкость (Naquadah-Adamantium Solution)
+  public static Material Fluorspar; //Formula:  только пыль ()
   public static Material FluorineRichWasteLiquid; // только жидкость (Fluorine-RichWasteLiquid)
   public static Material WasteLiquid; // только жидкость
   public static Material NaquadahRichSolution; //Formula: ~NqAd~ только жидкость (Naquadah-RichSolution)
@@ -185,4 +190,23 @@ public class GTRMaterials {
   public static Material NaquadriaRichSolution; //Formula: ~?Na*?~ только жидкость (Naquadria-Rich Solution)
   public static Material LowQualityNaquadriaSulphate; //Formula: ??Nq*(SO4)2?? только пыль и жидкость
   public static Material NaquadriaSulphate; //Formula: Nq*(SO4)2 только пыль
+
+
+  //Super wire
+  public static Material ManganesePhosphideBase;
+  public static Material MagnesiumDiborideBase;
+  public static Material MercuryBariumCalciumCuprateBase;
+  public static Material UraniumTriplatinumBase;
+  public static Material SamariumIronArsenicOxideBase;
+  public static Material IndiumTinBariumTitaniumCuprateBase;
+  public static Material UraniumRhodiumDinaquadideBase;
+  public static Material EnrichedNaquadahTriniumEuropiumDuranideBase;
+  public static Material RutheniumTriniumAmericiumNeutronateBase;
+
+  public static Material Draconium;
+  public static Material AwakenedDraconium;
+
+  //Nucler
+  public static Material ThoriumNitrate; // Formula Th(NO3)4 только жидкость
+  public static Material ThoriumHydroxide; // Formula Th(NO3)4 только пыль
 }

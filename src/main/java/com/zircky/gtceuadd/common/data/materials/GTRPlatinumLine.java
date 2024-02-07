@@ -79,7 +79,7 @@ public class GTRPlatinumLine {
         .setFormula("CH2O2", true);
 
     PotassiumDisulfate = Builder("potassium_disulfate")
-        .dust(1).fluid()
+        .dust(1).fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
         .color(0xEEA23E)
         .buildAndRegister()
         .setFormula("K2S2O7", true);

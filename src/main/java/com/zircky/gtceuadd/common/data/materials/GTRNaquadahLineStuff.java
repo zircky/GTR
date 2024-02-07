@@ -93,5 +93,84 @@ public class GTRNaquadahLineStuff {
         .color(0x06070A)
         .buildAndRegister()
         .setFormula("~NqAd~", true);
+
+    Fluorspar = Builder("fluorspar")
+        .dust().gem().iconSet(METALLIC)
+        .color(0x320B35)
+        .buildAndRegister();
+
+    FluorineRichWasteLiquid = Builder("fluorine_rich_waste_liquid")
+        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
+        .color(0x0C2527)
+        .buildAndRegister();
+
+    WasteLiquid = Builder("waste_liquid")
+        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
+        .color(0x136862)
+        .buildAndRegister();
+
+    NaquadahRichSolution = Builder("naquadah_rich_solution")
+        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
+        .color(0x333333)
+        .buildAndRegister()
+        .setFormula("~NqAd~", false);
+
+    Naquadahine = Builder("naquadahine")
+        .dust()
+        .color(0x333333)
+        .buildAndRegister()
+        .setFormula("Nq02", true);
+
+    EnrichedNaquadahRichSolution = Builder("enriched_naquadah_rich_solution")
+        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
+        .color(0x523939)
+        .buildAndRegister()
+        .setFormula("~?Nq+?~", true);
+
+    ConcentratedEnrichedNaquadahSludge = Builder("concentrated_enriched_naquadah_sludge")
+        .dust()
+        .color(0x523939)
+        .buildAndRegister()
+        .setFormula("?Nq+?", true);
+
+    EnrichedNaquadahSulphate = Builder("enriched_naquadah_sulphate")
+        .dust()
+        .color(0x523939)
+        .buildAndRegister()
+        .setFormula("Na+(SO4)2", true);
+
+    LowQualityNaquadriaPhosphate = Builder("low_quality_naquadria_phosphate")
+        .dust()
+        .color(0x4d4d55)
+        .buildAndRegister()
+        .setFormula("??Nq*3(PO4)4??", true);
+
+    IndiumPhosphate = Builder("indium_phosphate")
+        .dust()
+        .color(0x2b2e70)
+        .components(Indium, 1, Phosphorus, 1, Oxygen, 4)
+        .buildAndRegister()
+        .setFormula("InPO4", true);
+
+    NaquadriaRichSolution = Builder("naquadria_rich_solution")
+        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
+        .color(0x1f1e33)
+        .buildAndRegister()
+        .setFormula("~?Nq*?~", true);
+
+    LowQualityNaquadriaSulphate = Builder("low_quality_naquadria_sulphate")
+        .dust().fluid()
+        .color(0x737284)
+        .buildAndRegister()
+        .setFormula("??Nq*(SO4)2??", true);
+
+    NaquadriaSulphate = Builder("naquadria_sulphate")
+        .dust()
+        .color(0x1f1e33)
+        .components(Naquadria, 1, Sulfur, 2, Oxygen, 8)
+        .buildAndRegister()
+        .setFormula("Nq*(SO4)2", true);
+
+
   }
 }

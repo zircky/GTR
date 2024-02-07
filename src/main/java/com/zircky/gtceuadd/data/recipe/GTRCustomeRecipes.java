@@ -30,7 +30,8 @@ public class GTRCustomeRecipes {
         .inputItems(wireGtDouble, Cupronickel, 4)
         .inputItems(ELECTRIC_MOTOR_LV, 1)
         .outputItems(ELECTRIC_MOTOR_MV)
-        .duration(100).EUt(VA[LV]).save(provider);
+        .duration(100).EUt(VA[LV]).save(
+            provider);
 
     ASSEMBLER_RECIPES.recipeBuilder(GTCEu.id("electric_motor_hv"))
         .inputItems(cableGtQuadruple, Silver, 2)
@@ -128,7 +129,7 @@ public class GTRCustomeRecipes {
         .outputItems(ELECTRIC_MOTOR_UHV)
         .duration(2400).EUt(VA[UV]).save(provider);
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "electric_piston_mv", ELECTRIC_MOTOR_MV.asStack(), "PPP", "CRR", "CMG", 'P', new UnificationEntry(plate, Aluminium), 'C', new UnificationEntry(cableGtSingle, AnnealedCopper), 'R', new UnificationEntry(rod, Aluminium), 'G', new UnificationEntry(gearSmall, Aluminium), 'M', ELECTRIC_PISTON_MV.asStack());
+    VanillaRecipeHelper.addShapedRecipe(provider, "electric_piston_mv", ELECTRIC_PISTON_MV.asStack(), "PPP", "CRR", "CMG", 'P', new UnificationEntry(plate, Aluminium), 'C', new UnificationEntry(cableGtSingle, AnnealedCopper), 'R', new UnificationEntry(rod, Aluminium), 'G', new UnificationEntry(gearSmall, Aluminium), 'M', ELECTRIC_MOTOR_MV.asStack());
 
     ASSEMBLY_LINE_RECIPES.recipeBuilder("electric_piston_luv")
         .inputItems(ELECTRIC_MOTOR_LuV)
