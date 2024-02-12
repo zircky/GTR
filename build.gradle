@@ -119,13 +119,38 @@ repositories {
   maven {
     name = "Jared's maven"
     url = "https://maven.blamejared.com/"
-  } // JEI
+  } // JEI,
+  maven {
+    url 'https://maven.blamejared.com'
+    content {
+      includeGroup "vazkii.botania"
+      includeGroup "vazkii.patchouli"
+    }
+  }
+  maven {
+    name = "Modrinth Maven"
+    url = "https://api.modrinth.com/maven"
+    content {
+      includeGroup "maven.modrinth"
+    }
+  }
   maven { url 'https://jitpack.io' } // MixinExtras
   maven {
     // location of a maven mirror for JEI files, as a fallback
     name = "ModMaven"
     url = "https://modmaven.dev"
   } // JEI mirror, AE2
+  exclusiveContent {
+    forRepository {
+      maven {
+        url "https://cursemaven.com"
+      }
+    }
+    filter {
+      includeGroup "curse.maven"
+    }
+  }
+  maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' } //geckolib
   maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
   maven { url = "https://maven.quiltmc.org/repository/release/" } // Quilt Mappings
   maven { url = "https://maven.firstdarkdev.xyz/snapshots" } // LDLib
@@ -150,6 +175,11 @@ dependencies {
   // Registrate
   modImplementation("com.tterrag.registrate:Registrate:${forge.versions.registrate.get()}")
 
+  // JEI
+  modCompileOnly(forge.jei.common.api) { transitive = false }
+  modCompileOnly(forge.jei.forge.api) { transitive = false }
+  modCompileOnly(forge.jei.forge.impl) { transitive = false }
+
   // REI
   modCompileOnly forge.rei.plugin
   modCompileOnly forge.rei.api
@@ -158,10 +188,39 @@ dependencies {
   modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
   modCompileOnly forge.emi
 
-//  compileOnly "dev.emi:emi-forge:${emi_version}:api"
-//  runtimeOnly "dev.emi:emi-forge:${emi_version}"
+  // Botania
+  modImplementation(forge.botania) { transitive = false }
+
+  // ars Nouveau
+  modImplementation(forge.arsnouveau) { transitive = false }
+
+  // Ars Energistique
+  modImplementation(forge.arseng) { transitive = false }
+
+  modImplementation(forge.geckolib)
+
+  modCompileOnly "top.theillusivec4.curios:curios-forge:${forge.versions.curios.get()}:api"
+  modImplementation(forge.curios)
+
+  modRuntimeOnly(forge.patchouli)
 
 
+  // Electrodynamics
+  modImplementation("curse.maven:electrodynamics-316867:5022907")
+
+  // Nuclear_Science
+  modImplementation("curse.maven:nuclear-science-318646:5022908")
+
+  // Ballistix
+  modImplementation("curse.maven:ballistix-443915:5022909")
+
+  // Assembly_Line
+  modImplementation("curse.maven:assembly-lines-404360:4903245")
+
+  // Modular Forcefields
+  modImplementation("curse.maven:modular-forcefields-322896:4878383")
+
+  // AE2
   modImplementation(forge.ae2) { transitive = false }
 
   // TOP

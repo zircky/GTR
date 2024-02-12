@@ -14,6 +14,7 @@ public class GTRMaterials {
     GTRNaquadahLineStuff.register();
     GTRTungstenLine.register();
     GTRSuperconductor.register();
+    GTRBotaniaMaterial.register();
 //    GTRFluid.register();
   }
 
@@ -56,6 +57,18 @@ public class GTRMaterials {
   public static Material AcrylicAcid;
   public static Material Silicone;
   public static Material SodiumCyanide;
+
+  // Botania Material
+  public static Material ManaSteel;
+  public static Material Terrasteel;
+  public static Material ElvenElementium;
+  public static Material Livingrock;
+  public static Material GaiaSpirit;
+  public static Material Livingwood;
+  public static Material Dreamwood;
+  public static Material ManaDiamond;
+  public static Material BotaniaDragonstone;
+
 
   // PlatinumLine
   public static Material PlatinumMetallicPowder;

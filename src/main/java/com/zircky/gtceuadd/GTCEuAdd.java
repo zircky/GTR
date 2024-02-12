@@ -1,6 +1,5 @@
 package com.zircky.gtceuadd;
 
-import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
@@ -35,7 +34,8 @@ public class GTCEuAdd {
     var bus = FMLJavaModLoadingContext.get().getModEventBus();
     bus.register(this);
 
-//    bus.addGenericListener(MachineDefinition.class, GTRRegistries::registerMachine);
+    bus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
+    bus.addGenericListener(MachineDefinition.class, this::registerMachines);
   }
 
   public static void init() {
