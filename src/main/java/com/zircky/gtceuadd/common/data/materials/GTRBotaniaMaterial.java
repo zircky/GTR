@@ -1,13 +1,14 @@
 package com.zircky.gtceuadd.common.data.materials;
 
 import com.gregtechceu.gtceu.api.GTValues;
-import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty.GasTier;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
-import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
+import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.DIAMOND;
+import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.METALLIC;
+import static com.zircky.gtceuadd.api.data.material.GTRMaterialIconSet.*;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.Builder;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.REF;
@@ -15,9 +16,6 @@ import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.REF;
 @SuppressWarnings("unused")
 public class GTRBotaniaMaterial {
 
-  public static final MaterialIconSet LIVINGROCK = new MaterialIconSet("livingrock", SHINY);
-  public static final MaterialIconSet LIVINGWOOD = new MaterialIconSet("livingwood", SHINY);
-  public static final MaterialIconSet DREAMWOOD = new MaterialIconSet("dreamwood", SHINY);
 
   public static final void register() {
     ManaSteel = Builder("manasteel")
