@@ -222,4 +222,6 @@ public class GTRMaterials {
   //Nucler
   public static Material ThoriumNitrate; // Formula Th(NO3)4 только жидкость
   public static Material ThoriumHydroxide; // Formula Th(NO3)4 только пыль
+
+  public static Material CSolder;
 }

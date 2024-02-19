@@ -1,14 +1,12 @@
 package com.zircky.gtceuadd.common.data.materials;
 
 import com.gregtechceu.gtceu.api.GTValues;
-import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.api.fluids.attribute.FluidAttributes;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
-import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.Builder;
@@ -186,6 +184,13 @@ public class GTRCemicalMaterial {
         .dust().ore()
         .color(0xB7B1A6)
         .buildAndRegister();
+
+    CSolder = Builder("c_solder")
+        .ingot().dust().fluid()
+        .color(0x051F9E)
+        .flags(GENERATE_PLATE, GENERATE_DENSE)
+        .buildAndRegister()
+        .setFormula("Sn90.7Ag3.6Cu0.7Cr5", true);
 
     Syngas = Builder("syngas")
         .fluid(FluidStorageKeys.GAS, new FluidBuilder().temperature(500))

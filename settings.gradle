@@ -18,9 +18,9 @@ dependencyResolutionManagement {
 
     // Mod Dependencies Versions
     // Common
-    def jeiVersion = "15.2.0.27"
+    def jeiVersion = "15.3.0.4"
     def reiVersion = "12.0.625"
-    def kjsVersion = "2001.6.3-build.37"
+    def kjsVersion = "2001.6.4-build.133"
     def emiVersion = "1.0.30"
     def ae2Version = "15.0.20"
 
@@ -41,13 +41,12 @@ dependencyResolutionManagement {
     def vineFlowerVersion = "1.+"
     def macheteVersion = "1.+"
     def configurationVersion = "2.2.0"
-    def gtCeuVersion = "1.1.0"
-    def ldLibVersion = "1.0.22.a"
+    def gtCeuVersion = "1.1.3.b"
+    def ldLibVersion = "1.0.23.a"
     def mixinExtrasVersion = "0.2.0"
     def geckoLibVersion = "4.2.1"
     def patchouliVersion = "1.20.1-83-FORGE"
-    def curiosVersion = "5.7.0+1.20.1" +
-        ""
+    def curiosVersion = "5.7.0+1.20.1"
 
     forge {
       version("forgeShortVersion", forgeVersion)
@@ -60,24 +59,24 @@ dependencyResolutionManagement {
       def registrate = version("registrate", registrateForgeVersion)
       library("registrate", "com.tterrag.registrate", "Registrate").versionRef(registrate)
 
-      def jei = version("jei", jeiVersion)
-      library("jei-common-api", "mezz.jei", "jei-${minecraftVersion}-common-api").versionRef(jei)
-      library("jei-forge-api", "mezz.jei", "jei-${minecraftVersion}-forge-api").versionRef(jei)
-      library("jei-forge-impl", "mezz.jei", "jei-${minecraftVersion}-forge").versionRef(jei)
-
+//      def jei = version("jei", jeiVersion)
+//      library("jei-common-api", "mezz.jei", "jei-${minecraftVersion}-common-api").versionRef(jei)
+//      library("jei-forge-api", "mezz.jei", "jei-${minecraftVersion}-forge-api").versionRef(jei)
+//      library("jei-forge", "mezz.jei", "jei-${minecraftVersion}-forge").versionRef(jei)
+//
       def rei = version("rei", reiVersion)
       library("rei-plugin", "me.shedaniel", "RoughlyEnoughItems-default-plugin-forge").versionRef(rei)
       library("rei-api", "me.shedaniel", "RoughlyEnoughItems-api-forge").versionRef(rei)
       library("rei-forge", "me.shedaniel", "RoughlyEnoughItems-forge").versionRef(rei)
 
-      def emi = version("emi", emiVersion + "+" + minecraftVersion)
-      library("emi", "dev.emi", "emi-forge").versionRef(emi)
+//      def emi = version("emi", emiVersion + "+" + minecraftVersion)
+//      library("emi", "dev.emi", "emi-forge").versionRef(emi)
 
       def theoneprobe = version("theoneprobe", topForgeVersion)
       library("theoneprobe", "mcjty.theoneprobe", "theoneprobe").versionRef(theoneprobe)
 
-      def kubejs = version("kubejs", kjsVersion)
-      library("kubejs-forge", "dev.latvian.mods", "kubejs-forge").versionRef(kubejs)
+//      def kubejs = version("kubejs", kjsVersion)
+//      library("kubejs-forge", "dev.latvian.mods", "kubejs-forge").versionRef(kubejs)
 
       def gtceu = version("gtceu", gtCeuVersion)
       library("gtceu-forge", "com.gregtechceu.gtceu", "gtceu-${minecraftVersion}").versionRef(gtceu)

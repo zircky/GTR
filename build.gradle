@@ -128,6 +128,21 @@ repositories {
     }
   }
   maven {
+    // location of the maven that hosts JEI files before January 2023
+    name = "Progwml6's maven"
+    url = "https://dvs1.progwml6.com/files/maven/"
+  }
+  maven {
+    // location of the maven that hosts JEI files since January 2023
+    name = "Jared's maven"
+    url = "https://maven.blamejared.com/"
+  }
+  maven {
+    // location of a maven mirror for JEI files, as a fallback
+    name = "ModMaven"
+    url = "https://modmaven.dev"
+  }
+  maven {
     name = "Modrinth Maven"
     url = "https://api.modrinth.com/maven"
     content {
@@ -176,20 +191,21 @@ dependencies {
   modImplementation("com.tterrag.registrate:Registrate:${forge.versions.registrate.get()}")
 
   // JEI
-  modCompileOnly(forge.jei.common.api) { transitive = false }
-  modCompileOnly(forge.jei.forge.api) { transitive = false }
-  modCompileOnly(forge.jei.forge.impl) { transitive = false }
+//  modCompileOnly(forge.jei.common.api) { transitive = false }
+//  modCompileOnly(forge.jei.forge.api) { transitive = false }
+//  modCompileOnly(forge.jei.forge) { transitive = false }
+
 
   // REI
   modCompileOnly forge.rei.plugin
   modCompileOnly forge.rei.api
   modImplementation forge.rei.forge
 
-  modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
-  modCompileOnly forge.emi
+//  modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
+//  modCompileOnly(forge.emi)
 
   // Botania
-  modImplementation(forge.botania) { transitive = false }
+//  modImplementation(forge.botania) { transitive = false }
 
   // ars Nouveau
   modImplementation(forge.arsnouveau) { transitive = false }
@@ -227,7 +243,7 @@ dependencies {
   modCompileOnly(forge.theoneprobe) { transitive = false }
 
   // KJS
-  modImplementation forge.kubejs.forge
+//  modImplementation(forge.kubejs.forge) { transitive = false }
 
   // Configuration
   modImplementation(forge.configuration)
