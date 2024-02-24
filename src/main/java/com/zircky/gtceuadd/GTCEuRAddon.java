@@ -6,7 +6,7 @@ import com.gregtechceu.gtceu.api.addon.events.KJSRecipeKeyEvent;
 import com.gregtechceu.gtceu.api.addon.events.MaterialCasingCollectionEvent;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
-import com.zircky.gtceuadd.common.data.GTRMaterials;
+import com.zircky.gtceuadd.common.data.GTRCasingBlocks;
 import com.zircky.gtceuadd.common.data.GTRRecipes;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
@@ -99,7 +99,8 @@ public class GTCEuRAddon implements IGTAddon {
 
     @Override
     public void collectMaterialCasings(MaterialCasingCollectionEvent event) {
-        IGTAddon.super.collectMaterialCasings(event);
+//        IGTAddon.super.collectMaterialCasings(event);
+        GTRCasingBlocks.init();
     }
 
     @Override

@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.Block;
 public interface ICompAssLineCasingType {
   int getTier();
 
-  BlockEntry<Block> getCompAssLineCasing();
+  BlockEntry<Block> getCompAssLineCasing(int tier);
 
   String getName();
 
