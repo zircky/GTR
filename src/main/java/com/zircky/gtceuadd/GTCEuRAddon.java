@@ -4,7 +4,9 @@ import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.addon.events.KJSRecipeKeyEvent;
 import com.gregtechceu.gtceu.api.addon.events.MaterialCasingCollectionEvent;
+import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+import com.zircky.gtceuadd.api.recipe.CompAssLineCondition;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
 import com.zircky.gtceuadd.common.data.GTRCasingBlocks;
 import com.zircky.gtceuadd.common.data.GTRRecipes;
@@ -57,7 +59,8 @@ public class GTCEuRAddon implements IGTAddon {
 
     @Override
     public void registerRecipeConditions() {
-        IGTAddon.super.registerRecipeConditions();
+//        IGTAddon.super.registerRecipeConditions();
+      GTRegistries.RECIPE_CONDITIONS.register(CompAssLineCondition.INSTANCE.getType(), CompAssLineCondition.class);
     }
 
     @Override
