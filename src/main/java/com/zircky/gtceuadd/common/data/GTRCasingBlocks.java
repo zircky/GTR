@@ -22,7 +22,7 @@ public class GTRCasingBlocks {
   public static final BlockEntry<Block> CompAssLine_Casing_UIV = createCasingBlock("compassline_casing_uiv", GTCEuAdd.id("block/casings/solid/compassline_casing_uiv"));
   public static final BlockEntry<Block> CompAssLine_Casing_UXV = createCasingBlock("compassline_casing_uxv", GTCEuAdd.id("block/casings/solid/compassline_casing_uxv"));
   public static final BlockEntry<Block> CompAssLine_Casing_OpV = createCasingBlock("compassline_casing_opv", GTCEuAdd.id("block/casings/solid/compassline_casing_opv"));
-  public static final BlockEntry<Block> CompAssLine_Casing_MAX = createCasingBlock("compassline_casing_max", GTCEuAdd.id("block/casings/solid/compassline_casing_MAX"));
+  public static final BlockEntry<Block> CompAssLine_Casing_MAX = createCasingBlock("compassline_casing_max", GTCEuAdd.id("block/casings/solid/compassline_casing_max"));
 
 
   public static void init() {

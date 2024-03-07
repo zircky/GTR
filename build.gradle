@@ -220,7 +220,7 @@ dependencies {
 
   modRuntimeOnly(forge.patchouli)
 
-
+/**
   // Electrodynamics
   modImplementation("curse.maven:electrodynamics-316867:5022907")
 
@@ -235,7 +235,7 @@ dependencies {
 
   // Modular Forcefields
   modImplementation("curse.maven:modular-forcefields-322896:4878383")
-
+ */
   // AE2
   modImplementation(forge.ae2) { transitive = false }
 

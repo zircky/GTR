@@ -6,7 +6,8 @@ import com.gregtechceu.gtceu.api.machine.feature.multiblock.IMultiController;
 import com.gregtechceu.gtceu.api.machine.trait.RecipeLogic;
 import com.gregtechceu.gtceu.api.recipe.GTRecipe;
 import com.gregtechceu.gtceu.api.recipe.RecipeCondition;
-import com.zircky.gtceuadd.common.block.CompAssLineCasing;
+import com.zircky.gtceuadd.api.block.ICompAssLineCasingType;
+import com.zircky.gtceuadd.common.block.CompAssLineCasingB;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.GsonHelper;
@@ -16,9 +17,9 @@ import org.jetbrains.annotations.NotNull;
 public class CompAssLineCondition extends RecipeCondition {
   public final static CompAssLineCondition INSTANCE = new CompAssLineCondition();
 
-  private CompAssLineCasing compAssLine = CompAssLineCasing.Compassline_Casing_LV;
+  private CompAssLineCasingB compAssLine = CompAssLineCasingB.Compassline_Casing_LV;
 
-  public CompAssLineCondition(CompAssLineCasing compAssLine) {
+  public CompAssLineCondition(CompAssLineCasingB compAssLine) {
     super();
     this.compAssLine = compAssLine;
   }
@@ -59,7 +60,7 @@ public class CompAssLineCondition extends RecipeCondition {
   @Override
   public RecipeCondition deserialize(@NotNull JsonObject config) {
     super.deserialize(config);
-    this.compAssLine = CompAssLineCasing.getByName(
+    this.compAssLine = CompAssLineCasingB.getByName(
         GsonHelper.getAsString(config, "compAssLine", "compAssLine"));
     return this;
   }
@@ -73,7 +74,11 @@ public class CompAssLineCondition extends RecipeCondition {
   @Override
   public RecipeCondition fromNetwork(FriendlyByteBuf buf) {
     super.fromNetwork(buf);
-    this.compAssLine = CompAssLineCasing.getByNameOrDefault(buf.readUtf());
+    this.compAssLine = CompAssLineCasingB.getByNameOrDefault(buf.readUtf());
     return this;
+  }
+
+  public ICompAssLineCasingType getCompAssLineCasing() {
+    return null;
   }
 }

@@ -27,6 +27,10 @@ public class GTRRecipeTypes {
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.ASSEMBLER);
 
+  public static final GTRecipeType TEST_RESIPES = register("test", MULTIBLOCK).setMaxIOSize(10, 2, 10, 0).setEUIO(IO.IN)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.ASSEMBLER);
+
 
   public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
     var recipeType = new GTRecipeType(GTCEuAdd.id(name), group, proxyRecipes);

@@ -11,8 +11,11 @@ import com.gregtechceu.gtceu.api.machine.multiblock.PartAbility;
 import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMachine;
 import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.Predicates;
+import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
+import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
+import com.zircky.gtceuadd.api.block.multiblock.ComponentAssemblyLineM;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
 
 import static com.gregtechceu.gtceu.api.GTValues.*;
@@ -27,10 +30,11 @@ public class GTRMachines {
   public final static int[] ALL_TIERS = GTValues.tiersBetween(ULV, GTCEuAPI.isHighTier() ? MAX : UHV);
 
   public final static MachineDefinition[] SCANNER = registerSimpleMachines("scanner", GTRRecipeTypes.SCANNER_RECIPES);
-  public final static MultiblockMachineDefinition COMPONENT_ASSEMBLY_LINE = GTRRegistries.REGISTRATE.multiblock("component_assembly_line", WorkableElectricMultiblockMachine::new)
+  public final static MultiblockMachineDefinition COMPONENT_ASSEMBLY_LINE = GTRRegistries.REGISTRATE.multiblock("component_assembly_line", ComponentAssemblyLineM::new)
       .langValue("Component Assembly Line")
       .rotationState(RotationState.NON_Y_AXIS)
       .recipeType(GTRRecipeTypes.ComponentAssemblyLineRecipes)
+      .recipeModifier(ComponentAssemblyLineM::componentAssemblyLineRecipe)
       .appearanceBlock(CASING_STEEL_SOLID)
       .pattern(definition -> FactoryBlockPattern.start()
           .aisle("CCCCCCCCC", "C##OOO##C", "C#######C", "C#######C", "C#######C", "C#######C", "CC#####CC", "#CCCCCCC#", "RCCCCCCCR", "###CKC###")
@@ -85,6 +89,25 @@ public class GTRMachines {
       .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_solid_steel"),
           GTCEu.id("block/multiblock/assembly_line"), false)
       .register();
+
+  public final static MultiblockMachineDefinition TEST = GTRRegistries.REGISTRATE.multiblock("test", WorkableElectricMultiblockMachine::new)
+      .rotationState(RotationState.NON_Y_AXIS)
+      .recipeType(GTRRecipeTypes.TEST_RESIPES)
+      .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
+      .appearanceBlock(CASING_STEEL_SOLID)
+      .pattern(definition -> FactoryBlockPattern.start()
+          .aisle("XXX", "XXX", "XXX")
+          .aisle("XXX", "X#X", "XXX")
+          .aisle("XXX", "XSX", "XXX")
+          .where('S', Predicates.controller(blocks(definition.getBlock())))
+          .where('X', blocks(CASING_STEEL_SOLID.get()).setMinGlobalLimited(14)
+              .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+              .or(Predicates.autoAbilities(true, true, false)))
+          .where('#', Predicates.air())
+          .build())
+      .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_solid_steel"),
+          GTCEu.id("block/multiblock/vacuum_freezer"), false)
+      .compassNodeSelf().register();
 
 /*  public final static MultiblockMachineDefinition NUCLER_REACTOR = GTRRegistries.REGISTRATE.multiblock("nucler_reactor", );
 

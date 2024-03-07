@@ -15,7 +15,7 @@ import java.util.Map;
 import static com.zircky.gtceuadd.common.block.BlockTier.*;
 import static com.zircky.gtceuadd.common.data.GTRCasingBlocks.*;
 
-public enum CompAssLineCasing implements ICompAssLineCasingType {
+public enum CompAssLineCasingB implements ICompAssLineCasingType {
 
   Compassline_Casing_LV(TIER0, "Compassline_Casing_LV", GTCEuAdd.id("block/casings/solid/compassline_casing_lv")),
   Compassline_Casing_MV(TIER1, "Compassline_Casing_MV", GTCEuAdd.id("block/casings/solid/compassline_casing_mv")),
@@ -33,8 +33,8 @@ public enum CompAssLineCasing implements ICompAssLineCasingType {
   Compassline_Casing_MAX(TIER13, "Compassline_Casing_MAX", GTCEuAdd.id("block/casings/solid/compassline_casing_max"));
 
   static class CompAssLine {
-    private static final Map<String, CompAssLineCasing> All_Compassline_Casings = new Object2ObjectOpenHashMap<>();
-    private static final Map<Integer, CompAssLineCasing> All_CompasslineCasings_Tier = new Object2ObjectOpenHashMap<>();
+    private static final Map<String, CompAssLineCasingB> All_Compassline_Casings = new Object2ObjectOpenHashMap<>();
+    private static final Map<Integer, CompAssLineCasingB> All_CompasslineCasings_Tier = new Object2ObjectOpenHashMap<>();
 
   }
 
@@ -42,7 +42,7 @@ public enum CompAssLineCasing implements ICompAssLineCasingType {
   private final String name;
   private final ResourceLocation resourceLocation;
 
-  CompAssLineCasing(ITier tier, String name, ResourceLocation resourceLocation) {
+  CompAssLineCasingB(ITier tier, String name, ResourceLocation resourceLocation) {
     this.tier = tier;
     this.name = name;
     this.resourceLocation = resourceLocation;
@@ -77,16 +77,16 @@ public enum CompAssLineCasing implements ICompAssLineCasingType {
     }
   }
 
-  public static CompAssLineCasing getByTier(int tier) {
+  public static CompAssLineCasingB getByTier(int tier) {
     return CompAssLine.All_CompasslineCasings_Tier.get(tier);
   }
 
   @Nullable
-  public static CompAssLineCasing getByName(@Nullable String name) {
+  public static CompAssLineCasingB getByName(@Nullable String name) {
     return CompAssLine.All_Compassline_Casings.get(name);
   }
 
-  public static CompAssLineCasing getByNameOrDefault(@Nullable String name) {
+  public static CompAssLineCasingB getByNameOrDefault(@Nullable String name) {
     var type = getByName(name);
     if (type == null) {
       return Compassline_Casing_LV;
