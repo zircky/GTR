@@ -368,8 +368,6 @@ public class GTRCustomeRecipes {
         .outputItems(FIELD_GENERATOR_UV)
         .duration(1800).EUt(VA[ZPM]).save(provider);
 
-
-
     ASSEMBLY_LINE_RECIPES.recipeBuilder("sensor_luv")
         .inputItems(frameGt, HSSS)
         .inputItems(ELECTRIC_MOTOR_LuV)

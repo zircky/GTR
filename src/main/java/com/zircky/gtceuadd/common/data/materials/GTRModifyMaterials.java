@@ -1,7 +1,5 @@
 package com.zircky.gtceuadd.common.data.materials;
 
-import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 
@@ -18,6 +16,7 @@ public class GTRModifyMaterials {
     UraniumRhodiumDinaquadide.addFlags(NO_UNIFICATION);
     EnrichedNaquadahTriniumEuropiumDuranide.addFlags(NO_UNIFICATION);
     RutheniumTriniumAmericiumNeutronate.addFlags(NO_UNIFICATION);
+    Tantalum.addFlags(GENERATE_ROD);
   }
 
 }

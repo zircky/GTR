@@ -1,4 +1,4 @@
-package com.zircky.gtceuadd.data.recipe;
+package com.zircky.gtceuadd.data.recipe.remove;
 
 
 //import com.gregtechceu.gtceu.common.data.GTItems;
