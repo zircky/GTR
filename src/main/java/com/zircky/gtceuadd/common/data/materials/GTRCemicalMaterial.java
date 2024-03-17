@@ -7,7 +7,9 @@ import com.gregtechceu.gtceu.api.fluids.attribute.FluidAttributes;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
+import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.SHINY;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
+import static com.zircky.gtceuadd.api.data.material.GTRMateralFlags.GENERATE_TRIPLE;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.Builder;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.SNDART_FLAGS;
@@ -17,9 +19,9 @@ public class GTRCemicalMaterial {
   public static final void register() {
     CuBe = Builder("cube")
         .ingot().dust()
-        .color(0xAC4A09)
+        .color(0xAC4A09).iconSet(SHINY)
         .components()
-        .appendFlags(SNDART_FLAGS)
+        .appendFlags(SNDART_FLAGS, GENERATE_TRIPLE)
         .blastTemp(1000, BlastProperty.GasTier.LOW)
         .buildAndRegister();
 

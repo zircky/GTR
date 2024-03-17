@@ -18,7 +18,7 @@ public class GTRBotaniaMaterial {
 
 
   public static final void register() {
-    ManaSteel = Builder("manasteel")
+    ManaSteel = Builder("mana_steel")
         .ingot().dust().fluid()
         .color(0xabe2fd).iconSet(METALLIC)
         .appendFlags(REF)
@@ -27,14 +27,14 @@ public class GTRBotaniaMaterial {
         .register()
         .setFormula("Ms", true);
 
-    Terrasteel = Builder("terrasteel")
+    Terrasteel = Builder("terra_steel")
         .ingot().dust().fluid()
         .color(0x5ec53c).iconSet(METALLIC)
         .appendFlags(REF)
         .register()
         .setFormula("Tr");
 
-    ElvenElementium = Builder("elven_elementium")
+    ElvenElementium = Builder("elementium")
         .ingot().dust().fluid()
         .color(0xdf3bd2).iconSet(METALLIC)
         .appendFlags(REF)

@@ -1,6 +1,10 @@
 package com.zircky.gtceuadd.common.data;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
+import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
+import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 import com.zircky.gtceuadd.common.data.materials.*;
 
 
@@ -224,4 +228,11 @@ public class GTRMaterials {
   public static Material ThoriumHydroxide; // Formula Th(NO3)4 только пыль
 
   public static Material CSolder;
+
+
+  public static void addFluid(Material material) {
+    material.setProperty(PropertyKey.FLUID, new FluidProperty());
+    material.getProperty(PropertyKey.FLUID).getStorage().enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder());
+  }
+
 }
