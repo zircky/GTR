@@ -1,0 +1,6 @@
+{
+  "parent": "gtceu:item/material_sets/shiny/rod_long",
+  "textures": {
+    "layer0": "gtceu:item/material_sets/magnetohydrodynamically_constrained_star_matter/stick_long"
+  }
+}

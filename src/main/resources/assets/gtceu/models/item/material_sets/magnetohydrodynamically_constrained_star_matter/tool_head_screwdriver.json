@@ -1,0 +1,6 @@
+{
+  "parent": "gtceu:item/material_sets/shiny/tool_head_screwdriver",
+  "textures": {
+    "layer0": "gtceu:item/material_sets/magnetohydrodynamically_constrained_star_matter/toolHeadScrewdriver"
+  }
+}

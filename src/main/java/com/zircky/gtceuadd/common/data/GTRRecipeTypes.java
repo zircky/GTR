@@ -11,6 +11,7 @@ import com.zircky.gtceuadd.GTCEuAdd;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeType;
 
+import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.GENERATOR;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.MULTIBLOCK;
 import static com.lowdragmc.lowdraglib.gui.texture.ProgressTexture.FillDirection.LEFT_TO_RIGHT;
 
@@ -31,6 +32,10 @@ public class GTRRecipeTypes {
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.ASSEMBLER);
 
+  public static final GTRecipeType XL_SC_STEAM_TURBINE_FUELS = register("xl_sc_steam_turbine", GENERATOR).setMaxIOSize(0, 0, 1, 1).setEUIO(IO.OUT)
+      .setSlotOverlay(false, true, true, GuiTextures.CENTRIFUGE_OVERLAY)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.TURBINE);
 
   public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
     var recipeType = new GTRecipeType(GTCEuAdd.id(name), group, proxyRecipes);

@@ -33,6 +33,9 @@ public class GTRMaterials {
   public static Material Bedrockium;
   public static Material CobaltIINitrate; //Formula Co(NO3)2 только пыль
   public static Material CobaltIIHydroxide; //Formula Co(OH)2 только пыль
+  public static Material ChaoticDraconium;
+  public static Material DynamicInfinity;
+
 
   // Chemical
   public static Material CuBe;
@@ -220,14 +223,24 @@ public class GTRMaterials {
   public static Material EnrichedNaquadahTriniumEuropiumDuranideBase;
   public static Material RutheniumTriniumAmericiumNeutronateBase;
 
-  public static Material Draconium;
-  public static Material AwakenedDraconium;
-
   //Nucler
   public static Material ThoriumNitrate; // Formula Th(NO3)4 только жидкость
   public static Material ThoriumHydroxide; // Formula Th(NO3)4 только пыль
 
   public static Material CSolder;
+
+  // GTNH
+  public static Material MagnetohydrodynamicallyConstrainedStarMatter;
+  public static Material WhiteDwarfMatter;
+  public static Material Eternity;
+  public static Material Magmatter;
+  public static Material Spacetime;
+  public static Material Universium;
+  public static Material SupercriticalSteam;
+  public static Material Draconium;
+  public static Material AwakenedDraconium;
+  public static Material MonolithAlloy; //Составт сплава: Steel, Cr, Ni, Co, Mn, Nb, V, Al, Si, Zn, Cu, Ti, Bi, Sn, Pb, Ag, Au, Pt, Rh, Pd, Re, Mg, Zr, Hf, Ir, (итрий), Mo, W, Ti, Ta Цвет "Серый"
+
 
 
   public static void addFluid(Material material) {

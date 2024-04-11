@@ -6,21 +6,32 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
+import com.gregtechceu.gtceu.api.machine.MetaMachine;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
+import com.gregtechceu.gtceu.api.machine.feature.multiblock.IRotorHolderMachine;
 import com.gregtechceu.gtceu.api.machine.multiblock.PartAbility;
 import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMachine;
 import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.Predicates;
+import com.gregtechceu.gtceu.api.pattern.TraceabilityPredicate;
+import com.gregtechceu.gtceu.api.pattern.predicates.SimplePredicate;
+import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
-import com.gregtechceu.gtceu.common.data.GTBlocks;
-import com.gregtechceu.gtceu.common.data.GTMaterials;
-import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
+import com.gregtechceu.gtceu.common.data.*;
+import com.gregtechceu.gtceu.common.machine.multiblock.generator.LargeTurbineMachine;
+import com.lowdragmc.lowdraglib.utils.BlockInfo;
+import com.zircky.gtceuadd.GTCEuAdd;
 import com.zircky.gtceuadd.api.block.multiblock.ComponentAssemblyLineM;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+
+import java.util.function.Supplier;
 
 import static com.gregtechceu.gtceu.api.GTValues.*;
-import static com.gregtechceu.gtceu.api.pattern.Predicates.abilities;
-import static com.gregtechceu.gtceu.api.pattern.Predicates.blocks;
+import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 //import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
@@ -109,12 +120,49 @@ public class GTRMachines {
           GTCEu.id("block/multiblock/vacuum_freezer"), false)
       .compassNodeSelf().register();
 
-/*  public final static MultiblockMachineDefinition NUCLER_REACTOR = GTRRegistries.REGISTRATE.multiblock("nucler_reactor", );
+//  public final static MultiblockMachineDefinition ExtremeHeatExchenger = GTRRegistries.REGISTRATE.multiblock("")
+
+  public final static MultiblockMachineDefinition XLTurboSCSteamTurbine = registerXlSCSteamTurbine("xl_turbo_sc_steam_turbine", UV,
+      GTRRecipeTypes.XL_SC_STEAM_TURBINE_FUELS, GTRCasingBlocks.ReinforcedSCTurbine, GTRCasingBlocks.TurbineShaft,
+      GTCEuAdd.id("block/casings/solid/reinforced_sc_turbine"),
+      GTCEu.id("block/multiblock/generator/large_steam_turbine"));
 
 
-  public static MultiblockMachineDefinition registerNuclerReactor(String name, int tier, GTRecipeType recipeType, Supplier<? extends Block> casing, ResourceLocation casingTexture, ResourceLocation overlayModel) {
-    return GTRRegistries.REGISTRATE.multiblock(name, holder -> new )
-  }*/
+  public static MultiblockMachineDefinition registerXlSCSteamTurbine(String name, int tier, GTRecipeType recipeType, Supplier<? extends Block> casing, Supplier<? extends Block> gear, ResourceLocation casingTexture, ResourceLocation overlayModel) {
+    return GTRRegistries.REGISTRATE.multiblock(name, holder -> new LargeTurbineMachine(holder, tier))
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeType(recipeType)
+        .recipeModifier(LargeTurbineMachine::recipeModifier, true)
+        .appearanceBlock(casing)
+        .pattern(definition -> FactoryBlockPattern.start()
+            .aisle("CCCC", "CHHC", "CCCC")
+            .aisle("CHHC", "RGGR", "CHHC")
+            .aisle("CCCC", "CSHC", "CCCC")
+            .where('S', controller(blocks(definition.getBlock())))
+            .where('G', blocks(gear.get()))
+            .where('C', blocks(casing.get()))
+            .where('R', new TraceabilityPredicate(new SimplePredicate(state -> MetaMachine.getMachine(state.getWorld(), state.getPos()) instanceof IRotorHolderMachine rotorHolder &&
+                state.getWorld().getBlockState(state.getPos().relative(rotorHolder.self().getFrontFacing())).isAir(),
+                () -> PartAbility.ROTOR_HOLDER.getAllBlocks().stream().map(BlockInfo::fromBlock).toArray(BlockInfo[]::new)))
+                .addTooltips(Component.translatable("gtceu.multiblock.pattern.clear_amount_3"))
+                .addTooltips(Component.translatable("gtceu.multiblock.pattern.error.limited.1", VN[tier]))
+                .setExactLimit(1)
+                .or(abilities(PartAbility.OUTPUT_ENERGY)).setExactLimit(1))
+            .where('H', blocks(casing.get())
+                .or(autoAbilities(definition.getRecipeTypes(), false, false, true, true, true, true))
+                .or(autoAbilities(true, true, false)))
+            .build())
+        .recoveryItems(() -> new ItemLike[]{GTItems.MATERIAL_ITEMS.get(TagPrefix.dustTiny, GTMaterials.Ash).get()})
+        .workableCasingRenderer(casingTexture, overlayModel, false)
+        .tooltips(
+            Component.translatable("gtceu.universal.tooltip.base_production_eut", V[tier] * 2),
+            Component.translatable("gtceu.multiblock.turbine.efficiency_tooltip", VNF[tier]))
+        .compassSections(GTCompassSections.TIER[HV])
+        .compassNode("xl_turbo_turbine")
+        .register();
+  }
+
+
 
   public static void init() {
 
