@@ -191,9 +191,9 @@ dependencies {
   modImplementation("com.tterrag.registrate:Registrate:${forge.versions.registrate.get()}")
 
   // JEI
-//  modCompileOnly(forge.jei.common.api) { transitive = false }
-//  modCompileOnly(forge.jei.forge.api) { transitive = false }
-//  modCompileOnly(forge.jei.forge) { transitive = false }
+  modCompileOnly(forge.jei.common.api) { transitive = false }
+  modCompileOnly(forge.jei.forge.api) { transitive = false }
+  modCompileOnly(forge.jei.forge) { transitive = false }
 
 
   // REI
@@ -201,11 +201,11 @@ dependencies {
   modCompileOnly forge.rei.api
   modImplementation forge.rei.forge
 
-//  modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
-//  modCompileOnly(forge.emi)
+  modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
+  modCompileOnly forge.emi
 
   // Botania
-  modImplementation(forge.botania) { transitive = false }
+//  modImplementation(forge.botania) { transitive = false }
 
   // ars Nouveau
   modImplementation(forge.arsnouveau) { transitive = false }

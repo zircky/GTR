@@ -6,7 +6,6 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipeSerializer;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.common.data.GTSoundEntries;
-import com.lowdragmc.lowdraglib.gui.texture.ProgressTexture;
 import com.zircky.gtceuadd.GTCEuAdd;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -18,12 +17,6 @@ import static com.lowdragmc.lowdraglib.gui.texture.ProgressTexture.FillDirection
 public class GTRRecipeTypes {
   public static final String ELECTRIC = "electric";
 
-  public static final GTRecipeType SCANNER_RECIPES = register("scanner", ELECTRIC).setMaxIOSize(2, 1, 0, 0).setEUIO(IO.IN)
-      .setSlotOverlay(false, false, GuiTextures.PRESS_OVERLAY_1)
-      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressTexture.FillDirection.LEFT_TO_RIGHT)
-      .setSteamProgressBar(GuiTextures.PROGRESS_BAR_ARROW_STEAM, ProgressTexture.FillDirection.LEFT_TO_RIGHT)
-      .setSound(GTSoundEntries.FURNACE);
-
   public static final GTRecipeType ComponentAssemblyLineRecipes = register("component_assembly_line", MULTIBLOCK).setMaxIOSize(12, 1, 12, 0).setEUIO(IO.IN)
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.ASSEMBLER);
@@ -32,7 +25,7 @@ public class GTRRecipeTypes {
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.ASSEMBLER);
 
-  public static final GTRecipeType XL_SC_STEAM_TURBINE_FUELS = register("xl_sc_steam_turbine", GENERATOR).setMaxIOSize(0, 0, 1, 1).setEUIO(IO.OUT)
+  public static final GTRecipeType SC_STEAM_TURBINE_FUELS = register("xl_sc_steam_turbine", GENERATOR).setMaxIOSize(0, 0, 1, 1).setEUIO(IO.OUT)
       .setSlotOverlay(false, true, true, GuiTextures.CENTRIFUGE_OVERLAY)
       .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.TURBINE);

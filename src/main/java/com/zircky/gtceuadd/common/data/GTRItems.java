@@ -13,12 +13,12 @@ public class GTRItems {
     .lang("Logic Chip")
     .defaultModel()
     .register();
-  public static ItemEntry<Item> ADVANCED_LOGIC_CHIP = REGISTRATE.item("advanced_logic_chip", Item::new)
-    .lang("Advanced Logic Chip")
+  public static ItemEntry<Item> FLUID_LOGIC_CHIP = REGISTRATE.item("fluid_logic_chip", Item::new)
+      .lang("Fluid Logic Chip")
     .defaultModel()
     .register();
-  public static ItemEntry<Item> BOUNDARY_LOGIC_CHIP = REGISTRATE.item("boundary_logic_chip", Item::new)
-    .lang("Boundary Logic Chip")
+  public static ItemEntry<Item> MANA_LOGIC_CHIP = REGISTRATE.item("mana_logic_chip", Item::new)
+      .lang("Mana Logic Chip")
     .defaultModel()
     .register();
   public static ItemEntry<Item> FAN = REGISTRATE.item("fan", Item::new)
@@ -57,20 +57,6 @@ public class GTRItems {
     .lang("Aluminum Casing")
     .defaultModel()
     .register();
-
-  public static ItemEntry<Item> InfinityCatalyst = REGISTRATE.item("infinity_catalyst", Item::new)
-      .lang("Infinity Catalyst")
-      .defaultModel()
-      .register();
-
-  public static ItemEntry<Item> ItemChipCore = REGISTRATE.item("item_chip_core", Item::new)
-      .lang("Item Chip core")
-      .defaultModel()
-      .register();
-  public static ItemEntry<Item> FluidChipCore = REGISTRATE.item("fluid_chip_core", Item::new)
-      .lang("Fluid Chip core")
-      .defaultModel()
-      .register();
 
   public static ItemEntry<Item> InfinityStar = REGISTRATE.item("infinity_star", Item::new)
       .lang("Infinity Star")

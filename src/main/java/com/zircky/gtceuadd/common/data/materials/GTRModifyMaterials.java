@@ -3,6 +3,7 @@ package com.zircky.gtceuadd.common.data.materials;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.addFluid;
+import static com.zircky.gtceuadd.common.data.GTRMaterials.addIngot;
 
 public class GTRModifyMaterials {
   public static void init(){
@@ -20,6 +21,12 @@ public class GTRModifyMaterials {
     Tantalum.addFlags(GENERATE_ROD);
     Iridium.addFlags(GENERATE_DENSE);
     TitaniumTungstenCarbide.addFlags(GENERATE_BOLT_SCREW, GENERATE_DENSE);
+
+    addIngot(Graphite);
+    addIngot(Lithium);
+    addIngot(Sodium);
+    addIngot(Calcium);
+    addIngot(Boron);
 
     addFluid(AmmoniumChloride);
   }

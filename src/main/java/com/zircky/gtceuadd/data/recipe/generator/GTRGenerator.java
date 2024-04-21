@@ -7,7 +7,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 
 import java.util.function.Consumer;
 
-import static com.zircky.gtceuadd.common.data.GTRRecipeTypes.XL_SC_STEAM_TURBINE_FUELS;
+import static com.zircky.gtceuadd.common.data.GTRRecipeTypes.SC_STEAM_TURBINE_FUELS;
 
 public class GTRGenerator {
 
@@ -16,10 +16,10 @@ public class GTRGenerator {
   }
 
   public static void generator(Consumer<FinishedRecipe> provider) {
-    XL_SC_STEAM_TURBINE_FUELS.recipeBuilder("xl-sc-steam")
+    SC_STEAM_TURBINE_FUELS.recipeBuilder("sc-steam")
         .inputFluids(GTRMaterials.SupercriticalSteam.getFluid(1500))
         .outputFluids(GTMaterials.Steam.getFluid(650))
-        .duration(50)
+        .duration(500)
         .EUt(-GTValues.VA[GTValues.ZPM])
         .save(provider);
   }

@@ -80,6 +80,10 @@ public class GTRCustomeRecipes {
         .inputFluids(SolderingAlloy.getFluid(L))
         .inputFluids(Lubricant.getFluid(250))
         .outputItems(ELECTRIC_MOTOR_LuV)
+        .scannerResearch(b -> b
+            .researchStack(ELECTRIC_MOTOR_IV.asStack())
+            .duration(1200)
+            .EUt(VA[IV]))
         .duration(650).EUt(VA[IV]).save(provider);
 
     ASSEMBLY_LINE_RECIPES.recipeBuilder(GTCEu.id("electric_motor_zpm"))
@@ -95,6 +99,10 @@ public class GTRCustomeRecipes {
         .inputFluids(SolderingAlloy.getFluid(L * 3))
         .inputFluids(Lubricant.getFluid(L))
         .outputItems(ELECTRIC_MOTOR_ZPM)
+        .scannerResearch(b -> b
+            .researchStack(ELECTRIC_MOTOR_LuV.asStack())
+            .duration(2400)
+            .EUt(VA[LuV]))
         .duration(1200).EUt(VA[LuV]).save(provider);
 
     ASSEMBLY_LINE_RECIPES.recipeBuilder(GTCEu.id("electric_motor_uv"))
@@ -114,6 +122,10 @@ public class GTRCustomeRecipes {
         .inputFluids(Lubricant.getFluid(L * 2))
         .inputFluids(Naquadria.getFluid(L * 5))
         .outputItems(ELECTRIC_MOTOR_UV)
+        .scannerResearch(b -> b
+            .researchStack(ELECTRIC_MOTOR_ZPM.asStack())
+            .duration(3600)
+            .EUt(VA[ZPM]))
         .duration(1800).EUt(VA[ZPM]).save(provider);
 
     ASSEMBLY_LINE_RECIPES.recipeBuilder(GTCEu.id("electric_motor_uhv"))

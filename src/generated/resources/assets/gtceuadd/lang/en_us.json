@@ -1,8 +1,8 @@
 {
   "block.gtceuadd.component_assembly_line": "Component Assembly Line",
   "item.gtceuadd.logic_chip": "Logic Chip",
-  "item.gtceuadd.advanced_logic_chip": "Advanced Logic Chip",
-  "item.gtceuadd.boundary_logic_chip": "Boundary Logic Chip",
+  "item.gtceuadd.fluid_logic_chip": "Fluid Logic Chip",
+  "item.gtceuadd.mana_logic_chip": "Mana Logic Chip",
   "item.gtceuadd.fan": "Turbine Fan",
   "item.gtceuadd.tungsten_carbide_casing": "Tungsten Carbide Casing",
   "item.gtceuadd.nimonic_casing": "Nimonic Casing",
@@ -12,7 +12,6 @@
   "item.gtceuadd.iron_casing": "Iron Casing",
   "item.gtceuadd.cupronickel_casing": "Cupronickel Casing",
   "item.gtceuadd.aluminum_casing": "Aluminum Casing",
-  "item.gtceuadd.infinity_catalyst": "Infinity Catalyst",
   "block.gtceuadd.compassline_casing_lv": "CompAssLine Casing LV",
   "block.gtceuadd.compassline_casing_mv": "CompAssLine Casing MV",
   "block.gtceuadd.compassline_casing_hv": "CompAssLine Casing HV",

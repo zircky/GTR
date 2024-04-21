@@ -5,7 +5,6 @@ import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
-import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.machine.MetaMachine;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
 import com.gregtechceu.gtceu.api.machine.feature.multiblock.IRotorHolderMachine;
@@ -23,6 +22,7 @@ import com.lowdragmc.lowdraglib.utils.BlockInfo;
 import com.zircky.gtceuadd.GTCEuAdd;
 import com.zircky.gtceuadd.api.block.multiblock.ComponentAssemblyLineM;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
+import com.zircky.gtceuadd.common.machine.multiblock.generator.XLLargeTurbineMachine;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
@@ -33,14 +33,12 @@ import java.util.function.Supplier;
 import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
-import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 //import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 
 
 public class GTRMachines {
   public final static int[] ALL_TIERS = GTValues.tiersBetween(ULV, GTCEuAPI.isHighTier() ? MAX : UHV);
 
-  public final static MachineDefinition[] SCANNER = registerSimpleMachines("scanner", GTRRecipeTypes.SCANNER_RECIPES);
   public final static MultiblockMachineDefinition COMPONENT_ASSEMBLY_LINE = GTRRegistries.REGISTRATE.multiblock("component_assembly_line", ComponentAssemblyLineM::new)
       .langValue("Component Assembly Line")
       .rotationState(RotationState.NON_Y_AXIS)
@@ -122,13 +120,58 @@ public class GTRMachines {
 
 //  public final static MultiblockMachineDefinition ExtremeHeatExchenger = GTRRegistries.REGISTRATE.multiblock("")
 
-  public final static MultiblockMachineDefinition XLTurboSCSteamTurbine = registerXlSCSteamTurbine("xl_turbo_sc_steam_turbine", UV,
-      GTRRecipeTypes.XL_SC_STEAM_TURBINE_FUELS, GTRCasingBlocks.ReinforcedSCTurbine, GTRCasingBlocks.TurbineShaft,
+  public final static MultiblockMachineDefinition TurboSCSteamTurbine = registerXlSCSteamTurbine("turbo_sc_steam_turbine", ZPM,
+      GTRRecipeTypes.SC_STEAM_TURBINE_FUELS, GTRCasingBlocks.ReinforcedSCTurbine, GTRCasingBlocks.TurbineShaft,
       GTCEuAdd.id("block/casings/solid/reinforced_sc_turbine"),
       GTCEu.id("block/multiblock/generator/large_steam_turbine"));
 
 
+  public final static MultiblockMachineDefinition XLTurboSCSteamTurbine = registerXlSCSteamTurbine("xl_turbo_sc_steam_turbine", UV,
+      GTRRecipeTypes.SC_STEAM_TURBINE_FUELS, GTRCasingBlocks.ReinforcedSCTurbine, GTRCasingBlocks.TurbineShaft,
+      GTCEuAdd.id("block/casings/solid/reinforced_sc_turbine"),
+      GTCEu.id("block/multiblock/generator/large_steam_turbine"));
+
   public static MultiblockMachineDefinition registerXlSCSteamTurbine(String name, int tier, GTRecipeType recipeType, Supplier<? extends Block> casing, Supplier<? extends Block> gear, ResourceLocation casingTexture, ResourceLocation overlayModel) {
+    return GTRRegistries.REGISTRATE.multiblock(name, holder -> new XLLargeTurbineMachine(holder, tier))
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeType(recipeType)
+        .recipeModifier(LargeTurbineMachine::recipeModifier, true)
+        .appearanceBlock(casing)
+        .pattern(definition -> FactoryBlockPattern.start()
+            .aisle("CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC")
+            .aisle("CCCCCCC", "RGGGGGR", "CCCCCCC", "CCCCCCC", "RGGGGGR", "CCCCCCC", "CCCCCCC", "RGGGGGR", "CCCCCCC")
+            .aisle("CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCMMMCC")
+            .aisle("HCCCCCH", "HCCCCCH", "HCCCCCH", "HCCCCCH", "HCCCCCH", "HCCCCCH", "HCCCCCH", "HCCCCCH", "HCMSMCH")
+            .aisle("CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCMMMCC")
+            .aisle("CCCCCCC", "RGGGGGR", "CCCCCCC", "CCCCCCC", "RGGGGGR", "CCCCCCC", "CCCCCCC", "RGGGGGR", "CCCCCCC")
+            .aisle("CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC")
+            .where('S', controller(blocks(definition.getBlock())))
+            .where('G', blocks(gear.get()))
+            .where('C', blocks(casing.get()))
+            .where('R', new TraceabilityPredicate(new SimplePredicate(state -> MetaMachine.getMachine(state.getWorld(), state.getPos()) instanceof IRotorHolderMachine rotorHolder &&
+                    state.getWorld().getBlockState(state.getPos().relative(rotorHolder.self().getFrontFacing())).isAir(),
+                    () -> PartAbility.ROTOR_HOLDER.getAllBlocks().stream().map(BlockInfo::fromBlock).toArray(BlockInfo[]::new)))
+                    .addTooltips(Component.translatable("gtceu.multiblock.pattern.clear_amount_3"))
+                    .addTooltips(Component.translatable("gtceu.multiblock.pattern.error.limited.1", VN[tier]))
+                /*.or(abilities(PartAbility.OUTPUT_ENERGY)).setExactLimit(1)*/)
+            .where('H', blocks(casing.get())
+                .or(autoAbilities(definition.getRecipeTypes(), false, false, true, true, true, true))
+                .or(autoAbilities(true, false, false))
+                .or(abilities(PartAbility.OUTPUT_ENERGY)).setExactLimit(1))
+            .where('M', blocks(casing.get())
+                .or(autoAbilities(false, true, false)))
+            .build())
+        .recoveryItems(() -> new ItemLike[]{GTItems.MATERIAL_ITEMS.get(TagPrefix.dustTiny, GTMaterials.Ash).get()})
+        .workableCasingRenderer(casingTexture, overlayModel, false)
+        .tooltips(
+            Component.translatable("gtceu.universal.tooltip.base_production_eut", V[tier] * 12),
+            Component.translatable("gtceu.multiblock.turbine.efficiency_tooltip", VNF[tier]))
+        .compassSections(GTCompassSections.TIER[HV])
+        .compassNode("xl_turbo_turbine")
+        .register();
+  }
+
+  public static MultiblockMachineDefinition registerSCSteamTurbine(String name, int tier, GTRecipeType recipeType, Supplier<? extends Block> casing, Supplier<? extends Block> gear, ResourceLocation casingTexture, ResourceLocation overlayModel) {
     return GTRRegistries.REGISTRATE.multiblock(name, holder -> new LargeTurbineMachine(holder, tier))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType(recipeType)

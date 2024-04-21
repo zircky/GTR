@@ -1,8 +1,7 @@
 package com.zircky.gtceuadd.common.data;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty;
-import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.*;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 import com.zircky.gtceuadd.common.data.materials.*;
@@ -19,6 +18,7 @@ public class GTRMaterials {
     GTRTungstenLine.register();
     GTRSuperconductor.register();
     GTRBotaniaMaterial.register();
+    NucC.register();
 //    GTRFluid.register();
   }
 
@@ -242,10 +242,60 @@ public class GTRMaterials {
   public static Material MonolithAlloy; //Составт сплава: Steel, Cr, Ni, Co, Mn, Nb, V, Al, Si, Zn, Cu, Ti, Bi, Sn, Pb, Ag, Au, Pt, Rh, Pd, Re, Mg, Zr, Hf, Ir, (итрий), Mo, W, Ti, Ta Цвет "Серый"
 
 
+  //NuclerCraft
+  public static Material ManganeseOxide; //
+  public static Material NiobiumTin; //
+  public static Material Zircaloy; //
+  public static Material Thermoconducting; //
+  public static Material ZirconiumMolybdenum; //
+  public static Material Extreme; //
+  //public static Material Magnesium; //
+  public static Material TinSilver; //
+  public static Material PyroliticCarbon; //
+  public static Material ManganeseDioxide; //
+  public static Material ToughAlloy; //
+  //public static Material Potassium; //
+  public static Material Ferroboron; //
+  public static Material SuperAlloy; //
+  public static Material Aluminum; //
+  public static Material SicSicCmc; //
+  public static Material HardCarbon; //
+  //public static Material Zirconium; //
+  public static Material Strontium; //
+  public static Material LithiumManganeseDioxide; //
+  public static Material LeadPlatinum; //
+  public static Material Hafnium; //
+
+  //gem
+  public static Material BoronArsenide; //
+  public static Material Carobbiite; //
+  public static Material Villiaumite; //
+  public static Material Fluorite; //
+  public static Material BoronNitride; //
+  public static Material Rhodochrosite; //
+
 
   public static void addFluid(Material material) {
     material.setProperty(PropertyKey.FLUID, new FluidProperty());
     material.getProperty(PropertyKey.FLUID).getStorage().enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder());
   }
+
+  public static void addIngot(Material material) {
+    material.setProperty(PropertyKey.INGOT, new IngotProperty());
+  }
+
+  public static void addDust(Material material) {
+    material.setProperty(PropertyKey.DUST, new DustProperty());
+  }
+
+  public static void addGas(Material material) {
+    material.setProperty(PropertyKey.FLUID, new FluidProperty());
+    material.getProperty(PropertyKey.FLUID).getStorage().enqueueRegistration(FluidStorageKeys.GAS, new FluidBuilder());
+  }
+
+  public static void addOre(Material material) {
+    material.setProperty(PropertyKey.ORE, new OreProperty());
+  }
+
 
 }
