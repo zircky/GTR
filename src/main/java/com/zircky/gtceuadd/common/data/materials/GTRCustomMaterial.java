@@ -115,5 +115,11 @@ public class GTRCustomMaterial {
         .color(0xFFFFFF).iconSet(MagnetohydrodynamicallyConstrainedStarMatterIcon)
         .appendFlags(SNDART_FLAGS)
         .buildAndRegister();
+
+    MonolithAlloy = Builder("monolith_alloy")
+        .ingot().dust().fluid()
+        .iconSet(METALLIC)
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
   }
 }

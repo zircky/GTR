@@ -241,7 +241,6 @@ public class GTRMaterials {
   public static Material AwakenedDraconium;
   public static Material MonolithAlloy; //Составт сплава: Steel, Cr, Ni, Co, Mn, Nb, V, Al, Si, Zn, Cu, Ti, Bi, Sn, Pb, Ag, Au, Pt, Rh, Pd, Re, Mg, Zr, Hf, Ir, (итрий), Mo, W, Ti, Ta Цвет "Серый"
 
-
   //NuclerCraft
   public static Material ManganeseOxide; //
   public static Material NiobiumTin; //
@@ -261,10 +260,10 @@ public class GTRMaterials {
   public static Material SicSicCmc; //
   public static Material HardCarbon; //
   //public static Material Zirconium; //
-  public static Material Strontium; //
+//  public static Material Strontium;
   public static Material LithiumManganeseDioxide; //
   public static Material LeadPlatinum; //
-  public static Material Hafnium; //
+//  public static Material Hafnium;
 
   //gem
   public static Material BoronArsenide; //

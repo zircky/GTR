@@ -79,11 +79,11 @@ public class GTRCustomeRecipes {
         .inputItems(cableGtOctal, YttriumBariumCuprate, 6)
         .inputFluids(SolderingAlloy.getFluid(L))
         .inputFluids(Lubricant.getFluid(250))
-        .outputItems(ELECTRIC_MOTOR_LuV)
         .scannerResearch(b -> b
             .researchStack(ELECTRIC_MOTOR_IV.asStack())
             .duration(1200)
             .EUt(VA[IV]))
+        .outputItems(ELECTRIC_MOTOR_LuV.asStack())
         .duration(650).EUt(VA[IV]).save(provider);
 
     ASSEMBLY_LINE_RECIPES.recipeBuilder(GTCEu.id("electric_motor_zpm"))

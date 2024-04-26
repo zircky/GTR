@@ -43,6 +43,95 @@ public class NucC {
         .blastTemp(2900)
         .buildAndRegister();
 
+    Extreme = Builder("extreme")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    TinSilver = Builder("tin_silver")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    PyroliticCarbon = Builder("pyrolitic_carbon")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    ManganeseDioxide = Builder("manganese_dioxide")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    ToughAlloy = Builder("tough_alloy")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    Ferroboron = Builder("ferroboron")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    SuperAlloy = Builder("super_alloy")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    Aluminum = Builder("aluminum")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    SicSicCmc = Builder("sic_sic_cmc")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    HardCarbon = Builder("hard_carbon")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    BoronArsenide = Builder("boron_arsenide")
+        .gem().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    LithiumManganeseDioxide = Builder("lithium_manganese_dioxide")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    LeadPlatinum = Builder("lead_platinum")
+        .ingot().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    Carobbiite = Builder("carobbiite")
+        .gem().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    Villiaumite = Builder("villiaumite")
+        .gem().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    Fluorite = Builder("fluorite")
+        .gem().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    BoronNitride = Builder("rhodochrosite")
+        .gem().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
+
+    Rhodochrosite = Builder("boron_nitride")
+        .gem().dust().fluid()
+        .appendFlags(SNDART_FLAGS)
+        .buildAndRegister();
 
   }
 }

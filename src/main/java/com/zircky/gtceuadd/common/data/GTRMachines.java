@@ -159,7 +159,7 @@ public class GTRMachines {
                 .or(autoAbilities(true, false, false))
                 .or(abilities(PartAbility.OUTPUT_ENERGY)).setExactLimit(1))
             .where('M', blocks(casing.get())
-                .or(autoAbilities(false, true, false)))
+                .or(autoAbilities(false, true, false).setExactLimit(1)))
             .build())
         .recoveryItems(() -> new ItemLike[]{GTItems.MATERIAL_ITEMS.get(TagPrefix.dustTiny, GTMaterials.Ash).get()})
         .workableCasingRenderer(casingTexture, overlayModel, false)
