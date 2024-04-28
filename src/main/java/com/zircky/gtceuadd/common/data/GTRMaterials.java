@@ -1,10 +1,17 @@
 package com.zircky.gtceuadd.common.data;
 
+import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
+import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag;
+import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.*;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
+import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
+import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.zircky.gtceuadd.common.data.materials.*;
+
+import java.util.Collection;
 
 
 @SuppressWarnings("unused")
@@ -295,6 +302,158 @@ public class GTRMaterials {
   public static void addOre(Material material) {
     material.setProperty(PropertyKey.ORE, new OreProperty());
   }
+
+  public static ToolProperty toolStats(float harvestSpeed, float attackDamage, int durability, int harvestLevel, int enchantability, GTToolType... types) {
+    return ToolProperty.Builder.of(harvestSpeed, attackDamage, durability, harvestLevel).enchantability(enchantability).addTypes(types).build();
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet, String formula, int blastTemp, BlastProperty.GasTier gasTier, int eutOverride) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .blastTemp(blastTemp, gasTier, eutOverride)
+        .buildAndRegister()
+        .setFormula(formula, true);
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet, String formula, int blastTemp, BlastProperty.GasTier gasTier, int eutOverride, int durationOverride) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .blastTemp(blastTemp, gasTier, eutOverride, durationOverride)
+        .buildAndRegister()
+        .setFormula(formula, true);
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet, int blastTemp, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .blastTemp(blastTemp)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet, int blastTemp) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .blastTemp(blastTemp)
+        .buildAndRegister();
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .buildAndRegister();
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet, FluidStorageKey key, FluidBuilder builder, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid(key, builder)
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material IngotBuilder(String id, int color, int color1, MaterialIconSet iconSet, String formula, MaterialFlag... flags) {
+    return new Material.Builder(GTCEu.id(id))
+        .ingot().dust().fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .flags(flags)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+
+  public static Material DustBuilder(String id, int color, int color1, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .buildAndRegister();
+  }
+
+  public static Material DustBuilder(String id, int color, int color1, MaterialIconSet iconSet, Collection<MaterialFlag> flags, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .buildAndRegister()
+        .setFormula(formula, true);
+  }
+
+  public static Material DustBuilder(String id, int color, int color1, MaterialIconSet iconSet, String formula, MaterialFlag... flags) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .buildAndRegister();
+  }
+
+  public static Material DustCusBuilder(String id, MaterialIconSet iconSet, Collection<MaterialFlag> flags, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust().iconSet(iconSet)
+        .appendFlags(flags)
+        .buildAndRegister()
+        .setFormula(formula, true);
+  }
+
+  public static Material DustCusBuilder(String id, MaterialIconSet iconSet, String formula, MaterialFlag... flags) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust().iconSet(iconSet)
+        .flags(flags)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material GemBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .gem().dust()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .buildAndRegister();
+  }
+
+  public static Material GemBuilder(String id, int color, int color1, Collection<MaterialFlag> flags, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .gem().dust()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .appendFlags(flags)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material GemBuilder(String id, int color, int color1, MaterialIconSet iconSet, String formula, MaterialFlag... flags) {
+    return new Material.Builder(GTCEu.id(id))
+        .gem().dust()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .flags(flags)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material FluidBuilder(String id, int color, int color1, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .buildAndRegister();
+  }
+
+  public static Material FluidBuilder(String id, int color, int color1, FluidStorageKey key, FluidBuilder builder, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid(key, builder)
+        .color(color).secondaryColor(color1)
+        .iconSet(iconSet)
+        .buildAndRegister();
+  }
+
 
 
 }

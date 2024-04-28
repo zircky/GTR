@@ -1,137 +1,35 @@
 package com.zircky.gtceuadd.common.data.materials;
 
-import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
+import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.MAGNETIC;
+import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.METALLIC;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
-import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.Builder;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.SNDART_FLAGS;
 
 public class NucC {
   public static final void register() {
-    ManganeseOxide = Builder("manganese_oxide")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .color(0x1A3F0D).secondaryColor(0x425E17)
-        .components(Manganese, 1, Oxygen, 1)
-        .blastTemp(1924)
-        .buildAndRegister();
-
-    NiobiumTin = Builder("niobium_tin")
-        .ingot().dust().fluid()
-        .color(0xC4C4C4).secondaryColor(0xC0C0C0)
-        .appendFlags(SNDART_FLAGS)
-        .blastTemp(2403)
-        .components(Niobium, 3, Tin, 1)
-        .buildAndRegister();
-
-    Zircaloy = Builder("zircaloy")
-        .ingot().dust().fluid()
-        .color(0xF6FAF5)
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Thermoconducting = Builder("thermoconducting")
-        .ingot().dust().fluid()
-        .color(0x354630).secondaryColor(0x343B29)
-        .appendFlags(SNDART_FLAGS)
-        .blastTemp(2500)
-        .buildAndRegister();
-
-    ZirconiumMolybdenum = Builder("zirconium_molybdenum")
-        .ingot().dust().fluid()
-        .color(0xF3F9F1).secondaryColor(0xFFFFFF)
-        .appendFlags(SNDART_FLAGS)
-        .blastTemp(2900)
-        .buildAndRegister();
-
-    Extreme = Builder("extreme")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    TinSilver = Builder("tin_silver")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    PyroliticCarbon = Builder("pyrolitic_carbon")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    ManganeseDioxide = Builder("manganese_dioxide")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    ToughAlloy = Builder("tough_alloy")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Ferroboron = Builder("ferroboron")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    SuperAlloy = Builder("super_alloy")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Aluminum = Builder("aluminum")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    SicSicCmc = Builder("sic_sic_cmc")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    HardCarbon = Builder("hard_carbon")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    BoronArsenide = Builder("boron_arsenide")
-        .gem().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    LithiumManganeseDioxide = Builder("lithium_manganese_dioxide")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    LeadPlatinum = Builder("lead_platinum")
-        .ingot().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Carobbiite = Builder("carobbiite")
-        .gem().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Villiaumite = Builder("villiaumite")
-        .gem().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Fluorite = Builder("fluorite")
-        .gem().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    BoronNitride = Builder("rhodochrosite")
-        .gem().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Rhodochrosite = Builder("boron_nitride")
-        .gem().dust().fluid()
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
+    ManganeseOxide = IngotBuilder("manganese_oxide", 0x1A3F0D, 0x425E17, SNDART_FLAGS, METALLIC, 1924, "MnO");
+    NiobiumTin = IngotBuilder("niobium_tin", 0xC4C4C4, 0xC0C0C0, SNDART_FLAGS, MAGNETIC, 2403, "Nb3Sn");
+    Zircaloy = IngotBuilder("zircaloy", 0xF6FAF5, 0xFFCC00, SNDART_FLAGS, MAGNETIC);
+    Thermoconducting = IngotBuilder("thermoconducting", 0x354630, 0x343B29, SNDART_FLAGS, MAGNETIC, 2500);
+    ZirconiumMolybdenum = IngotBuilder("zirconium_molybdenum", 0xF3F9F1, 0xFFFFFF, SNDART_FLAGS, MAGNETIC, 2900);
+    Extreme = IngotBuilder("extreme", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    TinSilver = IngotBuilder("tin_silver", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    PyroliticCarbon = IngotBuilder("pyrolitic_carbon", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    ManganeseDioxide = IngotBuilder("manganese_dioxide", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    ToughAlloy = IngotBuilder("tough_alloy", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    Ferroboron = IngotBuilder("ferroboron", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    SuperAlloy = IngotBuilder("super_alloy", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    Aluminum = IngotBuilder("aluminum", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    SicSicCmc = IngotBuilder("sic_sic_cmc", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    HardCarbon = IngotBuilder("hard_carbon", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    LithiumManganeseDioxide = IngotBuilder("lithium_manganese_dioxide", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    LeadPlatinum = IngotBuilder("lead_platinum", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    BoronArsenide = GemBuilder("boron_arsenide", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    Carobbiite = GemBuilder("carobbiite", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    Villiaumite = GemBuilder("villiaumite", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    Fluorite = GemBuilder("fluorite", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    BoronNitride = GemBuilder("boron_nitride", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
+    Rhodochrosite = GemBuilder("rhodochrosite", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MAGNETIC);
 
   }
 }

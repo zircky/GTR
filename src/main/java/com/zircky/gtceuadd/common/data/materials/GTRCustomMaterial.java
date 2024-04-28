@@ -17,17 +17,15 @@ import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.SNDART_F
 public class GTRCustomMaterial {
 
   public static final void register() {
-
     Infinity = Builder("infinity")
         .ingot().fluid(FluidStorageKeys.LIQUID, new FluidBuilder().temperature(35200).customStill()).ore().dust()
         .appendFlags(SNDART_FLAGS, DECOMPOSITION_BY_ELECTROLYZING)
         .color(0xFFFFFF).iconSet(InfinityIcon)
         .fluidPipeProperties(10000000, 200000, true)
-
         .blastTemp(10800, BlastProperty.GasTier.HIGHEST, GTValues.VA[GTValues.UHV], 54562)
         .cableProperties(GTValues.V[GTValues.MAX], 8192, 0, true, 30)
         .rotorStats(256.0f, 21.0f,262144000)
-        .toolStats(ToolProperty.Builder.of(256.0f, 21.0f, 262144000, 17).enchantability(20).addTypes(GTToolType.MORTAR).build())
+        .toolStats(toolStats(256.0f, 21.0f, 262144000, 17, 20, GTToolType.MORTAR))
         .buildAndRegister();
 
     InfinityCatalyst = Builder("infinity_catalyst")
@@ -93,33 +91,10 @@ public class GTRCustomMaterial {
         .buildAndRegister()
         .setFormula("*DI*", true);
 
-    WhiteDwarfMatter = Builder("white_dwarf_matter")
-        .ingot().dust()
-        .iconSet(WhiteDwarfMatterIcon).secondaryColor(0xFEFDFB)
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    Eternity = Builder("eternity")
-        .ingot().dust()
-        .iconSet(EternityIcon)
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    SupercriticalSteam = Builder("sc_steam")
-        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder().temperature(650))
-        .color(0x1C1C1C)
-        .buildAndRegister();
-
-    MagnetohydrodynamicallyConstrainedStarMatter = Builder("magnetohydrodynamically_constrained_star_matter")
-        .ingot().dust().fluid(FluidStorageKeys.LIQUID, new FluidBuilder().temperature(1870).customStill())
-        .color(0xFFFFFF).iconSet(MagnetohydrodynamicallyConstrainedStarMatterIcon)
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
-
-    MonolithAlloy = Builder("monolith_alloy")
-        .ingot().dust().fluid()
-        .iconSet(METALLIC)
-        .appendFlags(SNDART_FLAGS)
-        .buildAndRegister();
+    WhiteDwarfMatter = IngotBuilder("white_dwarf_matter", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, WhiteDwarfMatterIcon, "");
+    Eternity = IngotBuilder("eternity", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, EternityIcon, "");
+    SupercriticalSteam = FluidBuilder("sc_steam", 0x1C1C1C, 0x1C1C1C, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(650), SHINY);
+    MagnetohydrodynamicallyConstrainedStarMatter = IngotBuilder("magnetohydrodynamically_constrained_star_matter", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MagnetohydrodynamicallyConstrainedStarMatterIcon, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(1870).customStill(), "");
+    MonolithAlloy = IngotBuilder("", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, METALLIC, "");
   }
 }
