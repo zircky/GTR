@@ -385,6 +385,27 @@ public class GTRMaterials {
         .buildAndRegister();
   }
 
+  public static Material DustBuilder(String id, int color, int color1, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material DustBuilder(String id, int color, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).iconSet(iconSet)
+        .buildAndRegister();
+  }
+
+  public static Material DustBuilder(String id, int color, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).iconSet(iconSet)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
   public static Material DustBuilder(String id, int color, int color1, MaterialIconSet iconSet, Collection<MaterialFlag> flags, String formula) {
     return new Material.Builder(GTCEu.id(id))
         .dust()
@@ -393,11 +414,26 @@ public class GTRMaterials {
         .setFormula(formula, true);
   }
 
+  public static Material DustBuilder(String id, int color, MaterialIconSet iconSet, Collection<MaterialFlag> flags, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).iconSet(iconSet)
+        .buildAndRegister()
+        .setFormula(formula, true);
+  }
+
   public static Material DustBuilder(String id, int color, int color1, MaterialIconSet iconSet, String formula, MaterialFlag... flags) {
     return new Material.Builder(GTCEu.id(id))
         .dust()
         .color(color).secondaryColor(color1).iconSet(iconSet)
-        .buildAndRegister();
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material DustBuilder(String id, int color, MaterialIconSet iconSet, String formula, MaterialFlag... flags) {
+    return new Material.Builder(GTCEu.id(id))
+        .dust()
+        .color(color).iconSet(iconSet)
+        .buildAndRegister().setFormula(formula, true);
   }
 
   public static Material DustCusBuilder(String id, MaterialIconSet iconSet, Collection<MaterialFlag> flags, String formula) {
@@ -439,6 +475,12 @@ public class GTRMaterials {
         .buildAndRegister().setFormula(formula, true);
   }
 
+  public static Material FluidBuilder(String id, int color, int color1, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid()
+        .color(color).secondaryColor(color1).iconSet(iconSet)
+        .buildAndRegister().setFormula(formula, true);
+  }
   public static Material FluidBuilder(String id, int color, int color1, MaterialIconSet iconSet) {
     return new Material.Builder(GTCEu.id(id))
         .fluid()
@@ -446,6 +488,27 @@ public class GTRMaterials {
         .buildAndRegister();
   }
 
+  public static Material FluidBuilder(String id, int color, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid()
+        .color(color).iconSet(iconSet)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material FluidBuilder(String id, int color, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid()
+        .color(color).iconSet(iconSet)
+        .buildAndRegister();
+  }
+
+  public static Material FluidBuilder(String id, int color, int color1, FluidStorageKey key, FluidBuilder builder, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid(key, builder)
+        .color(color).secondaryColor(color1)
+        .iconSet(iconSet)
+        .buildAndRegister().setFormula(formula, true);
+  }
   public static Material FluidBuilder(String id, int color, int color1, FluidStorageKey key, FluidBuilder builder, MaterialIconSet iconSet) {
     return new Material.Builder(GTCEu.id(id))
         .fluid(key, builder)
@@ -453,6 +516,23 @@ public class GTRMaterials {
         .iconSet(iconSet)
         .buildAndRegister();
   }
+
+  public static Material FluidBuilder(String id, int color, FluidStorageKey key, FluidBuilder builder, MaterialIconSet iconSet, String formula) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid(key, builder)
+        .color(color)
+        .iconSet(iconSet)
+        .buildAndRegister().setFormula(formula, true);
+  }
+
+  public static Material FluidBuilder(String id, int color, FluidStorageKey key, FluidBuilder builder, MaterialIconSet iconSet) {
+    return new Material.Builder(GTCEu.id(id))
+        .fluid(key, builder)
+        .color(color)
+        .iconSet(iconSet)
+        .buildAndRegister();
+  }
+
 
 
 

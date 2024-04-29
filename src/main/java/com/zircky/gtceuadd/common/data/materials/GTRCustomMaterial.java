@@ -9,6 +9,7 @@ import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.DECOMPOSITION_BY_ELECTROLYZING;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
+import static com.zircky.gtceuadd.api.data.material.GTRMateralFlags.GENERATE_TRIPLE;
 import static com.zircky.gtceuadd.api.data.material.GTRMaterialIconSet.*;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.Builder;
@@ -19,7 +20,7 @@ public class GTRCustomMaterial {
   public static final void register() {
     Infinity = Builder("infinity")
         .ingot().fluid(FluidStorageKeys.LIQUID, new FluidBuilder().temperature(35200).customStill()).ore().dust()
-        .appendFlags(SNDART_FLAGS, DECOMPOSITION_BY_ELECTROLYZING)
+        .appendFlags(SNDART_FLAGS, DECOMPOSITION_BY_ELECTROLYZING, GENERATE_TRIPLE)
         .color(0xFFFFFF).iconSet(InfinityIcon)
         .fluidPipeProperties(10000000, 200000, true)
         .blastTemp(10800, BlastProperty.GasTier.HIGHEST, GTValues.VA[GTValues.UHV], 54562)
@@ -30,7 +31,7 @@ public class GTRCustomMaterial {
 
     InfinityCatalyst = Builder("infinity_catalyst")
         .ingot().dust().ore()
-        .color(0xE5E2E1).iconSet(SAND)
+        .color(0xE5E2E1).iconSet(SHINY)
         .appendFlags(SNDART_FLAGS)
         //.element(GTNNElement.IF)
         .blastTemp(10800, BlastProperty.GasTier.MID, GTValues.VA[GTValues.UV], 26190)
@@ -95,6 +96,6 @@ public class GTRCustomMaterial {
     Eternity = IngotBuilder("eternity", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, EternityIcon, "");
     SupercriticalSteam = FluidBuilder("sc_steam", 0x1C1C1C, 0x1C1C1C, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(650), SHINY);
     MagnetohydrodynamicallyConstrainedStarMatter = IngotBuilder("magnetohydrodynamically_constrained_star_matter", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MagnetohydrodynamicallyConstrainedStarMatterIcon, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(1870).customStill(), "");
-    MonolithAlloy = IngotBuilder("", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, METALLIC, "");
+    MonolithAlloy = IngotBuilder("monolith_alloy", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, METALLIC, "");
   }
 }

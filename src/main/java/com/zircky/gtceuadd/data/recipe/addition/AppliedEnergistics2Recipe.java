@@ -63,16 +63,16 @@ public class AppliedEnergistics2Recipe {
 
     VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/blocks/energy_vibration_chamber", new ItemStack(AEBlocks.VIBRATION_CHAMBER.asItem()),
         "DSD", "sMw", "DED",
-        'P', new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide),
+        'D', new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide),
         'S', new UnificationEntry(TagPrefix.screw, GTMaterials.TitaniumTungstenCarbide),
         'E', new ItemStack(AEBlocks.ENERGY_ACCEPTOR),
         'M', GTMachines.ELECTRIC_FURNACE[4].asStack());
 
     VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/blocks/crystal_processing_growth_accelerator", new ItemStack(AEBlocks.GROWTH_ACCELERATOR.asItem()),
         "DGD", "CMC", "DED",
-        'P', new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide),
+        'D', new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide),
         'G', new ItemStack(AEBlocks.QUARTZ_GLASS),
-        'C', GLASS_CABLE,
+        'C', new ItemStack(GLASS_CABLE.item(TRANSPARENT)),
         'E', new ItemStack(AEItems.ENGINEERING_PROCESSOR),
         'M', GTMachines.AUTOCLAVE[5].asStack());
 
