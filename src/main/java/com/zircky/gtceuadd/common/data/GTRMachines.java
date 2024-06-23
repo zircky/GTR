@@ -39,7 +39,7 @@ import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 public class GTRMachines {
   public final static int[] ALL_TIERS = GTValues.tiersBetween(ULV, GTCEuAPI.isHighTier() ? MAX : UHV);
 
-  public final static MultiblockMachineDefinition COMPONENT_ASSEMBLY_LINE = GTRRegistries.REGISTRATE.multiblock("component_assembly_line", ComponentAssemblyLineM::new)
+  /*public final static MultiblockMachineDefinition COMPONENT_ASSEMBLY_LINE = GTRRegistries.REGISTRATE.multiblock("component_assembly_line", ComponentAssemblyLineM::new)
       .langValue("Component Assembly Line")
       .rotationState(RotationState.NON_Y_AXIS)
       .recipeType(GTRRecipeTypes.ComponentAssemblyLineRecipes)
@@ -97,7 +97,7 @@ public class GTRMachines {
           .build())
       .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_solid_steel"),
           GTCEu.id("block/multiblock/assembly_line"), false)
-      .register();
+      .register();*/
 
   public final static MultiblockMachineDefinition TEST = GTRRegistries.REGISTRATE.multiblock("test", WorkableElectricMultiblockMachine::new)
       .rotationState(RotationState.NON_Y_AXIS)
@@ -157,9 +157,9 @@ public class GTRMachines {
             .where('H', blocks(casing.get())
                 .or(autoAbilities(definition.getRecipeTypes(), false, false, true, true, true, true))
                 .or(autoAbilities(true, false, false))
-                .or(abilities(PartAbility.OUTPUT_ENERGY)).setExactLimit(1))
+                .or(abilities(PartAbility.OUTPUT_ENERGY)).setMinGlobalLimited(1))
             .where('M', blocks(casing.get())
-                .or(autoAbilities(false, true, false).setExactLimit(1)))
+                .or(autoAbilities(false, true, false).setMinGlobalLimited(1)))
             .build())
         .recoveryItems(() -> new ItemLike[]{GTItems.MATERIAL_ITEMS.get(TagPrefix.dustTiny, GTMaterials.Ash).get()})
         .workableCasingRenderer(casingTexture, overlayModel, false)
