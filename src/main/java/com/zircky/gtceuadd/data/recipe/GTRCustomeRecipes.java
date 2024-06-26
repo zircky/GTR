@@ -19,7 +19,7 @@ import static com.gregtechceu.gtceu.common.data.GTMachines.FLUID_SOLIDIFIER;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.ASSEMBLER_RECIPES;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.ASSEMBLY_LINE_RECIPES;
-import static com.zircky.gtceuadd.common.data.GTRMachines.COMPONENT_ASSEMBLY_LINE;
+//import static com.zircky.gtceuadd.common.data.GTRMachines.COMPONENT_ASSEMBLY_LINE;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 
 public class GTRCustomeRecipes {
@@ -420,7 +420,7 @@ public class GTRCustomeRecipes {
         .outputItems(SENSOR_UV)
         .duration(1800).EUt(VA[ZPM]).save(provider);
 
-    ASSEMBLY_LINE_RECIPES.recipeBuilder("component_assembly_line")
+    /*ASSEMBLY_LINE_RECIPES.recipeBuilder("component_assembly_line")
         .inputItems(ASSEMBLY_LINE, 16)
         .inputItems(CASING_GRATE.asStack(16))
         .inputItems(CASING_ASSEMBLY_CONTROL.asStack(32))
@@ -437,7 +437,7 @@ public class GTRCustomeRecipes {
         .inputFluids(Naquadria.getFluid(2304))
         .inputFluids(Lubricant.getFluid(10000))
         .outputItems(COMPONENT_ASSEMBLY_LINE)
-        .duration(2400).EUt(VA[UHV]).save(provider);
+        .duration(2400).EUt(VA[UHV]).save(provider);*/
 
   }
 }

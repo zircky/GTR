@@ -8,6 +8,7 @@ import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.zircky.gtceuadd.api.recipe.CompAssLineCondition;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
+import com.zircky.gtceuadd.common.data.Covers;
 import com.zircky.gtceuadd.common.data.GTRCasingBlocks;
 import com.zircky.gtceuadd.common.data.GTRRecipes;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -50,6 +51,7 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void registerCovers() {
         IGTAddon.super.registerCovers();
+        Covers.init();
     }
 
     @Override
