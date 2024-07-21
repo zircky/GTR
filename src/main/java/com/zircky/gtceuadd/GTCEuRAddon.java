@@ -11,6 +11,7 @@ import com.zircky.gtceuadd.api.registries.GTRRegistries;
 import com.zircky.gtceuadd.common.data.Covers;
 import com.zircky.gtceuadd.common.data.GTRCasingBlocks;
 import com.zircky.gtceuadd.common.data.GTRRecipes;
+import com.zircky.gtceuadd.data.recipe.CustemTags;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 

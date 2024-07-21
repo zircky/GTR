@@ -72,11 +72,11 @@ public class GTRPlatinumLine {
         .buildAndRegister()
         .setFormula("Pd2NH4", true);
 
-    FormicAcid = Builder("formic_acid")
-        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
-        .color(0xDCA358)
-        .buildAndRegister()
-        .setFormula("CH2O2", true);
+//    FormicAcid = Builder("formic_acid")
+//        .fluid(FluidStorageKeys.LIQUID, new FluidBuilder())
+//        .color(0xDCA358)
+//        .buildAndRegister()
+//        .setFormula("CH2O2", true);
 
     PotassiumDisulfate = Builder("potassium_disulfate")
         .dust(1).fluid(FluidStorageKeys.LIQUID, new FluidBuilder())

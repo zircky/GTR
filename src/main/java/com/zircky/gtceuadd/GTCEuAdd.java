@@ -9,10 +9,7 @@ import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.utils.FormattingUtil;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
-import com.zircky.gtceuadd.common.data.GTRItems;
-import com.zircky.gtceuadd.common.data.GTRMachines;
-import com.zircky.gtceuadd.common.data.GTRMaterials;
-import com.zircky.gtceuadd.common.data.GTRRecipeTypes;
+import com.zircky.gtceuadd.common.data.*;
 import com.zircky.gtceuadd.data.GTRDatagen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -40,7 +37,7 @@ public class GTCEuAdd {
 
   public static void init() {
     GTRItems.init();
-
+    //GTRBlock.init();
     GTRDatagen.init();
 
     GTRRegistries.REGISTRATE.registerRegistrate();

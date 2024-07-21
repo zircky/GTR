@@ -1,0 +1,61 @@
+public static void register() {
+    SMD_TRANSISTOR_REFINED = registerItem("smd_transistor_refined", "SMD Transistor Refined", SMD, "refined");
+    SMD_RESISTOR_REFINED = registerItem("smd_resistor_refined", "SMD Resistor Refined", SMD, "refined");
+    SMD_CAPACITOR_REFINED = registerItem("smd_capacitor_refined", "SMD Capacitor Refined", SMD, "refined");
+    SMD_INDUCTOR_REFINED = registerItem("smd_inductor_refined", "SMD Inductor Refined", SMD, "refined");
+    SMD_DIOD_REFINED = registerItem("smd_diode_refined", "SMD Diode Refined", SMD, "refined");
+
+    SMD_TRANSISTOR_NANO = registerItem("smd_transistor_nano", "SMD Transistor Nano", SMD, "nano");
+    SMD_RESISTOR_NANO = registerItem("smd_resistor_nano", "SMD Resistor Nano", SMD, "nano");
+    SMD_CAPACITOR_NANO = registerItem("smd_capacitor_nano", "SMD Capacitor Nano", SMD, "nano");
+    SMD_INDUCTOR_NANO = registerItem("smd_inductor_nano", "SMD Inductor Nano", SMD, "nano");
+    SMD_DIODE_NANO = registerItem("smd_diode_nano", "SMD Diode Nano", SMD, "nano");
+
+    SMD_TRANSISTOR_CRYSTAL = registerItem("smd_transistor_crystal", "SMD Transistor Crystal", SMD, "crystal");
+    SMD_RESISTOR_CRYSTAL = registerItem("smd_resistor_crystal", "SMD Resistor Crystal", SMD, "crystal");
+    SMD_CAPACITOR_CRYSTAL = registerItem("smd_capacitor_crystal", "SMD Capacitor Crystal", SMD, "crystal");
+    SMD_INDUCTOR_CRYSTAL = registerItem("smd_inductor_crystal", "SMD Inductor Crystal", SMD, "crystal");
+    SMD_DIODE_CRYSTAL = registerItem("smd_diode_crystal", "SMD Diode Crystal", SMD, "crystal");
+
+    SMD_TRANSISTOR_QUANTUM = registerItem("smd_transistor_quantum", "SMD Transistor Quantum", SMD, "quantum");
+    SMD_RESISTOR_QUANTUM = registerItem("smd_resistor_quantum", "SMD Resistor Quantum", SMD, "quantum");
+    SMD_CAPACITOR_QUANTUM = registerItem("smd_capacitor_quantum", "SMD Capacitor Quantum", SMD, "quantum");
+    SMD_INDUCTOR_QUANTUM = registerItem("smd_inductor_quantum", "SMD Inductor Quantum", SMD, "quantum");
+    SMD_DIODE_QUANTUM = registerItem("smd_diode_quantum", "SMD Diode Quantum", SMD, "quantum");
+
+    SMD_TRANSISTOR_WETWARE = registerItem("smd_transistor_wetware", "SMD Transistor Wetware", SMD, "wetware");
+    SMD_RESISTOR_WETWARE = registerItem("smd_resistor_wetware", "SMD Resistor Wetware", SMD, "wetware");
+    SMD_CAPACITOR_WETWARE = registerItem("smd_capacitor_wetware", "SMD Capacitor Wetware", SMD, "wetware");
+    SMD_INDUCTOR_WETWARE = registerItem("smd_inductor_wetware", "SMD Inductor Wetware", SMD, "wetware");
+    SMD_DIODE_WETWARE = registerItem("smd_diode_wetware", "SMD Diode Wetware", SMD, "wetware");
+
+    SMD_TRANSISTOR_BIOWARE = registerItem("smd_transistor_bioware", "SMD Transistor Bioware", SMD, "bioware");
+    SMD_RESISTOR_BIOWARE = registerItem("smd_resistor_bioware", "SMD Resistor Bioware", SMD, "bioware");
+    SMD_CAPACITOR_BIOWARE = registerItem("smd_capacitor_bioware", "SMD Capacitor Bioware", SMD, "bioware");
+    SMD_INDUCTOR_BIOWARE = registerItem("smd_inductor_bioware", "SMD Inductor Bioware", SMD, "bioware");
+    SMD_DIODE_BIOWARE = registerItem("smd_diode_bioware", "SMD Diode Bioware", SMD, "bioware");
+
+    SMD_TRANSISTOR_OPTICAL = registerItem("smd_transistor_optical", "SMD Transistor Optical", SMD, "optical");
+    SMD_RESISTOR_OPTICAL = registerItem("smd_resistor_optical", "SMD Resistor Optical", SMD, "optical");
+    SMD_CAPACITOR_OPTICAL = registerItem("smd_capacitor_optical", "SMD Capacitor Optical", SMD, "optical");
+    SMD_INDUCTOR_OPTICAL = registerItem("smd_inductor_optical", "SMD Inductor Optical", SMD, "optical");
+    SMD_DIODE_OPTICAL = registerItem("smd_diode_optical", "SMD Diode Optical", SMD, "optical");
+
+    SMD_TRANSISTOR_COSMIC = registerItem("smd_transistor_cosmic", "SMD Transistor Cosmic", SMD, "cosmic");
+    SMD_RESISTOR_COSMIC = registerItem("smd_resistor_cosmic", "SMD Resistor Cosmic", SMD, "cosmic");
+    SMD_CAPACITOR_COSMIC = registerItem("smd_capacitor_cosmic", "SMD Capacitor Cosmic", SMD, "cosmic");
+    SMD_INDUCTOR_COSMIC = registerItem("smd_inductor_cosmic", "SMD Inductor Cosmic", SMD, "cosmic");
+    SMD_DIODE_COSMIC = registerItem("smd_diode_cosmic", "SMD Diode Cosmic", SMD, "cosmic");
+
+    SMD_TRANSISTOR_SUPRACAUSAL = registerItem("smd_transistor_supracausal", "SMD Transistor Supracausal", SMD, "supracausal");
+    SMD_RESISTOR_SUPRACAUSAL = registerItem("smd_resistor_supracausal", "SMD Resistor Supracausal", SMD, "supracausal");
+    SMD_CAPACITOR_SUPRACAUSAL = registerItem("smd_capacitor_supracausal", "SMD Capacitor Supracausal", SMD, "supracausal");
+    SMD_INDUCTOR_SUPRACAUSAL = registerItem("smd_inductor_supracausal", "SMD Inductor Supracausal", SMD, "supracausal");
+    SMD_DIODE_SUPRACAUSAL = registerItem("smd_diode_supracausal", "SMD Diode Supracausal", SMD, "supracausal");
+
+    SMD_TRANSISTOR_EXOTIC = registerItem("smd_transistor_exotic", "SMD Transistor Exotic", SMD, "exotic");
+    SMD_RESISTOR_EXOTIC = registerItem("smd_resistor_exotic", "SMD Resistor Exotic", SMD, "exotic");
+    SMD_CAPACITOR_EXOTIC = registerItem("smd_capacitor_exotic", "SMD Capacitor Exotic", SMD, "exotic");
+    SMD_INDUCTOR_EXOTIC = registerItem("smd_inductor_exotic", "SMD Inductor Exotic", SMD, "exotic");
+    SMD_DIODE_EXOTIC = registerItem("smd_diode_exotic", "SMD Diode Exotic", SMD, "exotic");
+  }

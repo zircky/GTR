@@ -144,13 +144,13 @@ public class AppliedEnergistics2Recipe {
 
     ASSEMBLER_RECIPES.recipeBuilder("ae2/misc/chests_sky_stone")
         .inputItems(new ItemStack(AEBlocks.SKY_STONE_BLOCK, 8))
-        .inputItems(CustomTags.TAG_WOODEN_CHESTS)
+        .inputItems(CustomTags.WOODEN_CHESTS)
         .outputItems(new ItemStack(AEBlocks.SKY_STONE_CHEST))
         .duration(200).EUt(GTValues.VA[GTValues.LV]).save(provider);
 
     ASSEMBLER_RECIPES.recipeBuilder("ae2/misc/chests_smooth_sky_stone")
         .inputItems(new ItemStack(AEBlocks.SMOOTH_SKY_STONE_BLOCK, 8))
-        .inputItems(CustomTags.TAG_WOODEN_CHESTS)
+        .inputItems(CustomTags.WOODEN_CHESTS)
         .outputItems(new ItemStack(AEBlocks.SMOOTH_SKY_STONE_CHEST))
         .duration(200).EUt(GTValues.VA[GTValues.LV]).save(provider);
 
@@ -264,7 +264,7 @@ public class AppliedEnergistics2Recipe {
         .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.Titanium), 4)
         .inputItems(new ItemStack(GLASS_CABLE.item(TRANSPARENT), 2))
         .inputItems(CustomTags.EV_CIRCUITS, 2)
-        .inputItems(CustomTags.TAG_WOODEN_CHESTS)
+        .inputItems(CustomTags.WOODEN_CHESTS)
         .circuitMeta(2)
         .outputItems(new ItemStack(AEBlocks.CHEST))
         .duration(100).EUt(GTValues.VA[GTValues.EV]).save(provider);
@@ -294,7 +294,7 @@ public class AppliedEnergistics2Recipe {
         .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide), 4)
         .inputItems(new ItemStack(AEItems.CALCULATION_PROCESSOR))
         .inputItems(new ItemStack(GTItems.COVER_SCREEN))
-        .inputItems(CustomTags.TAG_WOODEN_CHESTS)
+        .inputItems(CustomTags.WOODEN_CHESTS)
         .circuitMeta(2)
         .outputItems(new ItemStack(AEBlocks.CELL_WORKBENCH))
         .duration(100).EUt(GTValues.VA[GTValues.EV]).save(provider);

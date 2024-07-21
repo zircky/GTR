@@ -25,7 +25,7 @@ public class GTRCustomMaterial {
         .fluidPipeProperties(10000000, 200000, true)
         .blastTemp(10800, BlastProperty.GasTier.HIGHEST, GTValues.VA[GTValues.UHV], 54562)
         .cableProperties(GTValues.V[GTValues.MAX], 8192, 0, true, 30)
-        .rotorStats(256.0f, 21.0f,262144000)
+        .rotorStats(158000, 256, 21.0f,262144000 )
         .toolStats(toolStats(256.0f, 21.0f, 262144000, 17, 20, GTToolType.MORTAR))
         .buildAndRegister();
 
@@ -35,7 +35,7 @@ public class GTRCustomMaterial {
         .appendFlags(SNDART_FLAGS)
         //.element(GTNNElement.IF)
         .blastTemp(10800, BlastProperty.GasTier.MID, GTValues.VA[GTValues.UV], 26190)
-        .rotorStats(64.0f, 14.0f,131072000)
+        .rotorStats(15000, 64, 14.0f,131072000)
         .toolStats(ToolProperty.Builder.of(64.0f, 14.0f, 131072000, 10).enchantability(20).addTypes(GTToolType.MORTAR).build())
         .buildAndRegister();
 
@@ -45,7 +45,7 @@ public class GTRCustomMaterial {
         .appendFlags(SNDART_FLAGS)
         //.element(GTNNElement.SpNt)
         .blastTemp(9900, BlastProperty.GasTier.HIGH, GTValues.VA[GTValues.ZPM], 21825)
-        .rotorStats(96.0f, 16.0f,16384000)
+        .rotorStats( 10000,96, 16.0f,16384000)
         .toolStats(ToolProperty.Builder.of(96.0f, 16.0f, 16384000, 12).enchantability(20).addTypes(GTToolType.MORTAR).build())
         .buildAndRegister();
 

@@ -25,6 +25,12 @@ public class Covers {
   public static ItemEntry<ComponentItem> FLUID_REGULATOR_MAX;
   public static ItemEntry<ComponentItem> FLUID_REGULATOR_ERV;
   public static ItemEntry<ComponentItem> FLUID_REGULATOR_SERV;
+  public static ItemEntry<ComponentItem> CONCVEYOR_MODULE_MAX;
+  public static ItemEntry<ComponentItem> CONCVEYOR_MODULE_ERV;
+  public static ItemEntry<ComponentItem> CONCVEYOR_MODULE_SERV;
+  public static ItemEntry<ComponentItem> ROBOT_ARM_MAX;
+  public static ItemEntry<ComponentItem> ROBOT_ARM_ERV;
+  public static ItemEntry<ComponentItem> ROBOT_ARM_SERV;
 
 
   public static ItemEntry<ComponentItem> registerComponent(String name, String langName, CoverDefinition coverDefinition, String tooltip, String tooltipInfo, int num, String node, CompassNode... preNodes) {
