@@ -9,6 +9,7 @@
 out/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+src/main/resources/assets/gtceuadd/textures/а
 
 # JIRA plugin
 atlassian-ide-plugin.xml

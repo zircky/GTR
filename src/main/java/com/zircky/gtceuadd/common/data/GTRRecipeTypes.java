@@ -6,6 +6,7 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipeSerializer;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.common.data.GTSoundEntries;
+import com.gregtechceu.gtceu.utils.ResearchManager;
 import com.zircky.gtceuadd.GTCEuAdd;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -30,6 +31,21 @@ public class GTRRecipeTypes {
       .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.TURBINE);
 
+  public static final GTRecipeType CIRCUIT_ASSEMBLER_R_RECIPES = register("circuit_assembler_r", ELECTRIC).setMaxIOSize(10, 1, 1, 0).setEUIO(IO.IN)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
+      .setSlotOverlay(false, false, GuiTextures.DATA_ORB_OVERLAY)
+      .setSound(GTSoundEntries.ASSEMBLER)
+      .setHasResearchSlot(true)
+      .onRecipeBuild(ResearchManager::createDefaultResearchRecipe);
+
+  public static final GTRecipeType CIRCUIT_ASSEMBLER_R_M_RECIPES = register("circuit_assembler_r_m", MULTIBLOCK)
+      .setMaxIOSize(16, 1, 6, 0).setEUIO(IO.IN)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.ASSEMBLER)
+      .setHasResearchSlot(true)
+      .setMaxTooltips(4)
+      .onRecipeBuild(ResearchManager::createDefaultResearchRecipe);
+
   public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
     var recipeType = new GTRecipeType(GTCEuAdd.id(name), group, proxyRecipes);
     GTRegistries.register(BuiltInRegistries.RECIPE_TYPE, recipeType.registryName, recipeType);
@@ -37,6 +53,8 @@ public class GTRRecipeTypes {
     GTRegistries.RECIPE_TYPES.register(recipeType.registryName, recipeType);
     return recipeType;
   }
+
+
 
   public static void init(){}
 }

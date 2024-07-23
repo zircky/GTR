@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
+import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.machine.MetaMachine;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
 import com.gregtechceu.gtceu.api.machine.feature.multiblock.IRotorHolderMachine;
@@ -22,6 +23,7 @@ import com.lowdragmc.lowdraglib.utils.BlockInfo;
 import com.zircky.gtceuadd.GTCEuAdd;
 import com.zircky.gtceuadd.api.block.multiblock.ComponentAssemblyLineM;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
+import com.zircky.gtceuadd.common.data.blocks.machines.CircuitAssembler;
 import com.zircky.gtceuadd.common.machine.multiblock.generator.XLLargeTurbineMachine;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -33,11 +35,15 @@ import java.util.function.Supplier;
 import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
+import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 //import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 
 
 public class GTRMachines {
   public final static int[] ALL_TIERS = GTValues.tiersBetween(ULV, GTCEuAPI.isHighTier() ? MAX : UHV);
+
+  public static MultiblockMachineDefinition CIRCUIT_ASSEMBLER_R_M;
+  public static MachineDefinition[] CIRCUIT_ASSEMBLER_R = registerSimpleMachines("circuit_assembler_r", GTRRecipeTypes.CIRCUIT_ASSEMBLER_R_RECIPES);
 
   /*public final static MultiblockMachineDefinition COMPONENT_ASSEMBLY_LINE = GTRRegistries.REGISTRATE.multiblock("component_assembly_line", ComponentAssemblyLineM::new)
       .langValue("Component Assembly Line")
@@ -208,6 +214,6 @@ public class GTRMachines {
 
 
   public static void init() {
-
+    //CircuitAssembler.register();
   }
 }

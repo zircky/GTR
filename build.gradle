@@ -257,6 +257,8 @@ dependencies {
   //glodium
   modImplementation("curse.maven:glodium-957920:5044862")
 
+  //modImplementation("curse.maven:draconic-evolution-223565:5524457")
+
   // TOP
   modCompileOnly(forge.theoneprobe) { transitive = false }
 
