@@ -31,7 +31,8 @@ public class GTRRecipeTypes {
       .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.TURBINE);
 
-  public static final GTRecipeType CIRCUIT_ASSEMBLER_R_RECIPES = register("circuit_assembler_r", ELECTRIC).setMaxIOSize(10, 1, 1, 0).setEUIO(IO.IN)
+  public static final GTRecipeType CIRCUIT_ASSEMBLER_R_RECIPES = register("circuit_assembler_r", ELECTRIC)
+      .setMaxIOSize(10, 1, 1, 0).setEUIO(IO.IN)
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
       .setSlotOverlay(false, false, GuiTextures.DATA_ORB_OVERLAY)
       .setSound(GTSoundEntries.ASSEMBLER)
@@ -45,6 +46,12 @@ public class GTRRecipeTypes {
       .setHasResearchSlot(true)
       .setMaxTooltips(4)
       .onRecipeBuild(ResearchManager::createDefaultResearchRecipe);
+
+  public static final GTRecipeType MEGA_MIXER_RECIPES = register("mega_mixer", MULTIBLOCK)
+      .setMaxIOSize(81, 1, 8, 4)
+      .setEUIO(IO.IN)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.MIXER);
 
   public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
     var recipeType = new GTRecipeType(GTCEuAdd.id(name), group, proxyRecipes);

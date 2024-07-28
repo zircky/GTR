@@ -3,6 +3,7 @@ package com.zircky.gtceuadd.common.data;
 import com.gregtechceu.gtceu.common.block.CoilBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.zircky.gtceuadd.GTCEuAdd;
+import com.zircky.gtceuadd.common.data.blocks.GTRCoilBlock;
 import net.minecraft.world.level.block.Block;
 
 import static com.gregtechceu.gtceu.common.data.GTBlocks.createCasingBlock;
@@ -10,7 +11,7 @@ import static com.gregtechceu.gtceu.common.data.GTBlocks.createCasingBlock;
 @SuppressWarnings("unused")
 public class GTRCasingBlocks {
 
-  public static BlockEntry<CoilBlock> COIL_INFINITY;
+  public static BlockEntry<GTRCoilBlock> COIL_INFINITY;
 
   public static final BlockEntry<Block> CompAssLine_Casing_LV = createCasingBlock("compassline_casing_lv", GTCEuAdd.id("block/casings/solid/compassline_casing_lv"));
   public static final BlockEntry<Block> CompAssLine_Casing_MV = createCasingBlock("compassline_casing_mv", GTCEuAdd.id("block/casings/solid/compassline_casing_mv"));
@@ -30,7 +31,10 @@ public class GTRCasingBlocks {
   public static final BlockEntry<Block> SCTurbine = createCasingBlock("sc_turbine", GTCEuAdd.id("block/casings/solid/sc_turbine"));
   public static final BlockEntry<Block> ReinforcedSCTurbine = createCasingBlock("reinforced_sc_turbine", GTCEuAdd.id("block/casings/solid/reinforced_sc_turbine"));
   public static final BlockEntry<Block> TurbineShaft = createCasingBlock("turbine_shaft", GTCEuAdd.id("block/casings/solid/turbine_shaft"));
-
+  public static final BlockEntry<Block> RadiantNaquadahAlloyCasing = createCasingBlock("radiant_naquadah_alloy_casing", GTCEuAdd.id("block/casings/solid/radiant_naquadah_alloy_casing"));
+  public static final BlockEntry<Block> MiningBlackPlutoniumCasing = createCasingBlock("mining_black_plutonium_casing", GTCEuAdd.id("block/casings/solid/mining_black_plutonium_casing"));
+  public static final BlockEntry<Block> ContainmentFieldMachineCasing = createCasingBlock("containment_field_machine_casing", GTCEuAdd.id("block/casings/solid/containment_field_machine_casing"));
+  public static final BlockEntry<Block> MiningNeutroniumCasing = createCasingBlock("mining_neutronium_casing", GTCEuAdd.id("block/casings/solid/mining_neutronium_casing"));
 
   public static void init() {
   }

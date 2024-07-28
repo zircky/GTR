@@ -80,7 +80,7 @@ public class GTRCustomMaterial {
         .ingot().dust().fluid()
         .color(0x030302).secondaryColor(0x0F110E).iconSet(METALLIC)
         .appendFlags(SNDART_FLAGS)
-        .cableProperties(GTValues.V[GTValues.UXV], 8192, 16, true, 3)
+        .cableProperties(GTValues.V[GTValues.UXV], 32768, 16, true, 3)
         .buildAndRegister()
         .setFormula("CD*", true);
 
@@ -88,7 +88,7 @@ public class GTRCustomMaterial {
         .ingot().dust().color(0x3B3C36)
         .iconSet(DynamicInfinityIcon)
         .appendFlags(SNDART_FLAGS)
-        .cableProperties(GTValues.V[GTValues.MAX], 32768, 0, true, 4)
+        .cableProperties(GTValues.V[GTValues.MAX], 2097152, 0, true, 5)
         .buildAndRegister()
         .setFormula("*DI*", true);
 
@@ -97,5 +97,6 @@ public class GTRCustomMaterial {
     SupercriticalSteam = FluidBuilder("sc_steam", 0x1C1C1C, 0x1C1C1C, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(650), SHINY);
     MagnetohydrodynamicallyConstrainedStarMatter = IngotBuilder("magnetohydrodynamically_constrained_star_matter", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MagnetohydrodynamicallyConstrainedStarMatterIcon, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(1870).customStill(), "");
     MonolithAlloy = IngotBuilder("monolith_alloy", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, METALLIC, "");
+
   }
 }

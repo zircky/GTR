@@ -22,7 +22,7 @@ public class GTRCoilBlock extends CoilBlock {
 
   @Getter
   public enum GTCoilType implements StringRepresentable, ICoilType {
-    INFINITY("infinity", 15800, 16, 16, GTRMaterials.Infinity, GTCEu.id("block/casings/coils/machine_coil_infinity"));
+    INFINITY("infinity", 15800, 16, 16, GTRMaterials.Infinity, GTCEuAdd.id("block/casings/coils/machine_coil_infinity"));
 
     @NotNull
     private final String name;

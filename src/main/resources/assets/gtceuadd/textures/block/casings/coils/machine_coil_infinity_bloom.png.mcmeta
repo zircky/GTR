@@ -1,0 +1,9 @@
+{
+    "ldlib": {
+        "connection": "gtceuadd:block/casings/coils/machine_coil_infinity_bloom_ctm",
+        "emissive": true
+    },
+    "shimmer": {
+        "bloom": true
+    }
+}
