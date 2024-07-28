@@ -126,46 +126,6 @@ public class GTRMachines {
           GTCEu.id("block/multiblock/vacuum_freezer"), false)
       .compassNodeSelf().register();
 
-  public final static MultiblockMachineDefinition MEGA_MIXER = GTRRegistries.REGISTRATE.multiblock("mega_mixer", WorkableElectricMultiblockMachine::new)
-      .rotationState(RotationState.NON_Y_AXIS)
-      .recipeType(GTRRecipeTypes.MEGA_MIXER_RECIPES)
-      .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
-      .appearanceBlock(RadiantNaquadahAlloyCasing)
-      .pattern(definition -> FactoryBlockPattern.start()
-          .aisle("CCCCCCCCCCCCCCCCCCC")
-          .aisle("CCCCCCCCCCCCCCCCCCC")
-          .aisle("CCCCCCCCCCCCCCCCCCC")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("#CCCCCCCCCCCCCCCCC#")
-          .aisle("CCCCCCCCCCCCCCCCCCC")
-          .aisle("CCCCCCCCCCCCCCCCCCC", "#CDDDDDDDDDDDDDDDC#")
-          .aisle("CCCCCCCCCCCCCCCCCCC", "#CDDDDDDD~DDDDDDDC#")
-
-          .where('~', Predicates.controller(blocks(definition.getBlock())))
-          .where('C', blocks(MiningBlackPlutoniumCasing.get()).or(Predicates.abilities(PartAbility.INPUT_ENERGY)).setMaxGlobalLimited(4))
-          .where('D', blocks(RadiantNaquadahAlloyCasing.get()).or(Predicates.abilities(PartAbility.MAINTENANCE)).setMaxGlobalLimited(1))
-
-
-          .where('#', Predicates.air())
-          .build())
-      .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_frost_proof"),
-                    GTCEu.id("block/multiblock/vacuum_freezer"))
-      .compassSections(GTCompassSections.TIER[HV])
-      .compassNodeSelf()
-      .register();
 
 //  public final static MultiblockMachineDefinition ExtremeHeatExchenger = GTRRegistries.REGISTRATE.multiblock("")
 

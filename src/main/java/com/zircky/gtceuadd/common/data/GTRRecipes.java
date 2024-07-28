@@ -11,6 +11,10 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.function.Consumer;
 
 public class GTRRecipes {
+  public static int seconds = 20;
+  public static int hour = seconds * 60;
+  public static int day = 24 * hour;
+
   public static void init(Consumer<FinishedRecipe> provider) {
     GTRCustomeRecipes.init(provider);
     //GTRPlatinumLine.init(provider);
