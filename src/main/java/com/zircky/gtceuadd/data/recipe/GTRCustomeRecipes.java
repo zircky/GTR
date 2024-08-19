@@ -10,7 +10,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 
 import java.util.function.Consumer;
 
-import com.zircky.gtceuadd.common.data.GTRRecipes
+import com.zircky.gtceuadd.common.data.GTRRecipes;
 
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.ASSEMBLY_LINE_RECIPES;

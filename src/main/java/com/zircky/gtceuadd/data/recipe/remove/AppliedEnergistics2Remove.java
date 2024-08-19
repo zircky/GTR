@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 public class AppliedEnergistics2Remove {
   public static void init(Consumer<ResourceLocation> consumer) {
     AE2Remove(consumer);
+    MEGACELLRemove(consumer);
   }
 
   public static void AE2Remove(Consumer<ResourceLocation> consumer) {
@@ -57,7 +58,22 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("ae2:network/crafting/cpu_crafting_unit"));
     consumer.accept(new ResourceLocation("ae2:network/crafting/molecular_assembler"));
     consumer.accept(new ResourceLocation("ae2:network/crafting/patterns_blank"));
+    consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_components_cell_1k_part"));
+    consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_components_cell_4k_part"));
+    consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_components_cell_16k_part"));
+    consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_components_cell_64k_part"));
+    consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_components_cell_256k_part"));
+    consumer.accept(new ResourceLocation("ae2:recipes/materials/annihilationcore"));
+    consumer.accept(new ResourceLocation("ae2:recipes/materials/formationcore"));
+    consumer.accept(new ResourceLocation("ae2:recipes/network/parts/terminals_crafting"));
 
+  }
 
+  public static void MEGACELLRemove(Consumer<ResourceLocation> consumer) {
+    consumer.accept(new ResourceLocation("megacell:cells/cell_component_1m"));
+    consumer.accept(new ResourceLocation("megacell:cells/cell_component_4m"));
+    consumer.accept(new ResourceLocation("megacell:cells/cell_component_16m"));
+    consumer.accept(new ResourceLocation("megacell:cells/cell_component_64m"));
+    consumer.accept(new ResourceLocation("megacell:cells/cell_component_256m"));
   }
 }

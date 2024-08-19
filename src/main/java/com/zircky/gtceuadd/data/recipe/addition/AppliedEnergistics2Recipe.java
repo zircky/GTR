@@ -2,6 +2,7 @@ package com.zircky.gtceuadd.data.recipe.addition;
 
 import appeng.core.definitions.AEBlocks;
 import appeng.core.definitions.AEItems;
+import appeng.core.definitions.AEParts;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.stack.UnificationEntry;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
@@ -12,6 +13,8 @@ import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 import com.zircky.gtceuadd.GTCEuAdd;
+import com.zircky.gtceuadd.common.data.GTRItems;
+import gripe._90.megacells.definition.MEGAItems;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
@@ -21,10 +24,13 @@ import java.util.function.Consumer;
 import static appeng.api.util.AEColor.TRANSPARENT;
 import static appeng.core.definitions.AEParts.*;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.*;
+import static com.zircky.gtceuadd.data.recipe.addition.AppliedEnergistics2BaseRecipe.circuitAssemblerRecipes;
+import static com.zircky.gtceuadd.data.recipe.addition.AppliedEnergistics2BaseRecipe.vanillaRecipeHelper;
 
 public class AppliedEnergistics2Recipe {
   public static void init(Consumer<FinishedRecipe> provider) {
     AE2Recipe(provider);
+    cells(provider);
   }
 
   public static void AE2Recipe(Consumer<FinishedRecipe> provider) {
@@ -82,7 +88,7 @@ public class AppliedEnergistics2Recipe {
         'G', new ItemStack(AEBlocks.QUARTZ_GLASS),
         'C', new UnificationEntry(TagPrefix.gem, GTMaterials.CertusQuartz),
         'A', new UnificationEntry(TagPrefix.plateDouble, GTMaterials.Aluminium),
-        'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide));
+        'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TantalumCarbide));
 
 
     COMPRESSOR_RECIPES.recipeBuilder("ae2/decorative/quartz_block")
@@ -389,7 +395,71 @@ public class AppliedEnergistics2Recipe {
         .outputItems(new ItemStack(AEBlocks.CRAFTING_STORAGE_256K))
         .duration(400).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/recipes/materials/annihilationcore")
+        .inputItems(new ItemStack(AEItems.LOGIC_PROCESSOR, 4))
+        .inputItems(new UnificationEntry(TagPrefix.rod, GTMaterials.NetherQuartz), 4)
+        .inputItems(new ItemStack(AEItems.FLUIX_CRYSTAL, 2))
+        .outputItems(new ItemStack(AEItems.ANNIHILATION_CORE))
+        .duration(400).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/recipes/materials/formationcore")
+        .inputItems(new ItemStack(AEItems.LOGIC_PROCESSOR, 4))
+        .inputItems(new UnificationEntry(TagPrefix.rod, GTMaterials.CertusQuartz), 4)
+        .inputItems(new ItemStack(AEItems.FLUIX_CRYSTAL, 2))
+        .outputItems(new ItemStack(AEItems.ANNIHILATION_CORE))
+        .duration(400).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/recipes/network/parts/terminals_crafting", CRAFTING_TERMINAL.stack(),
+        "dTr", "QCQ", "PSP",
+        'T', new ItemStack(TERMINAL),
+        'Q', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'P', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
+        'C', Blocks.CRAFTING_TABLE.asItem(),
+        'S', new ItemStack(AEItems.ENGINEERING_PROCESSOR));
+
+  }
+
+  public static void cells(Consumer<FinishedRecipe> provider) {
+    vanillaRecipeHelper(provider, "ae2/network/cells/item_storage_components_cell_1k_part", new ItemStack(AEItems.CELL_COMPONENT_1K), new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.ULV_CIRCUITS);
+    vanillaRecipeHelper(provider, "ae2/network/cells/item_storage_components_cell_4k_part", new ItemStack(AEItems.CELL_COMPONENT_4K), new ItemStack(AEItems.CELL_COMPONENT_1K), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.LV_CIRCUITS);
+    vanillaRecipeHelper(provider, "ae2/network/cells/item_storage_components_cell_16k_part", new ItemStack(AEItems.CELL_COMPONENT_16K), new ItemStack(AEItems.CELL_COMPONENT_4K), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.MV_CIRCUITS);
+    vanillaRecipeHelper(provider, "ae2/network/cells/item_storage_components_cell_64k_part", new ItemStack(AEItems.CELL_COMPONENT_64K), new ItemStack(AEItems.CELL_COMPONENT_16K), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.HV_CIRCUITS);
+    vanillaRecipeHelper(provider, "ae2/network/cells/item_storage_components_cell_256k_part", new ItemStack(AEItems.CELL_COMPONENT_256K), new ItemStack(AEItems.CELL_COMPONENT_64K), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.EV_CIRCUITS);
+    vanillaRecipeHelper(provider, "megacell/cells/cell_component_1m", new ItemStack(MEGAItems.CELL_COMPONENT_1M), new ItemStack(AEItems.CELL_COMPONENT_256K), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.IV_CIRCUITS);
+    vanillaRecipeHelper(provider, "megacell/cells/cell_component_4m", new ItemStack(MEGAItems.CELL_COMPONENT_4M), new ItemStack(MEGAItems.CELL_COMPONENT_1M), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.LuV_CIRCUITS);
+    vanillaRecipeHelper(provider, "megacell/cells/cell_component_16m", new ItemStack(MEGAItems.CELL_COMPONENT_16M), new ItemStack(MEGAItems.CELL_COMPONENT_4M), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.ZPM_CIRCUITS);
+    vanillaRecipeHelper(provider, "megacell/cells/cell_component_64m", new ItemStack(MEGAItems.CELL_COMPONENT_64M), new ItemStack(MEGAItems.CELL_COMPONENT_16M), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.UV_CIRCUITS);
+    vanillaRecipeHelper(provider, "megacell/cells/cell_component_256m", new ItemStack(MEGAItems.CELL_COMPONENT_256M), new ItemStack(MEGAItems.CELL_COMPONENT_64M), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.UHV_CIRCUITS);
+
+    circuitAssemblerRecipes("ae2/network/cells/item_storage_components_cell_1k_part_cir_ass", CustomTags.ULV_CIRCUITS, 2,
+        new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz), 2, new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.COATED_BOARD),
+        new ItemStack(AEItems.CELL_COMPONENT_1K), 400, GTValues.VA[GTValues.HV], provider);
+    circuitAssemblerRecipes("ae2/network/cells/item_storage_components_cell_4k_part_cir_ass", CustomTags.LV_CIRCUITS, 4,
+        CustomTags.ULV_CIRCUITS, 16, new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.BASIC_CIRCUIT_BOARD),
+        new ItemStack(AEItems.CELL_COMPONENT_4K), 400, GTValues.VA[GTValues.HV], provider);
+    circuitAssemblerRecipes("ae2/network/cells/item_storage_components_cell_16k_part_cir_ass", CustomTags.MV_CIRCUITS, 4,
+        CustomTags.LV_CIRCUITS, 16, new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.GOOD_CIRCUIT_BOARD),
+        new ItemStack(AEItems.CELL_COMPONENT_16K), 400, GTValues.VA[GTValues.HV], provider);
+    circuitAssemblerRecipes("ae2/network/cells/item_storage_components_cell_64k_part_cir_ass", CustomTags.HV_CIRCUITS, 4,
+        CustomTags.MV_CIRCUITS, 16, new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.ADVANCED_CIRCUIT_BOARD),
+        new ItemStack(AEItems.CELL_COMPONENT_64K), 400, GTValues.VA[GTValues.EV], provider);
+    circuitAssemblerRecipes("ae2/network/cells/item_storage_components_cell_256k_part_cir_ass", CustomTags.EV_CIRCUITS, 4,
+        CustomTags.HV_CIRCUITS, 16,  new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.FIBER_BOARD),
+        new ItemStack(AEItems.CELL_COMPONENT_256K), 400, GTValues.VA[GTValues.IV], provider);
+    circuitAssemblerRecipes("megacell/cells/cell_component_1m_cir_ass", CustomTags.IV_CIRCUITS, 4, CustomTags.EV_CIRCUITS, 16,
+        new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.ELITE_CIRCUIT_BOARD),
+        new ItemStack(MEGAItems.CELL_COMPONENT_1M), 400, GTValues.VA[GTValues.LuV], provider);
+    circuitAssemblerRecipes("megacell/cells/cell_component_4m_cir_ass", CustomTags.LuV_CIRCUITS, 4, CustomTags.IV_CIRCUITS, 16,
+        new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.WETWARE_BOARD),
+        new ItemStack(MEGAItems.CELL_COMPONENT_4M), 400, GTValues.VA[GTValues.ZPM], provider);
+    circuitAssemblerRecipes("megacell/cells/cell_component_16m_cir_ass", CustomTags.ZPM_CIRCUITS, 4, CustomTags.LuV_CIRCUITS, 16,
+        new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.WETWARE_BOARD),
+        new ItemStack(MEGAItems.CELL_COMPONENT_16M), 400, GTValues.VA[GTValues.UV], provider);
+    circuitAssemblerRecipes("megacell/cells/cell_component_64m_cir_ass", CustomTags.UV_CIRCUITS, 4, CustomTags.ZPM_CIRCUITS, 16,
+        new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.WETWARE_BOARD),
+        new ItemStack(MEGAItems.CELL_COMPONENT_64M), 400, GTValues.VA[GTValues.UHV], provider);
+    circuitAssemblerRecipes("megacell/cells/cell_component_256m_cir_ass", CustomTags.UHV_CIRCUITS, 4, CustomTags.UV_CIRCUITS, 16,
+        new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.WETWARE_BOARD),
+        new ItemStack(MEGAItems.CELL_COMPONENT_256M), 400, GTValues.VA[GTValues.UHV], provider);
   }
 }
