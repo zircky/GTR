@@ -27,6 +27,8 @@ tasks.withType(JavaCompile) {
 
 java {
   withSourcesJar()
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
 }
 
 def mod_id = properties.mod_id

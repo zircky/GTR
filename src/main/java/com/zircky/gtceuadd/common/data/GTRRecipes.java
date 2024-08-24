@@ -1,7 +1,7 @@
 package com.zircky.gtceuadd.common.data;
 
 import com.zircky.gtceuadd.data.recipe.GTRCustomeRecipes;
-import com.zircky.gtceuadd.data.recipe.addition.AppliedEnergistics2Recipe;
+import com.zircky.gtceuadd.data.recipe.addition.ae2.AppliedEnergistics2Recipe;
 import com.zircky.gtceuadd.data.recipe.generator.GTRGenerator;
 import com.zircky.gtceuadd.data.recipe.remove.AppliedEnergistics2Remove;
 import com.zircky.gtceuadd.data.recipe.remove.GTRRemoveRecipes;

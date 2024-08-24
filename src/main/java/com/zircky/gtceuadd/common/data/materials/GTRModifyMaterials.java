@@ -21,6 +21,7 @@ public class GTRModifyMaterials {
     Tantalum.addFlags(GENERATE_ROD);
     Iridium.addFlags(GENERATE_DENSE);
     TitaniumTungstenCarbide.addFlags(GENERATE_BOLT_SCREW, GENERATE_DENSE);
+    CertusQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
 
     addIngot(Graphite);
     addIngot(Lithium);
@@ -28,7 +29,7 @@ public class GTRModifyMaterials {
     addIngot(Calcium);
     addIngot(Boron);
 
-    addFluid(AmmoniumChloride);
+//    addFluid(AmmoniumChloride);
   }
 
 }
