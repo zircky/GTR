@@ -26,6 +26,7 @@ public class AppliedEnergistics2Recipe {
     Decorative.init(provider);
     Inscriber.init(provider);
     Materials.materials(provider);
+    Cables.init(provider);
     AE2Recipe(provider);
   }
 

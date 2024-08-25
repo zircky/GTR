@@ -9,7 +9,10 @@ import com.gregtechceu.gtceu.common.data.GTMachines;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
+import gripe._90.megacells.definition.MEGABlocks;
+import gripe._90.megacells.definition.MEGAItems;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.function.Consumer;
@@ -40,12 +43,8 @@ public class Crafting {
         .outputItems(new ItemStack(AEBlocks.CRAFTING_ACCELERATOR))
         .duration(400).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/crafting/cpu_crafting_monitor")
-        .inputItems(new ItemStack(AEBlocks.CRAFTING_UNIT))
-        .inputItems(STORAGE_MONITOR.asItem())
-        .outputItems(new ItemStack(AEBlocks.CRAFTING_MONITOR))
-        .duration(400).EUt(GTValues.VA[GTValues.EV]).save(provider);
-
+    crefting("ae2/network/crafting/cpu_crafting_monitor", new ItemStack(AEBlocks.CRAFTING_UNIT), STORAGE_MONITOR.asItem(), new ItemStack(AEBlocks.CRAFTING_MONITOR), 400, GTValues.VA[GTValues.EV], provider );
+    
     ASSEMBLER_RECIPES.recipeBuilder("ae2/network/crafting/molecular_assembler")
         .inputItems(GTMachines.ASSEMBLER[5])
         .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide), 4)
@@ -94,7 +93,27 @@ public class Crafting {
         'A', new UnificationEntry(TagPrefix.plateDouble, GTMaterials.Aluminium),
         'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TantalumCarbide));
 
+    ASSEMBLER_RECIPES.recipeBuilder("megacells/crafting/1m_crafting_storage")
+        .inputItems(new ItemStack(MEGABlocks.MEGA_CRAFTING_UNIT))
+        .inputItems(new ItemStack(MEGAItems.CELL_COMPONENT_1M))
+        .outputItems(new ItemStack(MEGABlocks.CRAFTING_STORAGE_1M))
+        .duration(1200).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
+
   }
 
 
+  private static void crefting(String id, ItemStack input1, ItemStack input2, ItemStack output, int time, int eut, Consumer<FinishedRecipe> provider) {
+    ASSEMBLER_RECIPES.recipeBuilder(id)
+        .inputItems(input1)
+        .inputItems(input2)
+        .inputItems(output)
+        .duration(time).EUt(eut).save(provider);
+  }
+  private static void crefting(String id, ItemStack input1, Item input2, ItemStack output, int time, int eut, Consumer<FinishedRecipe> provider) {
+    ASSEMBLER_RECIPES.recipeBuilder(id)
+        .inputItems(input1)
+        .inputItems(input2)
+        .inputItems(output)
+        .duration(time).EUt(eut).save(provider);
+  }
 }

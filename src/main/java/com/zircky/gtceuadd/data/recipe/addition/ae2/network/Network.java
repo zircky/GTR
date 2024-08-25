@@ -28,7 +28,7 @@ public class Network {
         'C', new ItemStack(AEItems.CALCULATION_PROCESSOR.asItem()),
         'S', new UnificationEntry(TagPrefix.screw, GTMaterials.TitaniumTungstenCarbide));
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:network/wireless_terminal", new ItemStack(AEItems.WIRELESS_TERMINAL.asItem()),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/wireless_terminal", new ItemStack(AEItems.WIRELESS_TERMINAL.asItem()),
         "WTW", "PEP", "PDP",
         'W', new ItemStack(AEItems.WIRELESS_RECEIVER),
         'T', new ItemStack(AEParts.TERMINAL.asItem()),
@@ -36,7 +36,7 @@ public class Network {
         'E', new ItemStack(AEItems.ENGINEERING_PROCESSOR),
         'D', new ItemStack(AEBlocks.DENSE_ENERGY_CELL));
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:network/wireless_crafting_terminal", new ItemStack(AEItems.WIRELESS_TERMINAL.asItem()),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/wireless_crafting_terminal", new ItemStack(AEItems.WIRELESS_CRAFTING_TERMINAL.asItem()),
         "PAP", "FTF", "CSX",
         'P', new ItemStack(AEItems.FLUIX_PEARL),
         'T', new ItemStack(AEParts.CRAFTING_TERMINAL.asItem()),

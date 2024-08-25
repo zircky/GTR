@@ -53,6 +53,102 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("ae2:network/blocks/energy_energy_cell"));
     consumer.accept(new ResourceLocation("ae2:network/blocks/energy_dense_energy_cell"));
 
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_fluix"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_fluix_clean"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_black"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_brown"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_cyan"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_green"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_light_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_light_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_lime"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_magenta"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_orange"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_pink"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_purple"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_red"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_white"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/glass_yellow"));
+
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_fluix"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_fluix_clean"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_black"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_brown"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_cyan"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_green"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_light_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_light_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_lime"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_magenta"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_orange"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_pink"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_purple"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_red"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_white"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/covered_yellow"));
+
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_fluix"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_fluix_clean"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_black"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_brown"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_cyan"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_green"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_light_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_light_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_lime"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_magenta"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_orange"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_pink"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_purple"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_red"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_white"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/smart_yellow"));
+
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_fluix"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_fluix_clean"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_black"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_brown"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_cyan"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_green"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_light_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_light_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_lime"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_magenta"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_orange"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_pink"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_purple"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_red"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_white"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_covered_yellow"));
+
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_fluix"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_from_smart"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_fluix_clean.json"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_black"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_brown"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_cyan"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_green"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_light_blue"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_light_gray"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_lime"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_magenta"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_orange"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_pink"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_purple"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_red"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_white"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_yellow"));
+
     consumer.accept(new ResourceLocation("ae2:network/crafting/1k_cpu_crafting_storage"));
     consumer.accept(new ResourceLocation("ae2:network/crafting/4k_cpu_crafting_storage"));
     consumer.accept(new ResourceLocation("ae2:network/crafting/16k_cpu_crafting_storage"));
@@ -81,6 +177,7 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_cell_16k"));
     consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_cell_64k"));
     consumer.accept(new ResourceLocation("ae2:network/cells/item_storage_cell_256k"));
+    consumer.accept(new ResourceLocation("ae2:network/cells/view_cell"));
 
     consumer.accept(new ResourceLocation("ae2:network/wireless_access_point"));
     consumer.accept(new ResourceLocation("ae2:network/wireless_terminal"));
@@ -91,7 +188,20 @@ public class AppliedEnergistics2Remove {
 
     consumer.accept(new ResourceLocation("ae2:materials/annihilationcore"));
     consumer.accept(new ResourceLocation("ae2:materials/formationcore"));
+    consumer.accept(new ResourceLocation("ae2:materials/basiccard"));
+    consumer.accept(new ResourceLocation("ae2:materials/advancedcard"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardcapacity"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardcrafting"));
+    consumer.accept(new ResourceLocation("ae2:materials/carddistribution"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardenergy"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardfuzzy"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardinverter"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardredstone"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardspeed"));
+    consumer.accept(new ResourceLocation("ae2:materials/cardvoid"));
+
     consumer.accept(new ResourceLocation("ae2:network/parts/terminals_crafting"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/quartz_fiber_part"));
 
     consumer.accept(new ResourceLocation("ae2:tools/paintballs_black"));
     consumer.accept(new ResourceLocation("ae2:tools/paintballs_blue"));
@@ -146,5 +256,33 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("megacells:cells/cell_component_16m"));
     consumer.accept(new ResourceLocation("megacells:cells/cell_component_64m"));
     consumer.accept(new ResourceLocation("megacells:cells/cell_component_256m"));
+    consumer.accept(new ResourceLocation("megacells:cells/mega_item_cell_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/mega_fluid_cell_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_1m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_4m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_16m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_64m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_256m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_1m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_4m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_16m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_64m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_256m"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_1m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_4m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_16m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_64m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/fluid_storage_cell_256m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_1m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_4m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_16m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_64m_with_housing"));
+    consumer.accept(new ResourceLocation("megacells:cells/standard/item_storage_cell_256m_with_housing"));
+
+    consumer.accept(new ResourceLocation("megacells:crafting/1m_crafting_storage"));
+    consumer.accept(new ResourceLocation("megacells:crafting/4m_crafting_storage"));
+    consumer.accept(new ResourceLocation("megacells:crafting/16m_crafting_storage"));
+    consumer.accept(new ResourceLocation("megacells:crafting/64m_crafting_storage"));
+    consumer.accept(new ResourceLocation("megacells:crafting/256m_crafting_storage"));
   }
 }

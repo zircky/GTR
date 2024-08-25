@@ -125,7 +125,7 @@ public class NetworkBlocks {
         .duration(100).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
     ASSEMBLER_RECIPES.recipeBuilder("ae2/network/blocks/storage_chest")
-        .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.Titanium), 4)
+        .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide), 4)
         .inputItems(new ItemStack(GLASS_CABLE.item(TRANSPARENT), 2))
         .inputItems(CustomTags.EV_CIRCUITS, 2)
         .inputItems(CustomTags.WOODEN_CHESTS)
@@ -173,7 +173,7 @@ public class NetworkBlocks {
         .duration(100).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
     ASSEMBLER_RECIPES.recipeBuilder("ae2/network/blocks/energy_energy_cell")
-        .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.Titanium), 4)
+        .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide), 4)
         .inputItems(CustomTags.EV_CIRCUITS, 2)
         .inputItems(new ItemStack(AEItems.FLUIX_DUST))
         .inputItems(new ItemStack(AEBlocks.FLUIX_BLOCK))

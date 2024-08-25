@@ -72,7 +72,7 @@ public class NetworkCells {
         new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.WETWARE_BOARD),
         new ItemStack(MEGAItems.CELL_COMPONENT_256M), 400, GTValues.VA[GTValues.UHV], provider);
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/cells/item_cell_housing")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/cells/item_cell_housing_ass")
         .inputItems(new ItemStack(Blocks.GLASS_PANE))
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz))
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.Tantalum))
@@ -80,7 +80,7 @@ public class NetworkCells {
         .outputItems(new ItemStack(AEItems.ITEM_CELL_HOUSING))
         .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/cells/fluid_cell_housing")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/cells/fluid_cell_housing_ass")
         .inputItems(new ItemStack(Blocks.GLASS_PANE))
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz))
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.AnnealedCopper))
@@ -88,18 +88,53 @@ public class NetworkCells {
         .outputItems(new ItemStack(AEItems.FLUID_CELL_HOUSING))
         .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
+    ASSEMBLER_RECIPES.recipeBuilder("megacells/cells/mega_item_cell_housing_ass")
+        .inputItems(new ItemStack(Blocks.GLASS_PANE))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTRMaterials.Bedrockium))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTRMaterials.SkySteel), 2)
+        .circuitMeta(1)
+        .outputItems(new ItemStack(MEGAItems.MEGA_ITEM_CELL_HOUSING))
+        .duration(580).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
 
-    vanillaRecipeHelperItemCell(provider, "ae2:network/cells/item_storage_cell_1k", new ItemStack(AEItems.ITEM_CELL_1K), new ItemStack(AEItems.CELL_COMPONENT_1K));
-    vanillaRecipeHelperItemCell(provider, "ae2:network/cells/item_storage_cell_4k", new ItemStack(AEItems.ITEM_CELL_4K), new ItemStack(AEItems.CELL_COMPONENT_4K));
-    vanillaRecipeHelperItemCell(provider, "ae2:network/cells/item_storage_cell_16k", new ItemStack(AEItems.ITEM_CELL_16K), new ItemStack(AEItems.CELL_COMPONENT_16K));
-    vanillaRecipeHelperItemCell(provider, "ae2:network/cells/item_storage_cell_64k", new ItemStack(AEItems.ITEM_CELL_64K), new ItemStack(AEItems.CELL_COMPONENT_64K));
-    vanillaRecipeHelperItemCell(provider, "ae2:network/cells/item_storage_cell_256k", new ItemStack(AEItems.ITEM_CELL_256K), new ItemStack(AEItems.CELL_COMPONENT_256K));
+    ASSEMBLER_RECIPES.recipeBuilder("megacells/cells/mega_fluid_cell_housing_ass")
+        .inputItems(new ItemStack(Blocks.GLASS_PANE))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTRMaterials.Bedrockium))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTRMaterials.SkySteel), 2)
+        .circuitMeta(2)
+        .outputItems(new ItemStack(MEGAItems.MEGA_FLUID_CELL_HOUSING))
+        .duration(580).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
 
-    vanillaRecipeHelperFluidCell(provider, "ae2:network/cells/fluid_storage_cell_1k", new ItemStack(AEItems.FLUID_CELL_1K), new ItemStack(AEItems.CELL_COMPONENT_1K));
-    vanillaRecipeHelperFluidCell(provider, "ae2:network/cells/fluid_storage_cell_4k", new ItemStack(AEItems.FLUID_CELL_4K), new ItemStack(AEItems.CELL_COMPONENT_4K));
-    vanillaRecipeHelperFluidCell(provider, "ae2:network/cells/fluid_storage_cell_16k", new ItemStack(AEItems.FLUID_CELL_16K), new ItemStack(AEItems.CELL_COMPONENT_16K));
-    vanillaRecipeHelperFluidCell(provider, "ae2:network/cells/fluid_storage_cell_64k", new ItemStack(AEItems.FLUID_CELL_64K), new ItemStack(AEItems.CELL_COMPONENT_64K));
-    vanillaRecipeHelperFluidCell(provider, "ae2:network/cells/fluid_storage_cell_256k", new ItemStack(AEItems.FLUID_CELL_256K), new ItemStack(AEItems.CELL_COMPONENT_256K));
+
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_cell_housing", new ItemStack(AEItems.ITEM_CELL_HOUSING), new ItemStack(Blocks.GLASS_PANE));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_storage_cell_1k", new ItemStack(AEItems.ITEM_CELL_1K), new ItemStack(AEItems.CELL_COMPONENT_1K));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_storage_cell_4k", new ItemStack(AEItems.ITEM_CELL_4K), new ItemStack(AEItems.CELL_COMPONENT_4K));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_storage_cell_16k", new ItemStack(AEItems.ITEM_CELL_16K), new ItemStack(AEItems.CELL_COMPONENT_16K));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_storage_cell_64k", new ItemStack(AEItems.ITEM_CELL_64K), new ItemStack(AEItems.CELL_COMPONENT_64K));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_storage_cell_256k", new ItemStack(AEItems.ITEM_CELL_256K), new ItemStack(AEItems.CELL_COMPONENT_256K));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/view_cell", new ItemStack(AEItems.VIEW_CELL), new UnificationEntry(TagPrefix.gem, GTMaterials.CertusQuartz));
+
+    vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_cell_housing", new ItemStack(AEItems.FLUID_CELL_HOUSING), new ItemStack(Blocks.GLASS_PANE));
+    vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_storage_cell_1k", new ItemStack(AEItems.FLUID_CELL_1K), new ItemStack(AEItems.CELL_COMPONENT_1K));
+    vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_storage_cell_4k", new ItemStack(AEItems.FLUID_CELL_4K), new ItemStack(AEItems.CELL_COMPONENT_4K));
+    vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_storage_cell_16k", new ItemStack(AEItems.FLUID_CELL_16K), new ItemStack(AEItems.CELL_COMPONENT_16K));
+    vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_storage_cell_64k", new ItemStack(AEItems.FLUID_CELL_64K), new ItemStack(AEItems.CELL_COMPONENT_64K));
+    vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_storage_cell_256k", new ItemStack(AEItems.FLUID_CELL_256K), new ItemStack(AEItems.CELL_COMPONENT_256K));
+
+    vanillaRecipeHelperItemMEGACell(provider, "megacells/cells/mega_item_cell_housing", new ItemStack(MEGAItems.MEGA_ITEM_CELL_HOUSING), new ItemStack(Blocks.GLASS_PANE));
+    vanillaRecipeHelperItemMEGACell(provider, "megacells/cells/mega_item_storage_cell_1k", new ItemStack(MEGAItems.ITEM_CELL_1M), new ItemStack(MEGAItems.CELL_COMPONENT_1M));
+    vanillaRecipeHelperItemMEGACell(provider, "megacells/cells/mega_item_storage_cell_4k", new ItemStack(MEGAItems.ITEM_CELL_4M), new ItemStack(MEGAItems.CELL_COMPONENT_4M));
+    vanillaRecipeHelperItemMEGACell(provider, "megacells/cells/mega_item_storage_cell_16k", new ItemStack(MEGAItems.ITEM_CELL_16M), new ItemStack(MEGAItems.CELL_COMPONENT_16M));
+    vanillaRecipeHelperItemMEGACell(provider, "megacells/cells/mega_item_storage_cell_64k", new ItemStack(MEGAItems.ITEM_CELL_64M), new ItemStack(MEGAItems.CELL_COMPONENT_64M));
+    vanillaRecipeHelperItemMEGACell(provider, "megacells/cells/mega_item_storage_cell_256k", new ItemStack(MEGAItems.ITEM_CELL_256M), new ItemStack(MEGAItems.CELL_COMPONENT_256M));
+
+    vanillaRecipeHelperFluidMEGACell(provider, "megacells/cells/mega_fluid_cell_housing", new ItemStack(MEGAItems.MEGA_FLUID_CELL_HOUSING), new ItemStack(Blocks.GLASS_PANE));
+    vanillaRecipeHelperFluidMEGACell(provider, "megacells/cells/standard/fluid_storage_cell_1m", new ItemStack(MEGAItems.FLUID_CELL_1M), new ItemStack(MEGAItems.CELL_COMPONENT_1M));
+    vanillaRecipeHelperFluidMEGACell(provider, "megacells/cells/standard/fluid_storage_cell_4m", new ItemStack(MEGAItems.FLUID_CELL_4M), new ItemStack(MEGAItems.CELL_COMPONENT_4M));
+    vanillaRecipeHelperFluidMEGACell(provider, "megacells/cells/standard/fluid_storage_cell_16m", new ItemStack(MEGAItems.FLUID_CELL_16M), new ItemStack(MEGAItems.CELL_COMPONENT_16M));
+    vanillaRecipeHelperFluidMEGACell(provider, "megacells/cells/standard/fluid_storage_cell_64m", new ItemStack(MEGAItems.FLUID_CELL_64M), new ItemStack(MEGAItems.CELL_COMPONENT_64M));
+    vanillaRecipeHelperFluidMEGACell(provider, "megacells/cells/standard/fluid_storage_cell_256m", new ItemStack(MEGAItems.FLUID_CELL_256M), new ItemStack(MEGAItems.CELL_COMPONENT_256M));
 
   }
   private static void vanillaRecipeHelperItemCell(Consumer<FinishedRecipe> provider, String id, ItemStack result, ItemStack input1) {
@@ -112,12 +147,43 @@ public class NetworkCells {
         'T', new UnificationEntry(TagPrefix.plate, GTMaterials.Tantalum)
     );
   }
+  private static void vanillaRecipeHelperItemCell(Consumer<FinishedRecipe> provider, String id, ItemStack result, UnificationEntry input1) {
+    VanillaRecipeHelper.addShapedRecipe(provider, id, result,
+        "hQS", "GCG", "STd",
+        'Q', new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'G', new UnificationEntry(TagPrefix.plate, GTMaterials.StainlessSteel),
+        'C', input1,
+        'T', new UnificationEntry(TagPrefix.plate, GTMaterials.Tantalum)
+    );
+  }
+
+  private static void vanillaRecipeHelperItemMEGACell(Consumer<FinishedRecipe> provider, String id, ItemStack result, ItemStack input1) {
+    VanillaRecipeHelper.addShapedRecipe(provider, id, result,
+        "hQS", "GCG", "STd",
+        'Q', new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz),
+        'S', new UnificationEntry(TagPrefix.screw, GTRMaterials.Bedrockium),
+        'G', new UnificationEntry(TagPrefix.plate, GTRMaterials.SkySteel),
+        'C', input1,
+        'T', new UnificationEntry(TagPrefix.plate, GTRMaterials.Bedrockium)
+    );
+  }
   private static void vanillaRecipeHelperFluidCell(Consumer<FinishedRecipe> provider, String id, ItemStack result, ItemStack input1) {
     VanillaRecipeHelper.addShapedRecipe(provider, id, result,
         "hQS", "GCG", "STd",
         'Q', new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz),
         'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
         'G', new UnificationEntry(TagPrefix.plate, GTRMaterials.CortenSteel),
+        'C', input1,
+        'T', new UnificationEntry(TagPrefix.plate, GTMaterials.AnnealedCopper)
+    );
+  }
+  private static void vanillaRecipeHelperFluidMEGACell(Consumer<FinishedRecipe> provider, String id, ItemStack result, ItemStack input1) {
+    VanillaRecipeHelper.addShapedRecipe(provider, id, result,
+        "hQS", "GCG", "STd",
+        'Q', new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz),
+        'S', new UnificationEntry(TagPrefix.screw, GTRMaterials.Bedrockium),
+        'G', new UnificationEntry(TagPrefix.plate, GTRMaterials.SkySteel),
         'C', input1,
         'T', new UnificationEntry(TagPrefix.plate, GTMaterials.AnnealedCopper)
     );

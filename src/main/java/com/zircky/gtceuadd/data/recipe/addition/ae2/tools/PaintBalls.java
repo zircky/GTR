@@ -67,13 +67,13 @@ public class PaintBalls {
         "QwQ", "QQQ", " Q ",
       'Q', new ItemStack(Items.QUARTZ));
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/tools/certus_quartz_cutting_knife", AEItems.CERTUS_QUARTZ_WRENCH.stack(),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/tools/certus_quartz_cutting_knife", AEItems.CERTUS_QUARTZ_KNIFE.stack(),
         "hTS", "CST", "PCf",
         'C', new UnificationEntry(TagPrefix.gem, GTMaterials.CertusQuartz),
         'P', new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz),
         'T', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
         'S', new UnificationEntry(TagPrefix.rod, GTMaterials.Wood));
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/tools/nether_quartz_cutting_knife", AEItems.NETHER_QUARTZ_WRENCH.stack(),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/tools/nether_quartz_cutting_knife", AEItems.NETHER_QUARTZ_KNIFE.stack(),
         "hTS",
                 "QST",
                 "PQf",
@@ -90,7 +90,7 @@ public class PaintBalls {
         'C', new ItemStack(AEBlocks.ENERGY_CELL),
         'T', new UnificationEntry(TagPrefix.rod, GTMaterials.TitaniumTungstenCarbide));
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:tools/network_color_applicator", AEItems.COLOR_APPLICATOR.stack(),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/tools/network_color_applicator", AEItems.COLOR_APPLICATOR.stack(),
         "WFW", "CEC", " R ",
         'W', new UnificationEntry(TagPrefix.wireGtSingle, GTMaterials.BlueAlloy),
         'F', new ItemStack(AEItems.FORMATION_CORE),
@@ -98,7 +98,7 @@ public class PaintBalls {
         'E', new ItemStack(AEBlocks.ENERGY_CELL),
         'R', new UnificationEntry(TagPrefix.rod, GTMaterials.Steel));
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:tools/network_memory_card", AEItems.MEMORY_CARD.stack(),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/tools/network_memory_card", AEItems.MEMORY_CARD.stack(),
         "LCT", "GRG",
         'L', new ItemStack(AEItems.LOGIC_PROCESSOR),
         'C', CustomTags.EV_CIRCUITS,

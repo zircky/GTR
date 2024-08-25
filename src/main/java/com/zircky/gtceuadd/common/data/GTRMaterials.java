@@ -42,6 +42,7 @@ public class GTRMaterials {
   public static Material CobaltIIHydroxide; //Formula Co(OH)2 только пыль
   public static Material ChaoticDraconium;
   public static Material DynamicInfinity;
+  public static Material SkySteel;
 
 
   // Chemical

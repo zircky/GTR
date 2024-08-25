@@ -54,7 +54,7 @@ public class Decorative {
         .outputItems(new ItemStack(AEBlocks.FLUIX_BLOCK))
         .duration(600).EUt(16).save(provider);
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2:decorative/light_detector")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/decorative/light_detector")
         .inputItems(new UnificationEntry(TagPrefix.gem, GTMaterials.CertusQuartz))
         .inputItems(new UnificationEntry(TagPrefix.rod, GTMaterials.Aluminium))
         .outputItems(new ItemStack(AEBlocks.LIGHT_DETECTOR))

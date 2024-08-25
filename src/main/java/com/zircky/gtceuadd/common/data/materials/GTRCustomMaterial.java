@@ -98,5 +98,6 @@ public class GTRCustomMaterial {
     MagnetohydrodynamicallyConstrainedStarMatter = IngotBuilder("magnetohydrodynamically_constrained_star_matter", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MagnetohydrodynamicallyConstrainedStarMatterIcon, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(1870).customStill(), "");
     MonolithAlloy = IngotBuilder("monolith_alloy", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, METALLIC, "");
 
+    SkySteel = IngotBuilder("sky_steel", 0x000000, 0xFFFFFF, SNDART_FLAGS, METALLIC, "SkFe");
   }
 }

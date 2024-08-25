@@ -22,6 +22,7 @@ public class GTRModifyMaterials {
     Iridium.addFlags(GENERATE_DENSE);
     TitaniumTungstenCarbide.addFlags(GENERATE_BOLT_SCREW, GENERATE_DENSE);
     CertusQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
+    NetherQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
 
     addIngot(Graphite);
     addIngot(Lithium);
