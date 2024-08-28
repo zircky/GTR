@@ -23,6 +23,7 @@ public class GTRModifyMaterials {
     TitaniumTungstenCarbide.addFlags(GENERATE_BOLT_SCREW, GENERATE_DENSE);
     CertusQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
     NetherQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
+    Quartzite.addFlags(GENERATE_ROD);
 
     addIngot(Graphite);
     addIngot(Lithium);

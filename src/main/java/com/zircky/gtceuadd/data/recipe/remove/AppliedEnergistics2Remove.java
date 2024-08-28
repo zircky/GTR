@@ -202,6 +202,12 @@ public class AppliedEnergistics2Remove {
 
     consumer.accept(new ResourceLocation("ae2:network/parts/terminals_crafting"));
     consumer.accept(new ResourceLocation("ae2:network/parts/quartz_fiber_part"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/toggle_bus"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/toggle_bus_alt"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/toggle_bus_inverted_alt"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/level_emitter"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/energy_level_emitter"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/cable_anchor"));
 
     consumer.accept(new ResourceLocation("ae2:tools/paintballs_black"));
     consumer.accept(new ResourceLocation("ae2:tools/paintballs_blue"));

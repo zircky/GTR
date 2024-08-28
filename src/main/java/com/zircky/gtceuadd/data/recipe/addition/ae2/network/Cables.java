@@ -61,7 +61,7 @@ public class Cables {
         .outputItems(new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)))
         .duration(350).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/cables/smart_fluix")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/cables/smart_fluix")
         .inputItems(new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT), 3))
         .inputItems(CustomTags.EV_CIRCUITS)
         .inputFluids(GTMaterials.Cupronickel.getFluid(144))
@@ -83,7 +83,7 @@ public class Cables {
         .outputItems(new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)))
         .duration(350).EUt(GTValues.VA[GTValues.LuV]).save(provider);
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/cables/dense_smart_fluix")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/cables/dense_smart_fluix")
         .inputItems(new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)))
         .inputItems(CustomTags.ZPM_CIRCUITS)
         .inputFluids(GTRMaterials.CortenSteel.getFluid(144))
@@ -93,96 +93,97 @@ public class Cables {
   }
 
   public static void colors(Consumer<FinishedRecipe> provider) {
-    cablesColor("ae2:network/cables/glass_black", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.BLACK)), provider);
-    cablesColor("ae2:network/cables/glass_blue", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.BLUE)), provider);
-    cablesColor("ae2:network/cables/glass_brown", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.BROWN)), provider);
-    cablesColor("ae2:network/cables/glass_cyan", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.CYAN)), provider);
-    cablesColor("ae2:network/cables/glass_gray", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.GRAY)), provider);
-    cablesColor("ae2:network/cables/glass_green", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.GREEN)), provider);
-    cablesColor("ae2:network/cables/glass_light_blue", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.LIGHT_BLUE)), provider);
-    cablesColor("ae2:network/cables/glass_light_gray", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.LIGHT_GRAY)), provider);
-    cablesColor("ae2:network/cables/glass_lime", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.LIME)), provider);
-    cablesColor("ae2:network/cables/glass_magenta", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.MAGENTA)), provider);
-    cablesColor("ae2:network/cables/glass_orange", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.ORANGE)), provider);
-    cablesColor("ae2:network/cables/glass_pink", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.PINK)), provider);
-    cablesColor("ae2:network/cables/glass_purple", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.PURPLE)), provider);
-    cablesColor("ae2:network/cables/glass_red", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.RED)), provider);
-    cablesColor("ae2:network/cables/glass_white", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.WHITE)), provider);
-    cablesColor("ae2:network/cables/glass_yellow", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.YELLOW)), provider);
+    cablesColor("ae2/network/cables/glass_black", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.BLACK)), provider);
+    cablesColor("ae2/network/cables/glass_blue", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.BLUE)), provider);
+    cablesColor("ae2/network/cables/glass_brown", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.BROWN)), provider);
+    cablesColor("ae2/network/cables/glass_cyan", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.CYAN)), provider);
+    cablesColor("ae2/network/cables/glass_gray", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.GRAY)), provider);
+    cablesColor("ae2/network/cables/glass_green", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.GREEN)), provider);
+    cablesColor("ae2/network/cables/glass_light_blue", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.LIGHT_BLUE)), provider);
+    cablesColor("ae2/network/cables/glass_light_gray", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.LIGHT_GRAY)), provider);
+    cablesColor("ae2/network/cables/glass_lime", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.LIME)), provider);
+    cablesColor("ae2/network/cables/glass_magenta", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.MAGENTA)), provider);
+    cablesColor("ae2/network/cables/glass_orange", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.ORANGE)), provider);
+    cablesColor("ae2/network/cables/glass_pink", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.PINK)), provider);
+    cablesColor("ae2/network/cables/glass_purple", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.PURPLE)), provider);
+    cablesColor("ae2/network/cables/glass_red", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.RED)), provider);
+    cablesColor("ae2/network/cables/glass_white", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.WHITE)), provider);
+    cablesColor("ae2/network/cables/glass_yellow", new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.GLASS_CABLE.item(AEColor.YELLOW)), provider);
 
-    cablesColor("ae2:network/cables/covered_black", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.BLACK)), provider);
-    cablesColor("ae2:network/cables/covered_blue", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.BLUE)), provider);
-    cablesColor("ae2:network/cables/covered_brown", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.BROWN)), provider);
-    cablesColor("ae2:network/cables/covered_cyan", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.CYAN)), provider);
-    cablesColor("ae2:network/cables/covered_gray", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.GRAY)), provider);
-    cablesColor("ae2:network/cables/covered_green", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.GREEN)), provider);
-    cablesColor("ae2:network/cables/covered_light_blue", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.LIGHT_BLUE)), provider);
-    cablesColor("ae2:network/cables/covered_light_gray", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.LIGHT_GRAY)), provider);
-    cablesColor("ae2:network/cables/covered_lime", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.LIME)), provider);
-    cablesColor("ae2:network/cables/covered_magenta", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.MAGENTA)), provider);
-    cablesColor("ae2:network/cables/covered_orange", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.ORANGE)), provider);
-    cablesColor("ae2:network/cables/covered_pink", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.PINK)), provider);
-    cablesColor("ae2:network/cables/covered_purple", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.PURPLE)), provider);
-    cablesColor("ae2:network/cables/covered_red", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.RED)), provider);
-    cablesColor("ae2:network/cables/covered_white", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.WHITE)), provider);
-    cablesColor("ae2:network/cables/covered_yellow", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.YELLOW)), provider);
+    cablesColor("ae2/network/cables/covered_black", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.BLACK)), provider);
+    cablesColor("ae2/network/cables/covered_blue", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.BLUE)), provider);
+    cablesColor("ae2/network/cables/covered_brown", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.BROWN)), provider);
+    cablesColor("ae2/network/cables/covered_cyan", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.CYAN)), provider);
+    cablesColor("ae2/network/cables/covered_gray", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.GRAY)), provider);
+    cablesColor("ae2/network/cables/covered_green", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.GREEN)), provider);
+    cablesColor("ae2/network/cables/covered_light_blue", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.LIGHT_BLUE)), provider);
+    cablesColor("ae2/network/cables/covered_light_gray", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.LIGHT_GRAY)), provider);
+    cablesColor("ae2/network/cables/covered_lime", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.LIME)), provider);
+    cablesColor("ae2/network/cables/covered_magenta", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.MAGENTA)), provider);
+    cablesColor("ae2/network/cables/covered_orange", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.ORANGE)), provider);
+    cablesColor("ae2/network/cables/covered_pink", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.PINK)), provider);
+    cablesColor("ae2/network/cables/covered_purple", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.PURPLE)), provider);
+    cablesColor("ae2/network/cables/covered_red", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.RED)), provider);
+    cablesColor("ae2/network/cables/covered_white", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.WHITE)), provider);
+    cablesColor("ae2/network/cables/covered_yellow", new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.COVERED_CABLE.item(AEColor.YELLOW)), provider);
 
-    cablesColor("ae2:network/cables/smart_black", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.BLACK)), provider);
-    cablesColor("ae2:network/cables/smart_blue", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.BLUE)), provider);
-    cablesColor("ae2:network/cables/smart_brown", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.BROWN)), provider);
-    cablesColor("ae2:network/cables/smart_cyan", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.CYAN)), provider);
-    cablesColor("ae2:network/cables/smart_gray", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.GRAY)), provider);
-    cablesColor("ae2:network/cables/smart_green", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.GREEN)), provider);
-    cablesColor("ae2:network/cables/smart_light_blue", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.LIGHT_BLUE)), provider);
-    cablesColor("ae2:network/cables/smart_light_gray", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.LIGHT_GRAY)), provider);
-    cablesColor("ae2:network/cables/smart_lime", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.LIME)), provider);
-    cablesColor("ae2:network/cables/smart_magenta", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.MAGENTA)), provider);
-    cablesColor("ae2:network/cables/smart_orange", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.ORANGE)), provider);
-    cablesColor("ae2:network/cables/smart_pink", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.PINK)), provider);
-    cablesColor("ae2:network/cables/smart_purple", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.PURPLE)), provider);
-    cablesColor("ae2:network/cables/smart_red", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.RED)), provider);
-    cablesColor("ae2:network/cables/smart_white", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.WHITE)), provider);
-    cablesColor("ae2:network/cables/smart_yellow", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.YELLOW)), provider);
+    cablesColor("ae2/network/cables/smart_black", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.BLACK)), provider);
+    cablesColor("ae2/network/cables/smart_blue", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.BLUE)), provider);
+    cablesColor("ae2/network/cables/smart_brown", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.BROWN)), provider);
+    cablesColor("ae2/network/cables/smart_cyan", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.CYAN)), provider);
+    cablesColor("ae2/network/cables/smart_gray", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.GRAY)), provider);
+    cablesColor("ae2/network/cables/smart_green", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.GREEN)), provider);
+    cablesColor("ae2/network/cables/smart_light_blue", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.LIGHT_BLUE)), provider);
+    cablesColor("ae2/network/cables/smart_light_gray", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.LIGHT_GRAY)), provider);
+    cablesColor("ae2/network/cables/smart_lime", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.LIME)), provider);
+    cablesColor("ae2/network/cables/smart_magenta", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.MAGENTA)), provider);
+    cablesColor("ae2/network/cables/smart_orange", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.ORANGE)), provider);
+    cablesColor("ae2/network/cables/smart_pink", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.PINK)), provider);
+    cablesColor("ae2/network/cables/smart_purple", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.PURPLE)), provider);
+    cablesColor("ae2/network/cables/smart_red", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.RED)), provider);
+    cablesColor("ae2/network/cables/smart_white", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.WHITE)), provider);
+    cablesColor("ae2/network/cables/smart_yellow", new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.SMART_CABLE.item(AEColor.YELLOW)), provider);
 
-    cablesColor("ae2:network/cables/dense_covered_black", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.BLACK)), provider);
-    cablesColor("ae2:network/cables/dense_covered_blue", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.BLUE)), provider);
-    cablesColor("ae2:network/cables/dense_covered_brown", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.BROWN)), provider);
-    cablesColor("ae2:network/cables/dense_covered_cyan", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.CYAN)), provider);
-    cablesColor("ae2:network/cables/dense_covered_gray", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.GRAY)), provider);
-    cablesColor("ae2:network/cables/dense_covered_green", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.GREEN)), provider);
-    cablesColor("ae2:network/cables/dense_covered_light_blue", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.LIGHT_BLUE)), provider);
-    cablesColor("ae2:network/cables/dense_covered_light_gray", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.LIGHT_GRAY)), provider);
-    cablesColor("ae2:network/cables/dense_covered_lime", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.LIME)), provider);
-    cablesColor("ae2:network/cables/dense_covered_magenta", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.MAGENTA)), provider);
-    cablesColor("ae2:network/cables/dense_covered_orange", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.ORANGE)), provider);
-    cablesColor("ae2:network/cables/dense_covered_pink", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.PINK)), provider);
-    cablesColor("ae2:network/cables/dense_covered_purple", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.PURPLE)), provider);
-    cablesColor("ae2:network/cables/dense_covered_red", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.RED)), provider);
-    cablesColor("ae2:network/cables/dense_covered_white", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.WHITE)), provider);
-    cablesColor("ae2:network/cables/dense_covered_yellow", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.YELLOW)), provider);
+    cablesColor("ae2/network/cables/dense_covered_black", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.BLACK)), provider);
+    cablesColor("ae2/network/cables/dense_covered_blue", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.BLUE)), provider);
+    cablesColor("ae2/network/cables/dense_covered_brown", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.BROWN)), provider);
+    cablesColor("ae2/network/cables/dense_covered_cyan", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.CYAN)), provider);
+    cablesColor("ae2/network/cables/dense_covered_gray", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.GRAY)), provider);
+    cablesColor("ae2/network/cables/dense_covered_green", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.GREEN)), provider);
+    cablesColor("ae2/network/cables/dense_covered_light_blue", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.LIGHT_BLUE)), provider);
+    cablesColor("ae2/network/cables/dense_covered_light_gray", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.LIGHT_GRAY)), provider);
+    cablesColor("ae2/network/cables/dense_covered_lime", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.LIME)), provider);
+    cablesColor("ae2/network/cables/dense_covered_magenta", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.MAGENTA)), provider);
+    cablesColor("ae2/network/cables/dense_covered_orange", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.ORANGE)), provider);
+    cablesColor("ae2/network/cables/dense_covered_pink", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.PINK)), provider);
+    cablesColor("ae2/network/cables/dense_covered_purple", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.PURPLE)), provider);
+    cablesColor("ae2/network/cables/dense_covered_red", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.RED)), provider);
+    cablesColor("ae2/network/cables/dense_covered_white", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.WHITE)), provider);
+    cablesColor("ae2/network/cables/dense_covered_yellow", new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.YELLOW)), provider);
 
-    cablesColor("ae2:network/cables/dense_smart_black", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.BLACK)), provider);
-    cablesColor("ae2:network/cables/dense_smart_blue", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.BLUE)), provider);
-    cablesColor("ae2:network/cables/dense_smart_brown", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.BROWN)), provider);
-    cablesColor("ae2:network/cables/dense_smart_cyan", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.CYAN)), provider);
-    cablesColor("ae2:network/cables/dense_smart_gray", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.GRAY)), provider);
-    cablesColor("ae2:network/cables/dense_smart_green", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.GREEN)), provider);
-    cablesColor("ae2:network/cables/dense_smart_light_blue", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.LIGHT_BLUE)), provider);
-    cablesColor("ae2:network/cables/dense_smart_light_gray", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.LIGHT_GRAY)), provider);
-    cablesColor("ae2:network/cables/dense_smart_lime", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.LIME)), provider);
-    cablesColor("ae2:network/cables/dense_smart_magenta", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.MAGENTA)), provider);
-    cablesColor("ae2:network/cables/dense_smart_orange", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.ORANGE)), provider);
-    cablesColor("ae2:network/cables/dense_smart_pink", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.PINK)), provider);
-    cablesColor("ae2:network/cables/dense_smart_purple", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.PURPLE)), provider);
-    cablesColor("ae2:network/cables/dense_smart_red", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.RED)), provider);
-    cablesColor("ae2:network/cables/dense_smart_white", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.WHITE)), provider);
-    cablesColor("ae2:network/cables/dense_smart_yellow", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.YELLOW)), provider);
+    cablesColor("ae2/network/cables/dense_smart_black", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlack.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.BLACK)), provider);
+    cablesColor("ae2/network/cables/dense_smart_blue", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBlue.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.BLUE)), provider);
+    cablesColor("ae2/network/cables/dense_smart_brown", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeBrown.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.BROWN)), provider);
+    cablesColor("ae2/network/cables/dense_smart_cyan", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeCyan.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.CYAN)), provider);
+    cablesColor("ae2/network/cables/dense_smart_gray", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGray.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.GRAY)), provider);
+    cablesColor("ae2/network/cables/dense_smart_green", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeGreen.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.GREEN)), provider);
+    cablesColor("ae2/network/cables/dense_smart_light_blue", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightBlue.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.LIGHT_BLUE)), provider);
+    cablesColor("ae2/network/cables/dense_smart_light_gray", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLightGray.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.LIGHT_GRAY)), provider);
+    cablesColor("ae2/network/cables/dense_smart_lime", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeLime.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.LIME)), provider);
+    cablesColor("ae2/network/cables/dense_smart_magenta", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeMagenta.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.MAGENTA)), provider);
+    cablesColor("ae2/network/cables/dense_smart_orange", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeOrange.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.ORANGE)), provider);
+    cablesColor("ae2/network/cables/dense_smart_pink", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePink.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.PINK)), provider);
+    cablesColor("ae2/network/cables/dense_smart_purple", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyePurple.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.PURPLE)), provider);
+    cablesColor("ae2/network/cables/dense_smart_red", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeRed.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.RED)), provider);
+    cablesColor("ae2/network/cables/dense_smart_white", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeWhite.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.WHITE)), provider);
+    cablesColor("ae2/network/cables/dense_smart_yellow", new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)), GTMaterials.DyeYellow.getFluid(144), new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.YELLOW)), provider);
 
   }
 
   public static void clean(Consumer<FinishedRecipe> provider) {
 
   }
+  
 
   private static void cablesColor(String id, ItemStack inputItem, FluidStack inputFluid, ItemStack outputItem, Consumer<FinishedRecipe> provider) {
     CHEMICAL_BATH_RECIPES.recipeBuilder(id)
