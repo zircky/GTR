@@ -1,21 +1,20 @@
 package com.zircky.gtceuadd.data.recipe.addition.ae2.network;
 
 import appeng.api.util.AEColor;
-import appeng.core.definitions.AEBlocks;
 import appeng.core.definitions.AEItems;
 import appeng.core.definitions.AEParts;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.stack.UnificationEntry;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
-import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.data.recipe.CraftingComponent;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 
-import java.util.Arrays;
+import java.util.Map;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -86,12 +85,37 @@ public class Parts {
         .outputItems(new ItemStack(AEParts.INVERTED_TOGGLE_BUS))
         .duration(100).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/cable_anchor_", new ItemStack(AEParts.CABLE_ANCHOR),
-        "Af", "sA",
-        'A', ANCHOR);
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_iron", new UnificationEntry(TagPrefix.bolt, GTMaterials.Iron));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_copper", new UnificationEntry(TagPrefix.bolt, GTMaterials.Copper));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_bronze", new UnificationEntry(TagPrefix.bolt, GTMaterials.Bronze));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_tin", new UnificationEntry(TagPrefix.bolt, GTMaterials.Tin));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_steel", new UnificationEntry(TagPrefix.bolt, GTMaterials.Steel), 2);
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_aluminium", new UnificationEntry(TagPrefix.bolt, GTMaterials.Aluminium), 2);
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_lead", new UnificationEntry(TagPrefix.bolt, GTMaterials.Lead));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_nickel", new UnificationEntry(TagPrefix.bolt, GTMaterials.Nickel));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_silver", new UnificationEntry(TagPrefix.bolt, GTMaterials.Silver));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_brass", new UnificationEntry(TagPrefix.bolt, GTMaterials.Brass));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_invar", new UnificationEntry(TagPrefix.bolt, GTMaterials.Invar));
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_stainless_steel", new UnificationEntry(TagPrefix.bolt, GTMaterials.StainlessSteel), 3);
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_titanium", new UnificationEntry(TagPrefix.bolt, GTMaterials.Titanium), 4);
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_titanium_tungsten_carbide", new UnificationEntry(TagPrefix.bolt, GTMaterials.TitaniumTungstenCarbide), 6);
+      registerCableAnchorRecipes(provider, "ae2/network/parts/cable_anchor_tungsten_steel", new UnificationEntry(TagPrefix.bolt, GTMaterials.TungstenSteel), 16);
   }
 
-  public static CraftingComponent.Component ANCHOR = new CraftingComponent.Component(Stream.of(new Object[][] {
+  public static void registerCableAnchorRecipes(Consumer<FinishedRecipe> provider, String regName, UnificationEntry input) {
+    VanillaRecipeHelper.addShapedRecipe(provider, regName, new ItemStack(AEParts.CABLE_ANCHOR),
+        "Af", "sA",
+        'A', input);
+  }
+
+  public static void registerCableAnchorRecipes(Consumer<FinishedRecipe> provider, String regName, UnificationEntry input, int count) {
+    VanillaRecipeHelper.addShapedRecipe(provider, regName, new ItemStack(AEParts.CABLE_ANCHOR),
+        "Af", "sA",
+        'A', input, count);
+  }
+
+/*
+  public static GTRComponent ANCHOR = new GTRComponent(Stream.of(new Object[][] {
     { 0, new UnificationEntry(TagPrefix.bolt, GTMaterials.Iron) },
     { 1, new UnificationEntry(TagPrefix.bolt, GTMaterials.Copper) },
     { 2, new UnificationEntry(TagPrefix.bolt, GTMaterials.Bronze) },
@@ -107,5 +131,7 @@ public class Parts {
     { 12, new UnificationEntry(TagPrefix.bolt, GTMaterials.Titanium), 4 },
 
   }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
+*/
 
 }
+
