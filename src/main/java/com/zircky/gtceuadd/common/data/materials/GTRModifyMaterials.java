@@ -24,6 +24,8 @@ public class GTRModifyMaterials {
     CertusQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
     NetherQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
     Quartzite.addFlags(GENERATE_ROD);
+    Copper.addFlags(GENERATE_BOLT_SCREW);
+    Nickel.addFlags(GENERATE_BOLT_SCREW);
 
     addIngot(Graphite);
     addIngot(Lithium);

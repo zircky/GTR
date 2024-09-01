@@ -36,6 +36,9 @@ public class GTRCasingBlocks {
   public static final BlockEntry<Block> ContainmentFieldMachineCasing = createCasingBlock("containment_field_machine_casing", GTCEuAdd.id("block/casings/solid/containment_field_machine_casing"));
   public static final BlockEntry<Block> MiningNeutroniumCasing = createCasingBlock("mining_neutronium_casing", GTCEuAdd.id("block/casings/solid/mining_neutronium_casing"));
 
+  public static final BlockEntry<Block> GLASS_HV = createCasingBlock("glass_hv", GTCEuAdd.id("block/casings/solid/glass_hv"));
+
+
   public static void init() {
   }
 }

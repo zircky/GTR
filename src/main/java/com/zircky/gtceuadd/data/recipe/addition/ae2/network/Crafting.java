@@ -99,6 +99,30 @@ public class Crafting {
         .outputItems(new ItemStack(MEGABlocks.CRAFTING_STORAGE_1M))
         .duration(1200).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
 
+    ASSEMBLER_RECIPES.recipeBuilder("megacells/crafting/4m_crafting_storage")
+        .inputItems(new ItemStack(MEGABlocks.MEGA_CRAFTING_UNIT))
+        .inputItems(new ItemStack(MEGAItems.CELL_COMPONENT_4M))
+        .outputItems(new ItemStack(MEGABlocks.CRAFTING_STORAGE_4M))
+        .duration(1200).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
+
+    ASSEMBLER_RECIPES.recipeBuilder("megacells/crafting/16m_crafting_storage")
+        .inputItems(new ItemStack(MEGABlocks.MEGA_CRAFTING_UNIT))
+        .inputItems(new ItemStack(MEGAItems.CELL_COMPONENT_16M))
+        .outputItems(new ItemStack(MEGABlocks.CRAFTING_STORAGE_16M))
+        .duration(1200).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
+
+    ASSEMBLER_RECIPES.recipeBuilder("megacells/crafting/64m_crafting_storage")
+        .inputItems(new ItemStack(MEGABlocks.MEGA_CRAFTING_UNIT))
+        .inputItems(new ItemStack(MEGAItems.CELL_COMPONENT_64M))
+        .outputItems(new ItemStack(MEGABlocks.CRAFTING_STORAGE_64M))
+        .duration(1200).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
+
+    ASSEMBLER_RECIPES.recipeBuilder("megacells/crafting/256m_crafting_storage")
+        .inputItems(new ItemStack(MEGABlocks.MEGA_CRAFTING_UNIT))
+        .inputItems(new ItemStack(MEGAItems.CELL_COMPONENT_256M))
+        .outputItems(new ItemStack(MEGABlocks.CRAFTING_STORAGE_256M))
+        .duration(1200).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
+
   }
 
 
