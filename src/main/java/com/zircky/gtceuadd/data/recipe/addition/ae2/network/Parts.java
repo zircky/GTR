@@ -1,6 +1,7 @@
 package com.zircky.gtceuadd.data.recipe.addition.ae2.network;
 
 import appeng.api.util.AEColor;
+import appeng.core.definitions.AEBlocks;
 import appeng.core.definitions.AEItems;
 import appeng.core.definitions.AEParts;
 import com.electronwill.nightconfig.core.utils.ObservedMap;
@@ -11,6 +12,7 @@ import com.gregtechceu.gtceu.common.data.GTCovers;
 import com.gregtechceu.gtceu.common.data.GTItems;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.data.recipe.CraftingComponent;
+import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 import com.zircky.gtceuadd.data.recipe.GTRCraftingComponent;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -118,6 +120,58 @@ public class Parts {
         .circuitMeta(2)
         .outputItems(new ItemStack(AEParts.DARK_MONITOR))
         .duration(100).EUt(GTValues.VA[GTValues.MV]).save(provider);
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/storage_bus", new ItemStack(AEParts.STORAGE_BUS),
+        "dCh", "SIS", "NPN",
+        'C', CustomTags.WOODEN_CHESTS,
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'I', new ItemStack(AEParts.INTERFACE),
+        'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
+        'P', new ItemStack(GTItems.ELECTRIC_PISTON_MV));
+
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/storage_bus_alt")
+        .inputItems(CustomTags.WOODEN_CHESTS)
+        .inputItems(new ItemStack(AEParts.INTERFACE.asItem()))
+        .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz), 2)
+        .inputItems(new ItemStack(GTItems.ELECTRIC_PISTON_MV))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz))
+        .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:network/parts/import_bus", new ItemStack(AEParts.IMPORT_BUS),
+        "dTh", "SAS", "NPN",
+        'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'A', new ItemStack(AEItems.ANNIHILATION_CORE),
+        'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
+        'P', new ItemStack(GTItems.ELECTRIC_PISTON_MV));
+
+    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/parts/import_bus_alt")
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide))
+        .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz))
+        .inputItems(new ItemStack(AEItems.ANNIHILATION_CORE))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz), 2)
+        .inputItems(new ItemStack(GTItems.ELECTRIC_PISTON_MV))
+        .outputItems(new ItemStack(AEParts.IMPORT_BUS))
+        .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:network/parts/export_bus", new ItemStack(AEParts.IMPORT_BUS),
+        "dTh", "SFS", "NPN",
+        'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'F', new ItemStack(AEItems.FORMATION_CORE),
+        'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
+        'P', new ItemStack(GTItems.ELECTRIC_PISTON_MV));
+
+    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/parts/export_bus_alt")
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide))
+        .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz))
+        .inputItems(new ItemStack(AEItems.FORMATION_CORE))
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz), 2)
+        .inputItems(new ItemStack(GTItems.ELECTRIC_PISTON_MV))
+        .outputItems(new ItemStack(AEParts.IMPORT_BUS))
+        .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+
   }
 
   public static String[] materials = {"iron", "copper", "Bronze", "Tin", "Steel", "Aluminium", "Lead", "Lead", "Nickel", "Silver", "Brass", "Invar", "StainlessSteel", "Titanium"};
