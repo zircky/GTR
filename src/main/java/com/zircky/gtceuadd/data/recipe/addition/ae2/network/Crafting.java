@@ -43,7 +43,7 @@ public class Crafting {
         .outputItems(new ItemStack(AEBlocks.CRAFTING_ACCELERATOR))
         .duration(400).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
-    crefting("ae2/network/crafting/cpu_crafting_monitor", new ItemStack(AEBlocks.CRAFTING_UNIT), STORAGE_MONITOR.asItem(), new ItemStack(AEBlocks.CRAFTING_MONITOR), 400, GTValues.VA[GTValues.EV], provider );
+    crefting("ae2/network/crafting/cpu_crafting_monitor", new ItemStack(AEBlocks.CRAFTING_UNIT), new ItemStack(STORAGE_MONITOR), new ItemStack(AEBlocks.CRAFTING_MONITOR), 400, GTValues.VA[GTValues.EV], provider);
     
     ASSEMBLER_RECIPES.recipeBuilder("ae2/network/crafting/molecular_assembler")
         .inputItems(GTMachines.ASSEMBLER[5])
@@ -130,14 +130,14 @@ public class Crafting {
     ASSEMBLER_RECIPES.recipeBuilder(id)
         .inputItems(input1)
         .inputItems(input2)
-        .inputItems(output)
+        .outputItems(output)
         .duration(time).EUt(eut).save(provider);
   }
   private static void crefting(String id, ItemStack input1, Item input2, ItemStack output, int time, int eut, Consumer<FinishedRecipe> provider) {
     ASSEMBLER_RECIPES.recipeBuilder(id)
         .inputItems(input1)
         .inputItems(input2)
-        .inputItems(output)
+        .outputItems(output)
         .duration(time).EUt(eut).save(provider);
   }
 }

@@ -4,6 +4,7 @@ import appeng.api.util.AEColor;
 import appeng.core.definitions.AEBlocks;
 import appeng.core.definitions.AEItems;
 import appeng.core.definitions.AEParts;
+import appeng.hooks.AEToolItem;
 import com.electronwill.nightconfig.core.utils.ObservedMap;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.stack.UnificationEntry;
@@ -135,9 +136,10 @@ public class Parts {
         .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz), 2)
         .inputItems(new ItemStack(GTItems.ELECTRIC_PISTON_MV))
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz))
+        .outputItems(new ItemStack(AEParts.STORAGE_BUS))
         .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:network/parts/import_bus", new ItemStack(AEParts.IMPORT_BUS),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/import_bus", new ItemStack(AEParts.IMPORT_BUS),
         "dTh", "SAS", "NPN",
         'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide),
         'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
@@ -145,7 +147,7 @@ public class Parts {
         'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
         'P', new ItemStack(GTItems.ELECTRIC_PISTON_MV));
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/parts/import_bus_alt")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/import_bus_alt")
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide))
         .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz))
         .inputItems(new ItemStack(AEItems.ANNIHILATION_CORE))
@@ -154,7 +156,7 @@ public class Parts {
         .outputItems(new ItemStack(AEParts.IMPORT_BUS))
         .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2:network/parts/export_bus", new ItemStack(AEParts.IMPORT_BUS),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/export_bus", new ItemStack(AEParts.EXPORT_BUS),
         "dTh", "SFS", "NPN",
         'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide),
         'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
@@ -162,15 +164,83 @@ public class Parts {
         'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
         'P', new ItemStack(GTItems.ELECTRIC_PISTON_MV));
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2:network/parts/export_bus_alt")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/export_bus_alt")
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide))
         .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz))
         .inputItems(new ItemStack(AEItems.FORMATION_CORE))
         .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz), 2)
         .inputItems(new ItemStack(GTItems.ELECTRIC_PISTON_MV))
-        .outputItems(new ItemStack(AEParts.IMPORT_BUS))
+        .outputItems(new ItemStack(AEParts.EXPORT_BUS))
         .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/tunnels_me", new ItemStack(AEParts.ME_P2P_TUNNEL),
+        "dTh", "SES", "FFF",
+        'T', new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'F', new ItemStack(AEItems.FLUIX_CRYSTAL),
+        'E', new ItemStack(AEItems.ENGINEERING_PROCESSOR));
+
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/tunnels_me_alt")
+        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.TitaniumTungstenCarbide))
+        .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz), 2)
+        .inputItems(new ItemStack(AEItems.FLUIX_CRYSTAL, 3))
+        .inputItems(new ItemStack(AEItems.ENGINEERING_PROCESSOR))
+        .outputItems(new ItemStack(AEParts.ME_P2P_TUNNEL))
+        .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/formation_plane", new ItemStack(AEParts.FORMATION_PLANE),
+        "dHh", "SFS", "UUU",
+        'H', new ItemStack(Blocks.HOPPER),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'U', new ItemStack(AEItems.FLUIX_CRYSTAL),
+        'F', new ItemStack(AEItems.FORMATION_CORE));
+
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/formation_plane_alt")
+        .inputItems(new ItemStack(Blocks.HOPPER))
+        .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz), 2)
+        .inputItems(new ItemStack(AEItems.FLUIX_CRYSTAL, 3))
+        .inputItems(new ItemStack(AEItems.FORMATION_CORE))
+        .outputItems(new ItemStack(AEParts.FORMATION_PLANE))
+        .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/formation_plane", new ItemStack(AEParts.FORMATION_PLANE),
+        "dPh", "SFS", "UUU",
+        'H', new ItemStack(AEItems.CERTUS_QUARTZ_PICK),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'U', new ItemStack(AEItems.FLUIX_CRYSTAL),
+        'F', new ItemStack(AEItems.FORMATION_CORE));
+
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/formation_plane_alt")
+        .inputItems(new ItemStack(AEItems.CERTUS_QUARTZ_PICK))
+        .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz), 2)
+        .inputItems(new ItemStack(AEItems.FLUIX_CRYSTAL, 3))
+        .inputItems(new ItemStack(AEItems.ANNIHILATION_CORE))
+        .outputItems(new ItemStack(AEParts.ANNIHILATION_PLANE))
+        .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/terminals", new ItemStack(TERMINAL),
+        "NQN","PES","NdN",
+        'N', new UnificationEntry(TagPrefix.rod, GTMaterials.NetherQuartz),
+        'Q', new UnificationEntry(TagPrefix.screw, GTMaterials.Quartzite),
+        'P', new ItemStack(AEParts.SEMI_DARK_MONITOR),
+        'E', CustomTags.EV_CIRCUITS,
+        'S', new UnificationEntry(TagPrefix.plate, GTMaterials.StainlessSteel));
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/terminals_pattern_access", new ItemStack(AEParts.PATTERN_ACCESS_TERMINAL),
+        "dTr","SIS","NEN",
+        'T', new ItemStack(TERMINAL),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'I', new ItemStack(AEParts.INTERFACE),
+        'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
+        'E', new ItemStack(AEItems.ENGINEERING_PROCESSOR));
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/terminals_pattern_encoding", new ItemStack(AEParts.PATTERN_ENCODING_TERMINAL),
+        "dTr","SPS","NEN",
+        'T', new ItemStack(TERMINAL),
+        'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
+        'P', new ItemStack(AEItems.BLANK_PATTERN),
+        'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
+        'E', new ItemStack(AEItems.ENGINEERING_PROCESSOR));
 
   }
 

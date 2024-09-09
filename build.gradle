@@ -206,7 +206,7 @@ dependencies {
   modCompileOnly forge.emi
 
   // Botania
-//  modImplementation(forge.botania) { transitive = false }
+  modImplementation(forge.botania) { transitive = false }
 
   // ars Nouveau
   modImplementation(forge.arsnouveau) { transitive = false }

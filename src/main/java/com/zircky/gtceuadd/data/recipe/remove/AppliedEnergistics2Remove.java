@@ -195,7 +195,7 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("ae2:network/upgrade_wireless_crafting_terminal"));
     consumer.accept(new ResourceLocation("ae2:network/wireless_crafting_terminal"));
     consumer.accept(new ResourceLocation("ae2:network/wireless_crafting_terminal"));
-
+    consumer.accept(new ResourceLocation("ae2:network/wireless_part"));
 
     consumer.accept(new ResourceLocation("ae2:materials/annihilationcore"));
     consumer.accept(new ResourceLocation("ae2:materials/formationcore"));
@@ -222,21 +222,21 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("ae2:network/parts/panels_monitor"));
     consumer.accept(new ResourceLocation("ae2:network/parts/panels_semi_dark_monitor"));
     consumer.accept(new ResourceLocation("ae2:network/parts/panels_dark_monitor"));
-
-    //надо начинать сделать срафт
     consumer.accept(new ResourceLocation("ae2:network/parts/storage_bus"));
     consumer.accept(new ResourceLocation("ae2:network/parts/import_bus"));
     consumer.accept(new ResourceLocation("ae2:network/parts/export_bus"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/tunnels_me"));
     consumer.accept(new ResourceLocation("ae2:network/parts/annihilation_plane_alt"));
     consumer.accept(new ResourceLocation("ae2:network/parts/annihilation_plane_alt2"));
     consumer.accept(new ResourceLocation("ae2:network/parts/formation_plane"));
     consumer.accept(new ResourceLocation("ae2:network/parts/formation_plane_alt"));
-    consumer.accept(new ResourceLocation("ae2:network/parts/terminals_pattern_encoding"));
     consumer.accept(new ResourceLocation("ae2:network/parts/terminals"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/terminals_pattern_encoding"));
+    consumer.accept(new ResourceLocation("ae2:network/parts/terminals_pattern_access"));
+
+    //надо начинать сделать срафт
     consumer.accept(new ResourceLocation("ae2:network/parts/monitors_storage"));
     consumer.accept(new ResourceLocation("ae2:network/parts/monitors_conversion"));
-    consumer.accept(new ResourceLocation("ae2:network/parts/terminals_pattern_access"));
-    consumer.accept(new ResourceLocation("ae2:network/parts/tunnels_me"));
 
     consumer.accept(new ResourceLocation("ae2:tools/paintballs_black"));
     consumer.accept(new ResourceLocation("ae2:tools/paintballs_blue"));
@@ -319,5 +319,9 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("megacells:crafting/16m_crafting_storage"));
     consumer.accept(new ResourceLocation("megacells:crafting/64m_crafting_storage"));
     consumer.accept(new ResourceLocation("megacells:crafting/256m_crafting_storage"));
+
+    consumer.accept(new ResourceLocation("megacells:inscriber/accumulation_processor"));
+    consumer.accept(new ResourceLocation("megacells:inscriber/accumulation_processor_print"));
+    consumer.accept(new ResourceLocation("megacells:inscriber/accumulation_processor_press"));
   }
 }

@@ -21,6 +21,11 @@ public class GTRRemoveRecipes {
     consumer.accept(GTCEu.id("electric_motor_luv"));
     consumer.accept(GTCEu.id("electric_motor_zpm"));
     consumer.accept(GTCEu.id("electric_motor_uv"));
+    consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_lv"));
+    consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_mv"));
+    consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_hv"));
+    consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_ev"));
+    consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_iv"));
   }
 
 }

@@ -6,6 +6,7 @@ import appeng.core.definitions.AEParts;
 import com.gregtechceu.gtceu.api.data.chemical.material.stack.UnificationEntry;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
+import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.world.item.ItemStack;
@@ -45,6 +46,14 @@ public class Network {
         'C', new ItemStack(AEItems.CELL_COMPONENT_64K),
         'S', new ItemStack(AEItems.SINGULARITY),
         'X', new ItemStack(AEItems.CELL_COMPONENT_16K));
+
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/wireless_part", new ItemStack(AEItems.WIRELESS_RECEIVER),
+        "QFQ", " C ", "SES",
+        'Q', new ItemStack(AEParts.QUARTZ_FIBER),
+        'F', new ItemStack(AEItems.FLUIX_PEARL),
+        'C', new UnificationEntry(TagPrefix.rod, GTMaterials.CertusQuartz),
+        'S', new UnificationEntry(TagPrefix.plate, GTMaterials.StainlessSteel),
+        'E', CustomTags.EV_CIRCUITS);
 
   }
 

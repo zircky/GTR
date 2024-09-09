@@ -41,6 +41,10 @@ public class NetworkCells {
     vanillaRecipeHelper(provider, "megacell/cells/cell_component_64m", new ItemStack(MEGAItems.CELL_COMPONENT_64M), new ItemStack(MEGAItems.CELL_COMPONENT_16M), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.UV_CIRCUITS);
     vanillaRecipeHelper(provider, "megacell/cells/cell_component_256m", new ItemStack(MEGAItems.CELL_COMPONENT_256M), new ItemStack(MEGAItems.CELL_COMPONENT_64M), new ItemStack(GTRItems.LOGIC_CHIP), CustomTags.UHV_CIRCUITS);
 
+    vanillaRecipeHelper(provider, "ae2/network/cells/spatial_components", new ItemStack(AEItems.SPATIAL_2_CELL_COMPONENT), new ItemStack(AEItems.FLUIX_PEARL), new ItemStack(GTRItems.LOGIC_CHIP), new UnificationEntry(TagPrefix.plate, GTMaterials.Glowstone));
+    vanillaRecipeHelper(provider, "ae2/network/cells/spatial_components_0", new ItemStack(AEItems.SPATIAL_16_CELL_COMPONENT), new ItemStack(AEItems.SPATIAL_2_CELL_COMPONENT), new ItemStack(GTRItems.LOGIC_CHIP), new UnificationEntry(TagPrefix.plate, GTMaterials.EnderPearl));
+    vanillaRecipeHelper(provider, "ae2/network/cells/spatial_components_1", new ItemStack(AEItems.SPATIAL_128_CELL_COMPONENT), new ItemStack(AEItems.SPATIAL_16_CELL_COMPONENT), new ItemStack(GTRItems.LOGIC_CHIP), new UnificationEntry(TagPrefix.plate, GTMaterials.EnderPearl));
+
     circuitAssemblerRecipes("ae2/network/cells/item_storage_components_cell_1k_part_cir_ass", CustomTags.ULV_CIRCUITS, 2,
         new UnificationEntry(TagPrefix.plate, GTMaterials.CertusQuartz), 2, new ItemStack(GTRItems.LOGIC_CHIP), new ItemStack(GTItems.COATED_BOARD),
         new ItemStack(AEItems.CELL_COMPONENT_1K), 400, GTValues.VA[GTValues.HV], provider);
@@ -114,6 +118,10 @@ public class NetworkCells {
     vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_storage_cell_64k", new ItemStack(AEItems.ITEM_CELL_64K), new ItemStack(AEItems.CELL_COMPONENT_64K));
     vanillaRecipeHelperItemCell(provider, "ae2/network/cells/item_storage_cell_256k", new ItemStack(AEItems.ITEM_CELL_256K), new ItemStack(AEItems.CELL_COMPONENT_256K));
     vanillaRecipeHelperItemCell(provider, "ae2/network/cells/view_cell", new ItemStack(AEItems.VIEW_CELL), new UnificationEntry(TagPrefix.gem, GTMaterials.CertusQuartz));
+
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/spatial_storage_cell_2_cubed", new ItemStack(AEItems.SPATIAL_CELL2), new ItemStack(AEItems.SPATIAL_2_CELL_COMPONENT));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/spatial_storage_cell_16_cubed", new ItemStack(AEItems.SPATIAL_CELL16), new ItemStack(AEItems.SPATIAL_16_CELL_COMPONENT));
+    vanillaRecipeHelperItemCell(provider, "ae2/network/cells/spatial_storage_cell_128_cubed", new ItemStack(AEItems.SPATIAL_CELL128), new ItemStack(AEItems.SPATIAL_128_CELL_COMPONENT));
 
     vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_cell_housing", new ItemStack(AEItems.FLUID_CELL_HOUSING), new ItemStack(Blocks.GLASS_PANE));
     vanillaRecipeHelperFluidCell(provider, "ae2/network/cells/fluid_storage_cell_1k", new ItemStack(AEItems.FLUID_CELL_1K), new ItemStack(AEItems.CELL_COMPONENT_1K));

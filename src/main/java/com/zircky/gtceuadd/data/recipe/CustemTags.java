@@ -10,7 +10,7 @@ public class CustemTags {
   public static final TagKey<Item> MAX_BATTERIES = TagUtil.createModItemTag("batteries/max");
   public static final TagKey<Item> ERV_BATTERIES = TagUtil.createModItemTag("batteries/ERV");
 
-  public static final TagKey<Item> ERV_CIRCUITS = TagUtil.createModItemTag("circuits/erv");
+  public static final TagKey<Item> ERV_CIRCUITS = TagUtil.createModItemTag("circuits/erv.json");
 
 //  public static final TagKey<Item> CABLES_COLORS = TagUtil.createModItemTag("ae2/cables_colors");
 }

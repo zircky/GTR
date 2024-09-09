@@ -1,10 +1,12 @@
 package com.zircky.gtceuadd.common.data;
 
 import com.zircky.gtceuadd.data.recipe.GTRCustomeRecipes;
+import com.zircky.gtceuadd.data.recipe.addition.RecipeVanilla;
 import com.zircky.gtceuadd.data.recipe.addition.ae2.AppliedEnergistics2Recipe;
 import com.zircky.gtceuadd.data.recipe.generator.GTRGenerator;
 import com.zircky.gtceuadd.data.recipe.remove.AppliedEnergistics2Remove;
 import com.zircky.gtceuadd.data.recipe.remove.GTRRemoveRecipes;
+import com.zircky.gtceuadd.data.recipe.remove.VanillaRemove;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 
@@ -20,11 +22,13 @@ public class GTRRecipes {
     //GTRPlatinumLine.init(provider);
     AppliedEnergistics2Recipe.init(provider);
     GTRGenerator.init(provider);
+    RecipeVanilla.init(provider);
   }
 
 
   public static void recipeRemoval(Consumer<ResourceLocation> consumer) {
     GTRRemoveRecipes.init(consumer);
     AppliedEnergistics2Remove.init(consumer);
+    VanillaRemove.init(consumer);
   }
 }

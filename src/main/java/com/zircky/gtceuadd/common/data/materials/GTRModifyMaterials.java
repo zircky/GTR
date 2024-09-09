@@ -2,9 +2,7 @@ package com.zircky.gtceuadd.common.data.materials;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
-import static com.zircky.gtceuadd.common.data.GTRMaterials.addFluid;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.addIngot;
-
 public class GTRModifyMaterials {
   public static void init(){
     NaquadahAlloy.addFlags(GENERATE_ROUND);
@@ -21,10 +19,10 @@ public class GTRModifyMaterials {
     Tantalum.addFlags(GENERATE_ROD);
     Iridium.addFlags(GENERATE_DENSE);
     TitaniumTungstenCarbide.addFlags(GENERATE_BOLT_SCREW, GENERATE_DENSE);
-    CertusQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
+    CertusQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD, GENERATE_DENSE);
     NetherQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
-    Quartzite.addFlags(GENERATE_ROD);
-    Copper.addFlags(GENERATE_BOLT_SCREW);
+    Quartzite.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
+    Copper.addFlags(GENERATE_BOLT_SCREW, GENERATE_RING);
     Nickel.addFlags(GENERATE_BOLT_SCREW);
 
     addIngot(Graphite);

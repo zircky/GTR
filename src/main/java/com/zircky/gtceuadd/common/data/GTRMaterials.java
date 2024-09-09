@@ -10,6 +10,7 @@ import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.zircky.gtceuadd.common.data.materials.*;
+import net.minecraft.world.item.enchantment.Enchantments;
 
 import java.util.Collection;
 
