@@ -1,13 +1,13 @@
 plugins {
   alias libs.plugins.architectury
-  alias libs.plugins.architectury.loom apply false
-  alias libs.plugins.vineFlower apply false // VineFlower, a better decompiler
+  alias libs.plugins.architectury.loom
+//  alias libs.plugins.vineFlower // VineFlower, a better decompiler
   alias libs.plugins.machete // automatic jar compressing on build
   alias libs.plugins.shadow
 }
 
 apply plugin: "dev.architectury.loom"
-apply plugin: "io.github.juuxel.loom-vineflower"
+//apply plugin: "io.github.juuxel.loom-vineflower"
 apply plugin: "java"
 apply plugin: "architectury-plugin"
 apply plugin: "maven-publish"
@@ -166,11 +166,33 @@ repositories {
       includeGroup "curse.maven"
     }
   }
-  maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' } //geckolib
+  maven {
+    name = 'GeckoLib'
+    url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    content {
+      includeGroupByRegex("software\\.bernie.*")
+      includeGroup("com.eliotlash.mclib")
+    }
+  } //geckolib
   maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
   maven { url = "https://maven.quiltmc.org/repository/release/" } // Quilt Mappings
   maven { url = "https://maven.firstdarkdev.xyz/snapshots" } // LDLib
+  maven {
+    name = "mixin"
+    url = "https://repo.spongepowered.org/repository/maven-public/"
+  }
 
+  maven {
+    name = 'GTCEu Maven'
+    url = 'https://maven.gtceu.com'
+    content {
+      includeGroup 'com.gregtechceu.gtceu'
+    }
+  }
+
+  flatDir {
+    dir 'libs'
+  }
 }
 
 dependencies {
@@ -206,7 +228,9 @@ dependencies {
   modCompileOnly forge.emi
 
   // Botania
-  modImplementation(forge.botania) { transitive = false }
+//  modImplementation(forge.botania) { transitive = false }
+  modImplementation("curse.maven:botania-225643:5594997")
+
 
   // ars Nouveau
   modImplementation(forge.arsnouveau) { transitive = false }
@@ -215,6 +239,9 @@ dependencies {
   modImplementation(forge.arseng) { transitive = false }
 
   modImplementation(forge.geckolib)
+//  modImplementation("curse.maven:geckolib-388172:5675221")
+  implementation("com.eliotlash.mclib:mclib:20")
+  forgeRuntimeLibrary("com.eliotlash.mclib:mclib:20")
 
   modCompileOnly "top.theillusivec4.curios:curios-forge:${forge.versions.curios.get()}:api"
   modImplementation(forge.curios)
@@ -259,6 +286,19 @@ dependencies {
   //glodium
   modImplementation("curse.maven:glodium-957920:5044862")
 
+
+  //productivebees
+//  modImplementation("curse.maven:productivebees-377897:5566102")
+
+  //biomes-o-plenty
+  modImplementation("curse.maven:biomes-o-plenty-220318:4764804")
+  modImplementation("curse.maven:terrablender-563928:5378180")
+
+  //oh-the-biomes-weve-gone
+//  modImplementation("curse.maven:oh-the-biomes-weve-gone-1070751:5712412")
+//  modImplementation("curse.maven:corgilib-693313:5691268")
+//  modImplementation("curse.maven:oh-the-trees-youll-grow-962544:5693539")
+
   //modImplementation("curse.maven:draconic-evolution-223565:5524457")
 
   // TOP
@@ -270,15 +310,21 @@ dependencies {
   // Configuration
   modImplementation(forge.configuration)
 
+  modImplementation("curse.maven:official-divinerpg-363543:5715606")
+
   // Mixin Extras
-  implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:0.2.0"))
-  api("io.github.llamalad7:mixinextras-forge:0.2.0")
+  implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
+  api("io.github.llamalad7:mixinextras-forge:0.4.1")
+
+  implementation(annotationProcessor("org.spongepowered:mixin:0.8.7:processor"))
 
   // lombok
   compileOnly 'org.projectlombok:lombok:1.18.34'
   annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
   implementation 'com.google.code.gson:gson:2.11.0'
+
+//  implementation fileTree(dir: 'libs', include: '*.jar')
 }
 
 processResources {

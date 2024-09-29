@@ -1,4 +1,4 @@
-package com.zircky.gtceuadd.data.recipe.remove;
+package com.zircky.gtceuadd.data.recipe.remove.mods;
 
 
 //import com.gregtechceu.gtceu.common.data.GTItems;
@@ -26,6 +26,8 @@ public class GTRRemoveRecipes {
     consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_hv"));
     consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_ev"));
     consumer.accept(new ResourceLocation("gtceu:shaped/electric_motor_iv"));
+
+
   }
 
 }

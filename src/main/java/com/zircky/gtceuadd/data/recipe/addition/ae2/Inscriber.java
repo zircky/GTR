@@ -24,19 +24,19 @@ public class Inscriber {
   public static void inscriber(Consumer<FinishedRecipe> provider) {
     FORMING_PRESS_RECIPES.recipeBuilder("ae2/inscriber/calculation_processor_print")
         .notConsumable(AEItems.CALCULATION_PROCESSOR_PRESS.asItem())
-        .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.CertusQuartz))
+        .inputItems(new UnificationEntry(TagPrefix.plateDense, GTMaterials.CertusQuartz))
         .outputItems(new ItemStack(AEItems.CALCULATION_PROCESSOR_PRINT.asItem()))
         .duration(250).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
     FORMING_PRESS_RECIPES.recipeBuilder("ae2/inscriber/engineering_processor_print")
         .notConsumable(AEItems.ENGINEERING_PROCESSOR_PRESS.asItem())
-        .inputItems(new UnificationEntry(TagPrefix.plate, GTMaterials.Diamond),4)
+        .inputItems(new UnificationEntry(TagPrefix.plateDense, GTMaterials.Diamond))
         .outputItems(new ItemStack(AEItems.ENGINEERING_PROCESSOR_PRINT.asItem()))
         .duration(250).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
     FORMING_PRESS_RECIPES.recipeBuilder("ae2/inscriber/logic_processor_print")
         .notConsumable(AEItems.LOGIC_PROCESSOR_PRESS.asItem())
-        .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.RoseGold))
+        .inputItems(new UnificationEntry(TagPrefix.plateDense, GTMaterials.RoseGold))
         .outputItems(new ItemStack(AEItems.LOGIC_PROCESSOR_PRINT.asItem()))
         .duration(250).EUt(GTValues.VA[GTValues.EV]).save(provider);
 
@@ -71,7 +71,7 @@ public class Inscriber {
   public static void megscellsInscriber(Consumer<FinishedRecipe> provider) {
     FORMING_PRESS_RECIPES.recipeBuilder("megacells/inscriber/accumulation_processor_print")
         .notConsumable(MEGAItems.ACCUMULATION_PROCESSOR_PRESS.asItem())
-        .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTRMaterials.SkySteel))
+        .inputItems(new UnificationEntry(TagPrefix.plateDense, GTRMaterials.SkySteel))
         .outputItems(new ItemStack(MEGAItems.ACCUMULATION_PROCESSOR_PRINT))
         .duration(1200).EUt(GTValues.VA[GTValues.ZPM]).save(provider);
 

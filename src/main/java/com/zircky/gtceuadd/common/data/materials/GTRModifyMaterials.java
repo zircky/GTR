@@ -20,10 +20,12 @@ public class GTRModifyMaterials {
     Iridium.addFlags(GENERATE_DENSE);
     TitaniumTungstenCarbide.addFlags(GENERATE_BOLT_SCREW, GENERATE_DENSE);
     CertusQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD, GENERATE_DENSE);
-    NetherQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD);
+    NetherQuartz.addFlags(GENERATE_BOLT_SCREW, GENERATE_ROD, GENERATE_DENSE);
     Quartzite.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
     Copper.addFlags(GENERATE_BOLT_SCREW, GENERATE_RING);
     Nickel.addFlags(GENERATE_BOLT_SCREW);
+    Diamond.addFlags(GENERATE_DENSE);
+    RoseGold.addFlags(GENERATE_DENSE);
 
     addIngot(Graphite);
     addIngot(Lithium);

@@ -6,6 +6,7 @@ import com.gregtechceu.gtceu.api.machine.feature.multiblock.IMultiController;
 import com.gregtechceu.gtceu.api.machine.trait.RecipeLogic;
 import com.gregtechceu.gtceu.api.recipe.GTRecipe;
 import com.gregtechceu.gtceu.api.recipe.RecipeCondition;
+import com.gregtechceu.gtceu.api.recipe.condition.RecipeConditionType;
 import com.zircky.gtceuadd.api.block.ICompAssLineCasingType;
 import com.zircky.gtceuadd.common.block.CompAssLineCasingB;
 import net.minecraft.network.FriendlyByteBuf;
@@ -29,9 +30,14 @@ public class CompAssLineCondition extends RecipeCondition {
   }
 
   @Override
-  public String getType() {
-    return "comp_ass_line_casing";
+  public RecipeConditionType<?> getType() {
+    return null;
   }
+
+//  @Override
+//  public String getType() {
+//    return "comp_ass_line_casing";
+//  }
 
   @Override
   public Component getTooltips() {

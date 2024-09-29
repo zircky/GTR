@@ -13,6 +13,7 @@ import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Consumer;
 
@@ -128,7 +129,7 @@ public class NetworkBlocks {
         .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide), 4)
         .inputItems(new ItemStack(GLASS_CABLE.item(TRANSPARENT), 2))
         .inputItems(CustomTags.EV_CIRCUITS, 2)
-        .inputItems(CustomTags.WOODEN_CHESTS)
+        .inputItems(Tags.Items.CHESTS_WOODEN)
         .circuitMeta(2)
         .outputItems(new ItemStack(AEBlocks.CHEST))
         .duration(100).EUt(GTValues.VA[GTValues.EV]).save(provider);
@@ -158,7 +159,7 @@ public class NetworkBlocks {
         .inputItems(new UnificationEntry(TagPrefix.plateDouble, GTMaterials.TitaniumTungstenCarbide), 4)
         .inputItems(new ItemStack(AEItems.CALCULATION_PROCESSOR))
         .inputItems(new ItemStack(GTItems.COVER_SCREEN))
-        .inputItems(CustomTags.WOODEN_CHESTS)
+        .inputItems(Tags.Items.CHESTS_WOODEN)
         .circuitMeta(2)
         .outputItems(new ItemStack(AEBlocks.CELL_WORKBENCH))
         .duration(100).EUt(GTValues.VA[GTValues.EV]).save(provider);

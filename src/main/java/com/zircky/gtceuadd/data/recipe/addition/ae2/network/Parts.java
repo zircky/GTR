@@ -20,6 +20,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 
 import java.util.Map;
 import java.util.function.Consumer;
@@ -124,14 +125,14 @@ public class Parts {
 
     VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/storage_bus", new ItemStack(AEParts.STORAGE_BUS),
         "dCh", "SIS", "NPN",
-        'C', CustomTags.WOODEN_CHESTS,
+        'C', Tags.Items.CHESTS_WOODEN,
         'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
         'I', new ItemStack(AEParts.INTERFACE),
         'N', new UnificationEntry(TagPrefix.plate, GTMaterials.NetherQuartz),
         'P', new ItemStack(GTItems.ELECTRIC_PISTON_MV));
 
     ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/storage_bus_alt")
-        .inputItems(CustomTags.WOODEN_CHESTS)
+        .inputItems(Tags.Items.CHESTS_WOODEN)
         .inputItems(new ItemStack(AEParts.INTERFACE.asItem()))
         .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz), 2)
         .inputItems(new ItemStack(GTItems.ELECTRIC_PISTON_MV))
@@ -203,14 +204,14 @@ public class Parts {
         .outputItems(new ItemStack(AEParts.FORMATION_PLANE))
         .duration(250).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
-    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/formation_plane", new ItemStack(AEParts.FORMATION_PLANE),
+    VanillaRecipeHelper.addShapedRecipe(provider, "ae2/network/parts/annihilation_plane", new ItemStack(AEParts.ANNIHILATION_PLANE),
         "dPh", "SFS", "UUU",
         'H', new ItemStack(AEItems.CERTUS_QUARTZ_PICK),
         'S', new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz),
         'U', new ItemStack(AEItems.FLUIX_CRYSTAL),
         'F', new ItemStack(AEItems.FORMATION_CORE));
 
-    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/formation_plane_alt")
+    ASSEMBLER_RECIPES.recipeBuilder("ae2/network/parts/annihilation_plane_alt")
         .inputItems(new ItemStack(AEItems.CERTUS_QUARTZ_PICK))
         .inputItems(new UnificationEntry(TagPrefix.screw, GTMaterials.CertusQuartz), 2)
         .inputItems(new ItemStack(AEItems.FLUIX_CRYSTAL, 3))

@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.zircky.gtceuadd.GTCEuAdd;
+import com.zircky.gtceuadd.data.recipe.Slabs;
 import com.zircky.gtceuadd.data.recipe.addition.ae2.network.*;
 import com.zircky.gtceuadd.data.recipe.addition.ae2.tools.PaintBalls;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -27,6 +28,7 @@ public class AppliedEnergistics2Recipe {
     Inscriber.init(provider);
     Materials.materials(provider);
     Cables.init(provider);
+    Slabs.init(provider);
     AE2Recipe(provider);
   }
 

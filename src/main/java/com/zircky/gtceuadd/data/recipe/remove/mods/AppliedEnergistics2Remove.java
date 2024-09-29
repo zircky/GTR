@@ -1,4 +1,4 @@
-package com.zircky.gtceuadd.data.recipe.remove;
+package com.zircky.gtceuadd.data.recipe.remove.mods;
 
 import net.minecraft.resources.ResourceLocation;
 
@@ -23,6 +23,19 @@ public class AppliedEnergistics2Remove {
     consumer.accept(new ResourceLocation("ae2:misc/chests_sky_stone"));
     consumer.accept(new ResourceLocation("ae2:misc/chests_smooth_sky_stone"));
     consumer.accept(new ResourceLocation("ae2:misc/tiny_tnt"));
+
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/chiseled_quartz_block"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/cut_quartz_block"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/fluix_block"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/quartz_block"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/quartz_bricks"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/quartz_pillar"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/sky_stone_block"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/sky_stone_brick"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/sky_stone_small_brick"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/smooth_quartz_block"));
+    consumer.accept(new ResourceLocation("ae2:shaped/slabs/smooth_sky_stone_block"));
+
 
     consumer.accept(new ResourceLocation("ae2:inscriber/calculation_processor_print"));
     consumer.accept(new ResourceLocation("ae2:inscriber/engineering_processor_print"));
@@ -131,7 +144,7 @@ public class AppliedEnergistics2Remove {
 
     consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_fluix"));
     consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_from_smart"));
-    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_fluix_clean.json"));
+    consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_fluix_clean"));
     consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_black"));
     consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_blue"));
     consumer.accept(new ResourceLocation("ae2:network/cables/dense_smart_brown"));

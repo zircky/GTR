@@ -60,11 +60,6 @@ public class GTCEuRAddon implements IGTAddon {
         IGTAddon.super.registerRecipeCapabilities();
     }
 
-    @Override
-    public void registerRecipeConditions() {
-//        IGTAddon.super.registerRecipeConditions();
-      GTRegistries.RECIPE_CONDITIONS.register(CompAssLineCondition.INSTANCE.getType(), CompAssLineCondition.class);
-    }
 
     @Override
     public void registerWorldgenLayers() {

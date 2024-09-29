@@ -34,7 +34,7 @@ public class CircuitAssembler {
         .rotationState(RotationState.ALL)
         .recipeType(GTRRecipeTypes.CIRCUIT_ASSEMBLER_R_M_RECIPES)
         .alwaysTryModifyRecipe(true)
-        .recipeModifiers(GTRecipeModifiers.DEFAULT_ENVIRONMENT_REQUIREMENT, GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
+//        .recipeModifiers(GTRecipeModifiers.DEFAULT_ENVIRONMENT_REQUIREMENT, GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
         .appearanceBlock(CASING_STEEL_SOLID)
         .pattern(definition -> FactoryBlockPattern.start(BACK, UP, RIGHT)
             .aisle("FIF", "RTR", "SAG", "#Y#")

@@ -10,6 +10,7 @@ import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.lowdragmc.lowdraglib.side.fluid.FluidStack;
 import com.zircky.gtceuadd.common.data.GTRMaterials;
+import com.zircky.gtceuadd.data.recipe.tags.AE2Tags;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.world.item.ItemStack;
 
@@ -21,6 +22,7 @@ public class Cables {
   public static void init(Consumer<FinishedRecipe> provider) {
     cables(provider);
     colors(provider);
+    clean(provider);
   }
 
   public static void cables(Consumer<FinishedRecipe> provider) {
@@ -181,9 +183,37 @@ public class Cables {
   }
 
   public static void clean(Consumer<FinishedRecipe> provider) {
+    CHEMICAL_BATH_RECIPES.recipeBuilder("ae2/network/cables/clean")
+        .inputItems(AE2Tags.AE2_GLASS_CABLE)
+        .inputFluids(GTMaterials.Water.getFluid(1000))
+        .outputItems(new ItemStack(AEParts.GLASS_CABLE.item(AEColor.TRANSPARENT)))
+        .duration(350).EUt(GTValues.VA[GTValues.HV]).save(provider);
 
+    CHEMICAL_BATH_RECIPES.recipeBuilder("ae2/network/cables/clean_covered_cable")
+        .inputItems(AE2Tags.AE2_COVERED_CABLE)
+        .inputFluids(GTMaterials.Water.getFluid(1000))
+        .outputItems(new ItemStack(AEParts.COVERED_CABLE.item(AEColor.TRANSPARENT)))
+        .duration(350).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    CHEMICAL_BATH_RECIPES.recipeBuilder("ae2/network/cables/clean_covered_dense_cable")
+        .inputItems(AE2Tags.AE2_COVERED_DENCE_CABLE)
+        .inputFluids(GTMaterials.Water.getFluid(1000))
+        .outputItems(new ItemStack(AEParts.COVERED_DENSE_CABLE.item(AEColor.TRANSPARENT)))
+        .duration(350).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    CHEMICAL_BATH_RECIPES.recipeBuilder("ae2/network/cables/clean_smart_cable")
+        .inputItems(AE2Tags.AE2_SMART_CABLE)
+        .inputFluids(GTMaterials.Water.getFluid(1000))
+        .outputItems(new ItemStack(AEParts.SMART_CABLE.item(AEColor.TRANSPARENT)))
+        .duration(350).EUt(GTValues.VA[GTValues.HV]).save(provider);
+
+    CHEMICAL_BATH_RECIPES.recipeBuilder("ae2/network/cables/clean_dense_smart")
+        .inputItems(AE2Tags.AE2_SMART_DENCE_CABLE)
+        .inputFluids(GTMaterials.Water.getFluid(1000))
+        .outputItems(new ItemStack(AEParts.SMART_DENSE_CABLE.item(AEColor.TRANSPARENT)))
+        .duration(350).EUt(GTValues.VA[GTValues.HV]).save(provider);
   }
-  
+
 
   private static void cablesColor(String id, ItemStack inputItem, FluidStack inputFluid, ItemStack outputItem, Consumer<FinishedRecipe> provider) {
     CHEMICAL_BATH_RECIPES.recipeBuilder(id)

@@ -25,26 +25,27 @@ dependencyResolutionManagement {
     def ae2Version = "15.0.20"
 
     // Forge
-    def forgeVersion = "47.2.0"
+    def forgeVersion = "47.3.10"
     def registrateForgeVersion = "MC1.20-1.3.3"
     def topForgeVersion = "1.20.1-10.0.1-3"
-    def arsNouveauVersion = "4.6.0.99"
+    def arsNouveauVersion = "4.12.5.242"
     def arsEnergistiqueVersion = "1.1.5"
-    def botaniaVersion = "1.20.1-443-FORGE"
+    def botaniaVersion = "1.20.1-446-FORGE"
 
     // Libs
     def quiltMappingsVersion = "5"  // https://lambdaurora.dev/tools/import_quilt.html
     def parchmentVersion = "2023.09.03" // https://parchmentmc.org/docs/getting-started
-    def shadowVersion = "7.1.2"
+    def shadowVersion = "8.1.1"
     def architecturyPluginVersion = "3.4-SNAPSHOT"
-    def architecturyLoomVersion = "1.3-SNAPSHOT"
-    def vineFlowerVersion = "1.+"
+    def architecturyLoomVersion = "1.6-SNAPSHOT"
+    def vineFlowerVersion = "1.11.0"
     def macheteVersion = "1.+"
     def configurationVersion = "2.2.0"
-    def gtCeuVersion = "1.4.0"
-    def ldLibVersion = "1.0.26.b"
+    def gtCeuVersion = "1.4.4"
+    def ldLibVersion = "1.0.28.a"
     def mixinExtrasVersion = "0.2.0"
-    def geckoLibVersion = "4.2.1"
+    def mixinVersion = "0.8.6-SNAPSHOT"
+    def geckoLibVersion = "4.4.9"
     def patchouliVersion = "1.20.1-83-FORGE"
     def curiosVersion = "5.7.0+1.20.1"
 
@@ -108,7 +109,6 @@ dependencyResolutionManagement {
 
       def patchouli = version("patchouli", patchouliVersion)
       library("patchouli", "vazkii.patchouli", "Patchouli").versionRef(patchouli)
-
     }
 
     libs {
@@ -132,6 +132,9 @@ dependencyResolutionManagement {
 
       def machete = version("machete", macheteVersion)
       plugin("machete", "io.github.p03w.machete").versionRef(machete)
+
+      def mixin = version("mixin", mixinVersion)
+      library("mixin", "org.spongepowered", "mixin").versionRef(mixin)
 
     }
   }

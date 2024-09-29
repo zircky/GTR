@@ -14,6 +14,8 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.CHEMICAL_BATH_RECIPES;
+import static com.zircky.gtceuadd.data.recipe.addition.ae2.network.Cables.colors;
 import static com.zircky.gtceuadd.data.recipe.addition.ae2.network.Parts.materials;
 
 public class GTRCraftingComponent {
