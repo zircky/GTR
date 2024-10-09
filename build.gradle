@@ -307,6 +307,10 @@ dependencies {
   // KJS
 //  modImplementation(forge.kubejs.forge) { transitive = false }
 
+  // allthemods
+  modImplementation("curse.maven:allthecompressed-514045:4938351")
+  modImplementation("curse.maven:ato-405593:5348605")
+
   // Configuration
   modImplementation(forge.configuration)
 

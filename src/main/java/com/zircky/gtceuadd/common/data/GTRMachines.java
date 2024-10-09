@@ -3,6 +3,7 @@ package com.zircky.gtceuadd.common.data;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
+import com.gregtechceu.gtceu.api.capability.recipe.IO;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
@@ -19,6 +20,9 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
 import com.gregtechceu.gtceu.common.data.*;
 import com.gregtechceu.gtceu.common.machine.multiblock.generator.LargeTurbineMachine;
+import com.gregtechceu.gtceu.common.machine.multiblock.part.EnergyHatchPartMachine;
+import com.gregtechceu.gtceu.common.machine.multiblock.part.LaserHatchPartMachine;
+import com.gregtechceu.gtceu.utils.FormattingUtil;
 import com.lowdragmc.lowdraglib.utils.BlockInfo;
 import com.zircky.gtceuadd.GTCEuAdd;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
@@ -34,6 +38,7 @@ import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
+import static com.gregtechceu.gtceu.common.data.GTMachines.registerTieredMachines;
 //import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 
 
@@ -175,6 +180,53 @@ public class GTRMachines {
 //        .compassNode("xl_turbo_turbine")
 //        .register();
 //  }
+
+  public static final MachineDefinition[] SUBSTATION_ENERGY_INPUT_HATCH_128A = GTMachines.registerTieredMachines(
+      "substation_input_hatch_128a",
+      (holder, tier) -> new EnergyHatchPartMachine(holder, tier, IO.IN, 128),
+      (tier, builder) -> builder
+          .langValue(VNF[tier] + " 128A Substation Energy Hatch")
+          .rotationState(RotationState.ALL)
+          .abilities(PartAbility.SUBSTATION_INPUT_ENERGY)
+          .tooltips(Component.translatable("gtceu.machine.substation_hatch.input.tooltip"))
+          .overlayTieredHullRenderer("energy_hatch.input_128a")
+          .compassNode("energy_hatch")
+          .register(),
+      GTValues.tiersBetween(UHV, GTCEuAPI.isHighTier() ? MAX : UHV)
+  );
+
+  public static final MachineDefinition[] LASER_INPUT_HATCH_16384 = registerLaserHatch(IO.IN, 16384, PartAbility.INPUT_LASER, GTValues.tiersBetween(UV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_OUTPUT_HATCH_16384 = registerLaserHatch(IO.OUT, 16384, PartAbility.OUTPUT_LASER, GTValues.tiersBetween(UV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_INPUT_HATCH_65536 = registerLaserHatch(IO.IN, 65536, PartAbility.INPUT_LASER, GTValues.tiersBetween(UHV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_OUTPUT_HATCH_65536 = registerLaserHatch(IO.OUT, 65536, PartAbility.OUTPUT_LASER, GTValues.tiersBetween(UHV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_INPUT_HATCH_262144 = registerLaserHatch(IO.IN, 262144, PartAbility.INPUT_LASER, GTValues.tiersBetween(UEV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_OUTPUT_HATCH_262144 = registerLaserHatch(IO.OUT, 262144, PartAbility.OUTPUT_LASER, GTValues.tiersBetween(UEV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_INPUT_HATCH_1048576 = registerLaserHatch(IO.IN, 1048576, PartAbility.INPUT_LASER, GTValues.tiersBetween(UIV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_OUTPUT_HATCH_1048576 = registerLaserHatch(IO.OUT, 1048576, PartAbility.OUTPUT_LASER, GTValues.tiersBetween(UIV, GTCEuAPI.isHighTier() ? OpV : UHV));
+  public static final MachineDefinition[] LASER_INPUT_HATCH_4194304 = registerLaserHatch(IO.IN, 4194304, PartAbility.INPUT_LASER, GTValues.tiersBetween(UXV, GTCEuAPI.isHighTier() ? MAX : UHV));
+  public static final MachineDefinition[] LASER_OUTPUT_HATCH_4194304 = registerLaserHatch(IO.OUT, 4194304, PartAbility.OUTPUT_LASER, GTValues.tiersBetween(UXV, GTCEuAPI.isHighTier() ? MAX : UHV));
+  public static final MachineDefinition[] LASER_INPUT_HATCH_1677216 = registerLaserHatch(IO.IN, 1677216, PartAbility.INPUT_LASER, GTValues.tiersBetween(OpV, GTCEuAPI.isHighTier() ? MAX : UHV));
+  public static final MachineDefinition[] LASER_OUTPUT_HATCH_1677216 = registerLaserHatch(IO.OUT, 1677216, PartAbility.OUTPUT_LASER, GTValues.tiersBetween(OpV, GTCEuAPI.isHighTier() ? MAX : UHV));
+  public static final MachineDefinition[] LASER_INPUT_HATCH_67108864 = registerLaserHatch(IO.IN, 67108864, PartAbility.INPUT_LASER, GTValues.tiersBetween(MAX, GTCEuAPI.isHighTier() ? MAX_TRUE : UHV));
+  public static final MachineDefinition[] LASER_OUTPUT_HATCH_67108864 = registerLaserHatch(IO.OUT, 67108864, PartAbility.OUTPUT_LASER, GTValues.tiersBetween(MAX, GTCEuAPI.isHighTier() ? MAX_TRUE : UHV));
+
+
+  public static MachineDefinition[] registerLaserHatch(IO io, int amperage, PartAbility ability, int... tiers) {
+    String name = io == IO.IN ? "target" : "source";
+    return registerTieredMachines(amperage + "a_laser_" + name + "_hatch",
+        (holder, tier) -> new LaserHatchPartMachine(holder, io, tier, amperage),
+        (tier, builder) -> builder
+            .langValue(VNF[tier] + " " + FormattingUtil.formatNumbers(amperage) + "A Laser " +
+                FormattingUtil.toEnglishName(name) + " Hatch")
+            .rotationState(RotationState.ALL)
+            .tooltips(Component.translatable("gtceu.machine.laser_hatch." + name + ".tooltip"),
+                Component.translatable("gtceu.machine.laser_hatch.both.tooltip"),
+                Component.translatable("gtceu.universal.disabled"))
+            .abilities(ability)
+            .overlayTieredHullRenderer("laser_hatch." + name)
+            .register(),
+        tiers);
+  }
 
   public static MultiblockMachineDefinition registerSCSteamTurbine(String name, int tier, GTRecipeType recipeType, Supplier<? extends Block> casing, Supplier<? extends Block> gear, ResourceLocation casingTexture, ResourceLocation overlayModel) {
     return GTRRegistries.REGISTRATE.multiblock(name, holder -> new LargeTurbineMachine(holder, tier))
