@@ -4,7 +4,7 @@
   "package": "com.zircky.gtceuadd.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-
+    "gt.GTOreMixin"
   ],
   "client": [
 

@@ -8,9 +8,7 @@ import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.zircky.gtceuadd.api.recipe.CompAssLineCondition;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
-import com.zircky.gtceuadd.common.data.Covers;
-import com.zircky.gtceuadd.common.data.GTRCasingBlocks;
-import com.zircky.gtceuadd.common.data.GTRRecipes;
+import com.zircky.gtceuadd.common.data.*;
 import com.zircky.gtceuadd.data.recipe.CustemTags;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
@@ -64,6 +62,7 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void registerWorldgenLayers() {
         IGTAddon.super.registerWorldgenLayers();
+        GTRWorld.GTRWorldGenLayers.init();
     }
 
     @Override
@@ -91,6 +90,7 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void registerOreVeins() {
         IGTAddon.super.registerOreVeins();
+        GTROres.init();
     }
 
     @Override
@@ -101,7 +101,7 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void collectMaterialCasings(MaterialCasingCollectionEvent event) {
 //        IGTAddon.super.collectMaterialCasings(event);
-        GTRCasingBlocks.init();
+//        GTRCasingBlocks.init();
     }
 
     @Override

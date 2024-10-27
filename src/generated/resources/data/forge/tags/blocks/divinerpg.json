@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "divinerpg:frozen_stone",
+      "required": false
+    },
+    {
+      "id": "divinerpg:twilight_stone",
+      "required": false
+    },
+    {
+      "id": "divinerpg:arcanite_stone",
+      "required": false
+    }
+  ]
+}

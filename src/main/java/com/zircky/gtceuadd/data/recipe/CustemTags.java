@@ -16,6 +16,7 @@ public class CustemTags {
   public static final TagKey<Item> ERV_CIRCUITS = TagUtil.createModItemTag("circuits/erv.json");
 
   public static final TagKey<Block> ARSNOUVEAU_ARCHWOOD = BlockTags.create(new ResourceLocation("forge", "logs/archwood"));
+  public static final TagKey<Block> DIVINE_RPG = TagUtil.createBlockTag("divinerpg");
 
 //  public static final TagKey<Item> CABLES_COLORS = TagUtil.createModItemTag("ae2/cables_colors");
 }

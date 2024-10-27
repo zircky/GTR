@@ -18,18 +18,10 @@ import static com.lowdragmc.lowdraglib.gui.texture.ProgressTexture.FillDirection
 public class GTRRecipeTypes {
   public static final String ELECTRIC = "electric";
 
-  public static final GTRecipeType ComponentAssemblyLineRecipes = register("component_assembly_line", MULTIBLOCK).setMaxIOSize(12, 1, 12, 0).setEUIO(IO.IN)
+  public static final GTRecipeType COMPRESSED_BLOCKS_RECIPES = register("compressed_blocks", MULTIBLOCK).setMaxIOSize(2, 2, 2, 2).setEUIO(IO.IN)
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
-      .setSound(GTSoundEntries.ASSEMBLER);
+      .setSound(GTSoundEntries.COMPRESSOR);
 
-  public static final GTRecipeType TEST_RESIPES = register("test", MULTIBLOCK).setMaxIOSize(10, 2, 10, 0).setEUIO(IO.IN)
-      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
-      .setSound(GTSoundEntries.ASSEMBLER);
-
-  public static final GTRecipeType SC_STEAM_TURBINE_FUELS = register("xl_sc_steam_turbine", GENERATOR).setMaxIOSize(0, 0, 1, 1).setEUIO(IO.OUT)
-      .setSlotOverlay(false, true, true, GuiTextures.CENTRIFUGE_OVERLAY)
-      .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, LEFT_TO_RIGHT)
-      .setSound(GTSoundEntries.TURBINE);
 
   public static final GTRecipeType CIRCUIT_ASSEMBLER_R_RECIPES = register("circuit_assembler_r", ELECTRIC)
       .setMaxIOSize(10, 1, 1, 0).setEUIO(IO.IN)
@@ -52,6 +44,18 @@ public class GTRRecipeTypes {
       .setEUIO(IO.IN)
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.MIXER);
+
+  public static final GTRecipeType ENDGAME_RECIPES = register("endgame", MULTIBLOCK)
+      .setMaxIOSize(81, 8, 12, 8)
+      .setEUIO(IO.IN)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.ASSEMBLER);
+
+  public static final GTRecipeType ENDGAME_GENERATOR_RECIPES = register("endgame_generator", GENERATOR)
+      .setMaxIOSize(32, 0, 12, 0)
+      .setEUIO(IO.OUT)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.ASSEMBLER);
 
   public static final GTRecipeType ESSENCE_ASSEMBLER_RESIPES = register("essence_assenbler", MULTIBLOCK)
       .setMaxIOSize(16, 4, 2, 2).setEUIO(IO.IN)

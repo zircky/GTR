@@ -37,7 +37,7 @@ public class GTRCemicalMaterial {
     Shakudo = IngotBuilder("shakudo", 0x111024, 0x1A162A, SNDART_FLAGS, SHINY, "", 3870, GasTier.HIGH, GTValues.VA[GTValues.IV], 2800);
     PurpleGold = IngotBuilder("purple_gold", 0x844684, 0x8E4585, SNDART_FLAGS, SHINY, "AlAu3", 4512, GasTier.HIGH, GTValues.VA[GTValues.ZPM], 3600);
     RawSalt = DustBuilder("raw_salt", 0xC9C0BB, 0xC0BEB9, SHINY, "");
-    CSolder = IngotBuilder("c_solder", 0x051F9E, 0x003399, SHINY, "Sn90.7Ag3.6Cu0.7Cr5", GENERATE_PLATE, GENERATE_DENSE);
+    CSolder = IngotBuilder("c_solder", 0x051F9E, 0x003399, SHINY, "Sn907Ag36Cu07Cr5", GENERATE_PLATE, GENERATE_DENSE);
     Syngas = FluidBuilder("syngas", 0x484848, 0x505050, FluidStorageKeys.GAS, new FluidBuilder().temperature(500), SHINY);
     AcrylicAcid = FluidBuilder("acrylic_acid", 0x919191, 0x909090, FluidStorageKeys.LIQUID, new FluidBuilder().attribute(FluidAttributes.ACID), METALLIC);
     Silicone = FluidBuilder("silicone", 0x98A6B3, 0x9DA1AA, METALLIC);

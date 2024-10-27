@@ -12,5 +12,6 @@ public class ModsRemoves {
     ArsNouveauRemoves.init(consumer);
     AppliedEnergistics2Remove.init(consumer);
     BotaniaRemoves.botaniaRemove(consumer);
+    AllTheCompressedRemoves.allTheCompressed(consumer);
   }
 }
