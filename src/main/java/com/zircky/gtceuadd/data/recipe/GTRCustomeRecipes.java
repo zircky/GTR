@@ -14,6 +14,7 @@ import com.zircky.gtceuadd.common.data.GTRRecipes;
 
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.ASSEMBLY_LINE_RECIPES;
+import static com.zircky.gtceuadd.common.data.GTRRecipeTypes.ENDGAME_RECIPES;
 
 public class GTRCustomeRecipes {
   public static void init(Consumer<FinishedRecipe> provider) {
@@ -48,6 +49,7 @@ public class GTRCustomeRecipes {
             .researchStack(GTMachines.HULL[7].asStack())
             .duration(GTRRecipes.hour * 3).EUt(GTValues.VA[GTValues.EV]))
         .duration(GTRRecipes.hour).EUt(GTValues.VA[GTValues.EV]).save(provider);
+
   }
 
   public static void recipesMachineCasing(Consumer<FinishedRecipe> provider) {

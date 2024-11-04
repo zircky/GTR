@@ -37,7 +37,7 @@ public class GTCEuAdd {
 
   public static void init() {
     GTRItems.init();
-    //GTRBlock.init();
+    GTRBlock.init();
     GTRDatagen.init();
 
     GTRRegistries.REGISTRATE.registerRegistrate();

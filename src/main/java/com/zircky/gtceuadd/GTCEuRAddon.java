@@ -101,7 +101,7 @@ public class GTCEuRAddon implements IGTAddon {
     @Override
     public void collectMaterialCasings(MaterialCasingCollectionEvent event) {
 //        IGTAddon.super.collectMaterialCasings(event);
-//        GTRCasingBlocks.init();
+        GTRCasingBlocks.init();
     }
 
     @Override

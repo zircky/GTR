@@ -22,7 +22,8 @@ public class Coils {
 
 
   public static BlockEntry<GTRCoilBlock> createCoilBlock(ICoilType icoilType) {
-    return GTRRegistries.REGISTRATE.block("%s_coil_block".formatted(icoilType.getName()), p -> new GTRCoilBlock(p, icoilType))
+    return GTRRegistries.REGISTRATE
+        .block("%s_coil_block".formatted(icoilType.getName()), p -> new GTRCoilBlock(p, icoilType))
         .initialProperties(() -> Blocks.IRON_BLOCK)
         .addLayer(() -> RenderType::cutoutMipped)
         .blockstate(NonNullBiConsumer.noop())

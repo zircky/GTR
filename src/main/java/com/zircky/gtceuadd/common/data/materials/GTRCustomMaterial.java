@@ -7,6 +7,7 @@ import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 
+import static com.gregtechceu.gtceu.api.GTValues.MAX;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.DECOMPOSITION_BY_ELECTROLYZING;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
 import static com.zircky.gtceuadd.api.data.material.GTRMateralFlags.GENERATE_TRIPLE;
@@ -24,7 +25,7 @@ public class GTRCustomMaterial {
         .color(0xFFFFFF).iconSet(InfinityIcon)
         .fluidPipeProperties(10000000, 200000, true)
         .blastTemp(10800, BlastProperty.GasTier.HIGHEST, GTValues.VA[GTValues.UHV], 54562)
-        .cableProperties(GTValues.V[GTValues.MAX], 8192, 0, true, 30)
+        .cableProperties(GTValues.V[MAX], 8192, 0, true, 30)
         .rotorStats(158000, 256, 21.0f,262144000 )
         .toolStats(toolStats(256.0f, 21.0f, 262144000, 17, 20, GTToolType.MORTAR))
         .buildAndRegister();
@@ -88,7 +89,7 @@ public class GTRCustomMaterial {
         .ingot().dust().color(0x3B3C36)
         .iconSet(DynamicInfinityIcon)
         .appendFlags(SNDART_FLAGS)
-        .cableProperties(GTValues.V[GTValues.MAX], 2097152, 0, true, 5)
+        .cableProperties(GTValues.V[MAX], 2097152, 0, true, 5)
         .buildAndRegister()
         .setFormula("*DI*", true);
 

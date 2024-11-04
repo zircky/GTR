@@ -4,7 +4,13 @@ import com.gregtechceu.gtceu.common.block.CoilBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.zircky.gtceuadd.GTCEuAdd;
 import com.zircky.gtceuadd.common.data.blocks.GTRCoilBlock;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.GlassBlock;
+
+import java.util.function.Supplier;
 
 import static com.gregtechceu.gtceu.common.data.GTBlocks.createCasingBlock;
 
@@ -12,6 +18,7 @@ import static com.gregtechceu.gtceu.common.data.GTBlocks.createCasingBlock;
 public class GTRCasingBlocks {
 
   public static BlockEntry<GTRCoilBlock> COIL_INFINITY;
+
 
   public static final BlockEntry<Block> CompAssLine_Casing_LV = createCasingBlock("compassline_casing_lv", GTCEuAdd.id("block/casings/solid/compassline_casing_lv"));
   public static final BlockEntry<Block> CompAssLine_Casing_MV = createCasingBlock("compassline_casing_mv", GTCEuAdd.id("block/casings/solid/compassline_casing_mv"));
@@ -36,9 +43,17 @@ public class GTRCasingBlocks {
   public static final BlockEntry<Block> ContainmentFieldMachineCasing = createCasingBlock("containment_field_machine_casing", GTCEuAdd.id("block/casings/solid/containment_field_machine_casing"));
   public static final BlockEntry<Block> MiningNeutroniumCasing = createCasingBlock("mining_neutronium_casing", GTCEuAdd.id("block/casings/solid/mining_neutronium_casing"));
 
-  public static final BlockEntry<Block> GLASS_HV = createCasingBlock("glass_hv", GTCEuAdd.id("block/casings/solid/glass_hv"));
+  public static final BlockEntry<Block> GLASS_HV = createGlassCasingBlock("glass_hv", GTCEuAdd.id("block/casings/transparent/glass_hv"), () -> RenderType::cutoutMipped);
 
 
   public static void init() {
   }
+
+  private static BlockEntry<Block> createGlassCasingBlock(String name, ResourceLocation texture,
+                                                          Supplier<Supplier<RenderType>> type) {
+    return createCasingBlock(name, GlassBlock::new, texture, () -> Blocks.GLASS, type);
+  }
 }
+
+
+

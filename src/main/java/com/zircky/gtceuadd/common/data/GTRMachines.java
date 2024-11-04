@@ -99,11 +99,17 @@ public class GTRMachines {
           .where('H', blocks(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING.get()))
           .where('R', blocks(GCyMBlocks.CASING_REACTION_SAFE.get()))
           .where('A', blocks(GCyMBlocks.CASING_ATOMIC.get()))
-          .where('F', blocks(FUSION_CASING_MK3.get()).setMinGlobalLimited(18))
+          .where('F', blocks(FUSION_CASING_MK3.get()).setMinGlobalLimited(18)
+              .or(autoAbilities(true, false, false))
+              .or(abilities(PartAbility.INPUT_LASER).setMinGlobalLimited(1).setMaxGlobalLimited(9))
+              .or(abilities(PartAbility.IMPORT_ITEMS).setMinGlobalLimited(1).setMaxGlobalLimited(9))
+              .or(abilities(PartAbility.IMPORT_FLUIDS).setMinGlobalLimited(1).setMaxGlobalLimited(9))
+              .or(abilities(PartAbility.EXPORT_ITEMS).setMinGlobalLimited(1).setMaxGlobalLimited(9))
+              .or(abilities(PartAbility.EXPORT_FLUIDS).setMinGlobalLimited(1).setMaxGlobalLimited(9)))
           .where(' ', Predicates.air())
           .build())
       .workableCasingRenderer(GTCEu.id("block/casings/gcym/high_temperature_smelting_casing"),
-          GTCEu.id("block/multiblock/assembler"), false)
+          GTCEu.id("block/multiblock/assembly_line"), false)
       .compassNodeSelf().register();
 
   public final static MultiblockMachineDefinition CompressedBlocks = GTRRegistries.REGISTRATE.multiblock("compressed_blocks", WorkableElectricMultiblockMachine::new)
@@ -144,7 +150,7 @@ public class GTRMachines {
           .where('#', Predicates.air())
           .build())
       .workableCasingRenderer(GTCEu.id("block/casings/gcym/atomic_casing"),
-          GTCEu.id("block/multiblock/assembler"), false)
+          GTCEu.id("block/multiblock/assembly_line"), false)
       .compassNodeSelf().register();
 
 
