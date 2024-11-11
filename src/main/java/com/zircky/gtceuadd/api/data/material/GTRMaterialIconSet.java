@@ -2,8 +2,7 @@ package com.zircky.gtceuadd.api.data.material;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 
-import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.DULL;
-import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.SHINY;
+import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
 
 public class GTRMaterialIconSet {
   public static final MaterialIconSet InfinityIcon = new MaterialIconSet("infinity", SHINY);
@@ -15,4 +14,6 @@ public class GTRMaterialIconSet {
   public static final MaterialIconSet EternityIcon = new MaterialIconSet("eternity", SHINY);
   public static final MaterialIconSet WhiteDwarfMatterIcon = new MaterialIconSet("white_dwarf_matter", SHINY);
   public static final MaterialIconSet MagnetohydrodynamicallyConstrainedStarMatterIcon = new MaterialIconSet("magnetohydrodynamically_constrained_star_matter", DULL);
+  public static final MaterialIconSet HotProtoHalkoniteIcon = new MaterialIconSet("hotprotohalkonite", METALLIC);
+
 }

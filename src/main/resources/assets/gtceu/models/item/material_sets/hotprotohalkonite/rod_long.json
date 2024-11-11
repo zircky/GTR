@@ -1,0 +1,6 @@
+{
+  "parent": "gtceu:item/material_sets/metallic/rod_long",
+  "textures": {
+    "layer0": "gtceu:item/material_sets/hotprotohalkonite/rod_long"
+  }
+}

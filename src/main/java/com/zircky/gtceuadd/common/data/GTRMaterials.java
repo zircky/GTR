@@ -27,6 +27,7 @@ public class GTRMaterials {
     GTRSuperconductor.register();
     GTRBotaniaMaterial.register();
     NucC.register();
+    MaterialsUEVPlus.register();
 //    GTRFluid.register();
   }
 
@@ -281,6 +282,33 @@ public class GTRMaterials {
   public static Material Fluorite; //
   public static Material BoronNitride; //
   public static Material Rhodochrosite; //
+
+  //UEV+
+  public static Material MagMatter;
+  public static Material DimensionallyShiftedSuperfluid; //Dimensionally Shifted Superfluid
+  public static Material ProtoHalkoniteBase; //Molten Proto-Halkonite Steel Base
+  public static Material HotProtoHalkonite; //Hot Proto-Halkonite Steel
+  public static Material ProtoHalkonite ; //Proto-Halkonite Steel
+  public static Material ExoHalkoniteBase; //Exo-Halkonite Steel Preparation Base
+  public static Material HotExoHalkonite ; //Hot Exo-Halkonite Steel
+  public static Material ExoHalkonite; //Exo-Halkonite Steel
+  public static Material DimensionallyTranscendentCrudeCatalyst; //Dimensionally Transcendent Crude Catalyst
+  public static Material DimensionallyTranscendentProsaicCatalyst; //Dimensionally Transcendent Prosaic Catalyst
+  public static Material DimensionallyTranscendentResplendentCatalyst; //Dimensionally Transcendent Resplendent Catalyst
+  public static Material DimensionallyTranscendentExoticCatalyst; //Dimensionally Transcendent Exotic Catalyst
+  public static Material DimensionallyTranscendentStellarCatalyst; //Dimensionally Transcendent Stellar Catalyst
+  public static Material ExcitedDTCC; //Excited Dimensionally Transcendent Crude Catalyst
+  public static Material ExcitedDTPC; //Excited Dimensionally Transcendent Prosaic Catalyst
+  public static Material ExcitedDTRC; //Excited Dimensionally Transcendent Resplendent Catalyst
+  public static Material ExcitedDTEC; //Excited Dimensionally Transcendent Exotic Catalyst
+  public static Material ExcitedDTSC; //Excited Dimensionally Transcendent Stellar Catalyst
+  public static Material DimensionallyTranscendentResidue; //Dimensionally Transcendent Residue
+
+
+
+
+
+
 
 
   public static void addFluid(Material material) {

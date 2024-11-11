@@ -35,9 +35,6 @@ public class GTRCasingBlocks {
   public static final BlockEntry<Block> CompAssLine_Casing_OpV = createCasingBlock("compassline_casing_opv", GTCEuAdd.id("block/casings/solid/compassline_casing_opv"));
   public static final BlockEntry<Block> CompAssLine_Casing_MAX = createCasingBlock("compassline_casing_max", GTCEuAdd.id("block/casings/solid/compassline_casing_max"));
   public static final BlockEntry<Block> IridiumPlatedMachineCasing = createCasingBlock("iridium_plated_machine_casing", GTCEuAdd.id("block/casings/solid/iridium_plated_machine_casing"));
-  public static final BlockEntry<Block> SCTurbine = createCasingBlock("sc_turbine", GTCEuAdd.id("block/casings/solid/sc_turbine"));
-  public static final BlockEntry<Block> ReinforcedSCTurbine = createCasingBlock("reinforced_sc_turbine", GTCEuAdd.id("block/casings/solid/reinforced_sc_turbine"));
-  public static final BlockEntry<Block> TurbineShaft = createCasingBlock("turbine_shaft", GTCEuAdd.id("block/casings/solid/turbine_shaft"));
   public static final BlockEntry<Block> RadiantNaquadahAlloyCasing = createCasingBlock("radiant_naquadah_alloy_casing", GTCEuAdd.id("block/casings/solid/radiant_naquadah_alloy_casing"));
   public static final BlockEntry<Block> MiningBlackPlutoniumCasing = createCasingBlock("mining_black_plutonium_casing", GTCEuAdd.id("block/casings/solid/mining_black_plutonium_casing"));
   public static final BlockEntry<Block> ContainmentFieldMachineCasing = createCasingBlock("containment_field_machine_casing", GTCEuAdd.id("block/casings/solid/containment_field_machine_casing"));
