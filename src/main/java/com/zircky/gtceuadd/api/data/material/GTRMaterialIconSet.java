@@ -15,5 +15,8 @@ public class GTRMaterialIconSet {
   public static final MaterialIconSet WhiteDwarfMatterIcon = new MaterialIconSet("white_dwarf_matter", SHINY);
   public static final MaterialIconSet MagnetohydrodynamicallyConstrainedStarMatterIcon = new MaterialIconSet("magnetohydrodynamically_constrained_star_matter", DULL);
   public static final MaterialIconSet HotProtoHalkoniteIcon = new MaterialIconSet("hotprotohalkonite", METALLIC);
+  public static final MaterialIconSet ProtoHalkoniteIcon = new MaterialIconSet("protohalkonite", SHINY);
+  public static final MaterialIconSet HotExoHalkoniteIcon = new MaterialIconSet("hotexohalkonite", SHINY);
+  public static final MaterialIconSet ExoHalkoniteIcon = new MaterialIconSet("exohalkonite", SHINY);
 
 }

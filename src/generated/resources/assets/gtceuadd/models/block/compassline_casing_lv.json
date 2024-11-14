@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "gtcuadd:block/casings/solid/compassline_casing_lv"
+    "all": "gtceuadd:block/casings/solid/compassline_casing_lv"
   }
 }
