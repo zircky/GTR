@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceuadd:block/casings/solid/containment_field_machine_casing"
+  }
+}

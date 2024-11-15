@@ -39,6 +39,7 @@ import java.util.function.Supplier;
 
 import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
+import static com.gregtechceu.gtceu.common.data.GCYMBlocks.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 import static com.gregtechceu.gtceu.common.data.GTMachines.registerTieredMachines;
@@ -70,7 +71,7 @@ public class GTRMachines {
       .rotationState(RotationState.NON_Y_AXIS)
       .recipeType(GTRRecipeTypes.ENDGAME_RECIPES)
       .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
-      .appearanceBlock(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
+      .appearanceBlock(CASING_HIGH_TEMPERATURE_SMELTING)
       .pattern(definition -> FactoryBlockPattern.start()
           .aisle("                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "       HHH   HHH       ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "       HHH   HHH       ", "       HHH   HHH       ", "       HHH   HHH       ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "       HHH   HHH       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ")
           .aisle("                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "       HHH   HHH       ", "       HHH   HHH       ", "      A   RRR   A      ", "     H           H     ", "     H           H     ", "     H           H     ", "      R   FFF   R      ", "      R   FFF   R      ", "      R   FFF   R      ", "     H           H     ", "     H           H     ", "     H           H     ", "      A   RRR   A      ", "       HHH   HHH       ", "       HHH   HHH       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ")
@@ -96,9 +97,9 @@ public class GTRMachines {
           .aisle("                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "       HHH   HHH       ", "       HHH   HHH       ", "      A   RRR   A      ", "     H           H     ", "     H           H     ", "     H           H     ", "      R   HHH   R      ", "      R   HSH   R      ", "      R   HHH   R      ", "     H           H     ", "     H           H     ", "     H           H     ", "      A   RRR   A      ", "       HHH   HHH       ", "       HHH   HHH       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ")
           .aisle("                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "       HHH   HHH       ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "       HHH   HHH       ", "       HHH   HHH       ", "       HHH   HHH       ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "      HHHHHHHHHHH      ", "       HHH   HHH       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ")
           .where('S', Predicates.controller(blocks(definition.getBlock())))
-          .where('H', blocks(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING.get()))
-          .where('R', blocks(GCyMBlocks.CASING_REACTION_SAFE.get()))
-          .where('A', blocks(GCyMBlocks.CASING_ATOMIC.get()))
+          .where('H', blocks(CASING_HIGH_TEMPERATURE_SMELTING.get()))
+          .where('R', blocks(CASING_REACTION_SAFE.get()))
+          .where('A', blocks(CASING_ATOMIC.get()))
           .where('F', blocks(FUSION_CASING_MK3.get()).setMinGlobalLimited(18)
               .or(autoAbilities(true, false, false))
               .or(abilities(PartAbility.INPUT_LASER).setMinGlobalLimited(1).setMaxGlobalLimited(9))
@@ -116,7 +117,7 @@ public class GTRMachines {
       .rotationState(RotationState.NON_Y_AXIS)
       .recipeType(GTRRecipeTypes.COMPRESSED_BLOCKS_RECIPES)
       .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
-      .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
+      .appearanceBlock(CASING_ATOMIC)
       .pattern(definition -> FactoryBlockPattern.start()
           .aisle("#TTTTTTT#", "DXXXXXXXD", "DXEAAAEXD", "DXGGGGGXD", "DXGGGGGXD", "DXGGGGGXD", "DXEAAAEXD", "DXXXXXXXD", "#TTTTTTT#")
           .aisle("TXXXXXXXT", "XXELKLEXX", "XB#####BX", "X#######X", "X#######X", "X#######X", "XB#####BX", "XXE#K#EXX", "TXXXXXXXT")
@@ -128,8 +129,8 @@ public class GTRMachines {
           .aisle("TXXXXXXXT", "XXELKLEXX", "XB#####BX", "X#######X", "X#######X", "X#######X", "XB#####BX", "XXE#K#EXX", "TXXXXXXXT")
           .aisle("#TTTTTTT#", "DQQQQQQQD", "DQQQQQQQD", "DQQQQQQQD", "DQQQSQQQD", "DQQQQQQQD", "DQQQQQQQD", "DQQQQQQQD", "#TTTTTTT#")
           .where('S', Predicates.controller(blocks(definition.getBlock())))
-          .where('X', blocks(GCyMBlocks.CASING_ATOMIC.get()))
-          .where('Q', blocks(GCyMBlocks.CASING_ATOMIC.get())
+          .where('X', blocks(CASING_ATOMIC.get()))
+          .where('Q', blocks(CASING_ATOMIC.get())
               .or(autoAbilities(definition.getRecipeTypes()))
               .or(autoAbilities(true, true, true))
               .or(abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2))
@@ -146,7 +147,7 @@ public class GTRMachines {
           .where('A', blocks(BlockRegistry.apalachiaBlock.get()))
           .where('B', blocks(BlockRegistry.bloodgemBlock.get()))
           .where('G', blocks(CASING_LAMINATED_GLASS.get()))
-          .where('P', blocks(GCyMBlocks.CASING_SHOCK_PROOF.get()))
+          .where('P', blocks(CASING_SHOCK_PROOF.get()))
           .where('#', Predicates.air())
           .build())
       .workableCasingRenderer(GTCEu.id("block/casings/gcym/atomic_casing"),

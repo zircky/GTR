@@ -22,7 +22,7 @@ public class RecipesRobotArm {
         .inputItems(gear, HSSS)
         .inputItems(gearSmall, HSSS, 3)
         .inputItems(ELECTRIC_MOTOR_LuV, 2)
-        .inputItems(ELECTRIC_PISTON_LUV)
+        .inputItems(ELECTRIC_PISTON_LuV)
         .inputItems(CustomTags.LuV_CIRCUITS, 2)
         .inputItems(CustomTags.IV_CIRCUITS, 4)
         .inputItems(CustomTags.EV_CIRCUITS, 8)

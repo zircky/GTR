@@ -1,11 +1,17 @@
 package com.zircky.gtceuadd.common.data;
 
+import com.gregtechceu.gtceu.GTCEu;
+import com.gregtechceu.gtceu.api.GTCEuAPI;
+import com.gregtechceu.gtceu.api.block.SimpleCoilType;
+import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
+import com.gregtechceu.gtceu.common.block.CoilBlock;
+import com.gregtechceu.gtceu.common.data.GTCompassSections;
+import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
+import com.zircky.gtceuadd.GTCEuAdd;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
-import com.zircky.gtceuadd.common.data.blocks.GTRCoilBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -14,17 +20,20 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+import static com.gregtechceu.gtceu.common.data.GTBlocks.compassNodeExist;
+import static com.gregtechceu.gtceu.common.registry.GTRegistration.REGISTRATE;
 import static com.zircky.gtceuadd.GTCEuAdd.id;
 
 @SuppressWarnings("unused")
 public class GTRCasingBlocks {
-
-  public static BlockEntry<GTRCoilBlock> COIL_INFINITY;
-
+  public static final BlockEntry<CoilBlock> INFINITY = createCoilBlock("infinity", 15800, 16, 16, 8, GTRMaterials.Infinity, GTCEu.id("block/casings/coils/machine_coil_infinity"));
+  public static final BlockEntry<CoilBlock> INFINITY_DYNAMIC = createCoilBlock("infinity_dynamic", 25901, 32, 48, 9, GTRMaterials.DynamicInfinity, GTCEu.id("block/casings/coils/machine_coil_infinity"));
 
   public static final BlockEntry<Block> CompAssLine_Casing_LV = createCasingBlock("compassline_casing_lv", id("block/casings/solid/compassline_casing_lv"));
   public static final BlockEntry<Block> CompAssLine_Casing_MV = createCasingBlock("compassline_casing_mv", id("block/casings/solid/compassline_casing_mv"));
@@ -65,6 +74,25 @@ public class GTRCasingBlocks {
         .item(BlockItem::new)
         .build()
         .register();
+  }
+
+  private static BlockEntry<CoilBlock> createCoilBlock(String name, int coilTemperature, int levels, int energyDiscount, int tier, Material material, ResourceLocation texture) {
+    SimpleCoilType coilType = new SimpleCoilType(
+        name, coilTemperature, levels, energyDiscount, tier,
+        () -> material, texture);
+    BlockEntry<CoilBlock> coilBlock = REGISTRATE
+        .block("%s_coil_block".formatted(coilType.getName()), p -> new CoilBlock(p, coilType))
+        .initialProperties(() -> Blocks.IRON_BLOCK)
+        .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
+        .addLayer(() -> RenderType::cutoutMipped)
+        .blockstate(GTModels.createCoilModel("%s_coil_block".formatted(coilType.getName()), coilType))
+        .tag(GTToolType.WRENCH.harvestTags.get(0), BlockTags.MINEABLE_WITH_PICKAXE)
+        .item(BlockItem::new)
+        .onRegister(compassNodeExist(GTCompassSections.BLOCKS, "coil_block"))
+        .build()
+        .register();
+    GTCEuAPI.HEATING_COILS.put(coilType, coilBlock);
+    return coilBlock;
   }
 
 

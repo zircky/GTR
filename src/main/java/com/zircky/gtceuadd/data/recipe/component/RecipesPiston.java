@@ -29,7 +29,7 @@ public class RecipesPiston {
         .inputItems(cableGtSingle, YttriumBariumCuprate, 4)
         .inputFluids(SolderingAlloy.getFluid(L))
         .inputFluids(Lubricant.getFluid(250))
-        .outputItems(ELECTRIC_PISTON_LUV)
+        .outputItems(ELECTRIC_PISTON_LuV)
         .scannerResearch(b -> b
             .researchStack(ELECTRIC_PISTON_IV.asStack())
             .duration(1800)
@@ -49,7 +49,7 @@ public class RecipesPiston {
         .inputFluids(Lubricant.getFluid(500))
         .outputItems(ELECTRIC_PISTON_ZPM)
         .scannerResearch(b -> b
-            .researchStack(ELECTRIC_PISTON_LUV.asStack())
+            .researchStack(ELECTRIC_PISTON_LuV.asStack())
             .duration(2400)
             .EUt(VA[LuV]))
         .duration(1200).EUt(VA[LuV]).save(provider);

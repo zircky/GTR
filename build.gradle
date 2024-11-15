@@ -213,22 +213,9 @@ dependencies {
   // Registrate
   modImplementation("com.tterrag.registrate:Registrate:${forge.versions.registrate.get()}")
 
-  // JEI
-  modCompileOnly(forge.jei.common.api) { transitive = false }
-  modCompileOnly(forge.jei.forge.api) { transitive = false }
-  modCompileOnly(forge.jei.forge) { transitive = false }
-
-
-  // REI
-  modCompileOnly forge.rei.plugin
-  modCompileOnly forge.rei.api
-  modImplementation forge.rei.forge
-
-  modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
-  modCompileOnly forge.emi
+  modImplementation forge.emi
 
   // Botania
-//  modImplementation(forge.botania) { transitive = false }
   modImplementation("curse.maven:botania-225643:5594997")
 
 
@@ -239,7 +226,6 @@ dependencies {
   modImplementation(forge.arseng) { transitive = false }
 
   modImplementation(forge.geckolib)
-//  modImplementation("curse.maven:geckolib-388172:5675221")
   implementation("com.eliotlash.mclib:mclib:20")
   forgeRuntimeLibrary("com.eliotlash.mclib:mclib:20")
 
@@ -247,23 +233,6 @@ dependencies {
   modImplementation(forge.curios)
 
   modRuntimeOnly(forge.patchouli)
-
-/**
-  // Electrodynamics
-  modImplementation("curse.maven:electrodynamics-316867:5022907")
-
-  // Nuclear_Science
-  modImplementation("curse.maven:nuclear-science-318646:5022908")
-
-  // Ballistix
-  modImplementation("curse.maven:ballistix-443915:5022909")
-
-  // Assembly_Line
-  modImplementation("curse.maven:assembly-lines-404360:4903245")
-
-  // Modular Forcefields
-  modImplementation("curse.maven:modular-forcefields-322896:4878383")
- */
 
   // AE2
   modImplementation(forge.ae2) { transitive = false }
@@ -274,38 +243,20 @@ dependencies {
   //ExtendedAE
   modImplementation("curse.maven:ex-pattern-provider-892005:5181332")
 
-  //AE Additions - ExtraCells2 Fork
-  //modImplementation("curse.maven:ae-additions-extra-cells-2-fork-493962:5077081")
-
   //Applied Energistics 2 Wireless Terminals
   modImplementation("curse.maven:applied-energistics-2-wireless-terminals-459929:5162352")
-
-  //kotlin-for-forge
-  //modImplementation("curse.maven:kotlin-for-forge-351264:4578885")
+  modImplementation("curse.maven:cloth-config-348521:5729105")
+  modImplementation("curse.maven:architectury-api-419699:5137938")
 
   //glodium
   modImplementation("curse.maven:glodium-957920:5044862")
-
-
-  //productivebees
-//  modImplementation("curse.maven:productivebees-377897:5566102")
 
   //biomes-o-plenty
   modImplementation("curse.maven:biomes-o-plenty-220318:4764804")
   modImplementation("curse.maven:terrablender-563928:5378180")
 
-  //oh-the-biomes-weve-gone
-//  modImplementation("curse.maven:oh-the-biomes-weve-gone-1070751:5712412")
-//  modImplementation("curse.maven:corgilib-693313:5691268")
-//  modImplementation("curse.maven:oh-the-trees-youll-grow-962544:5693539")
-
-  //modImplementation("curse.maven:draconic-evolution-223565:5524457")
-
   // TOP
   modCompileOnly(forge.theoneprobe) { transitive = false }
-
-  // KJS
-//  modImplementation(forge.kubejs.forge) { transitive = false }
 
   // allthemods
   modImplementation("curse.maven:allthecompressed-514045:4938351")
@@ -328,7 +279,6 @@ dependencies {
 
   implementation 'com.google.code.gson:gson:2.11.0'
 
-//  implementation fileTree(dir: 'libs', include: '*.jar')
 }
 
 processResources {

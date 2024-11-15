@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtceuadd:block/infinity_coil_block"
+    },
+    "active=true": {
+      "model": "gtceuadd:block/infinity_coil_block_active"
+    }
+  }
+}

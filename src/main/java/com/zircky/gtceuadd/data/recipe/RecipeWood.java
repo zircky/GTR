@@ -1019,11 +1019,11 @@ public class RecipeWood {
    * Standard recipes for GT woods
    */
   private static void registerGTWoodRecipes(Consumer<FinishedRecipe> provider) {
-    VanillaRecipeHelper.addShapedRecipe(provider, "treated_wood_planks",
-        GTBlocks.TREATED_WOOD_PLANK.asStack(8),
-        "PPP", "PBP", "PPP",
-        'P', ItemTags.PLANKS,
-        'B', FluidUtil.getFilledBucket(FluidHelperImpl.toFluidStack(Creosote.getFluid(1000))));
+//    VanillaRecipeHelper.addShapedRecipe(provider, "treated_wood_planks",
+//        GTBlocks.TREATED_WOOD_PLANK.asStack(8),
+//        "PPP", "PBP", "PPP",
+//        'P', ItemTags.PLANKS,
+//        'B', FluidUtil.getFilledBucket(FluidHelperImpl.toFluidStack(Creosote.getFluid(1000))));
 
     VanillaRecipeHelper.addShapedRecipe(provider, "treated_wood_stick",
         ChemicalHelper.get(rod, TreatedWood, 2),
