@@ -1,4 +1,4 @@
-package com.zircky.gtceuadd.api.data.material;
+package com.zircky.gtceuadd.api.data.chemical.info.material;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 

@@ -9,6 +9,7 @@ plugins {
 apply plugin: "dev.architectury.loom"
 //apply plugin: "io.github.juuxel.loom-vineflower"
 apply plugin: "java"
+apply plugin: "idea"
 apply plugin: "architectury-plugin"
 apply plugin: "maven-publish"
 
@@ -77,6 +78,7 @@ loom {
 }
 
 configurations {
+  jarJar
   common
   shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
   compileClasspath.extendsFrom common
@@ -189,7 +191,6 @@ repositories {
       includeGroup 'com.gregtechceu.gtceu'
     }
   }
-
   flatDir {
     dir 'libs'
   }
@@ -258,6 +259,12 @@ dependencies {
   // TOP
   modCompileOnly(forge.theoneprobe) { transitive = false }
 
+  //productivet
+//  modImplementation("curse.maven:productivetrees-867074:5486574")
+//  modImplementation("curse.maven:productivebees-377897:5566102")
+//  modImplementation("curse.maven:treetap-927874:5922848")
+//  modImplementation ("local.libs:productivelib-1.20.1-0.0.4")
+
   // allthemods
   modImplementation("curse.maven:allthecompressed-514045:4938351")
   modImplementation("curse.maven:ato-405593:5348605")
@@ -279,6 +286,12 @@ dependencies {
 
   implementation 'com.google.code.gson:gson:2.11.0'
 
+//  modImplementation("local.libs:productivelib-${mc_version}:${lib_version}")
+//
+//  jarJar(group: 'cy.jdkdigital.productivelib', name: 'productivelib', version: '[0.0.1,)') {
+//    transitive(false)
+//  }
+
 }
 
 processResources {
@@ -292,6 +305,8 @@ processResources {
 
 shadowJar {
   exclude "fabric.mod.json"
+
+//  relocate 'cy.jdkdigital.productivelib', 'your.package.lib'
 
   configurations = [project.configurations.shadowCommon]
   archiveClassifier.set("dev-shadow")

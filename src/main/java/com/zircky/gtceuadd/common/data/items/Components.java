@@ -1,6 +1,5 @@
 package com.zircky.gtceuadd.common.data.items;
 
-import com.gregtechceu.gtceu.common.data.GTCompassNodes;
 import com.gregtechceu.gtceu.common.data.GTCovers;
 
 import static com.zircky.gtceuadd.common.data.Covers.*;
@@ -61,20 +60,20 @@ public class Components {
   }
 
   public static void registerComponents() {
-    ELECTRIC_PUMP_MAX = registerComponent("max_electric_pump", "MAX Electric Pump", GTCovers.PUMPS[12], "item.gtceu.electric_pump.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20, "pump", GTCompassNodes.COVER);
-    ELECTRIC_PUMP_ERV = registerComponent("erv_electric_pump", "ERV Electric Pump", GTCovers.PUMPS[12], "item.gtceu.electric_pump.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20, "pump", GTCompassNodes.COVER);
-    ELECTRIC_PUMP_SERV = registerComponent("serv_electric_pump", "SERV Electric Pump", GTCovers.PUMPS[12], "item.gtceu.electric_pump.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20, "pump", GTCompassNodes.COVER);
+    ELECTRIC_PUMP_MAX = registerComponent("max_electric_pump", "MAX Electric Pump", GTCovers.PUMPS[12], "item.gtceu.electric_pump.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20, "pump");
+    ELECTRIC_PUMP_ERV = registerComponent("erv_electric_pump", "ERV Electric Pump", GTCovers.PUMPS[12], "item.gtceu.electric_pump.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20, "pump");
+    ELECTRIC_PUMP_SERV = registerComponent("serv_electric_pump", "SERV Electric Pump", GTCovers.PUMPS[12], "item.gtceu.electric_pump.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20, "pump");
 
     FLUID_REGULATOR_MAX = registerComponent("max_fluid_regulator", "MAX Fluid Regulator", GTCovers.FLUID_REGULATORS[12], "item.gtceu.fluid_regulator.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20);
     FLUID_REGULATOR_ERV = registerComponent("erv_fluid_regulator", "ERV Fluid Regulator", GTCovers.FLUID_REGULATORS[12], "item.gtceu.fluid_regulator.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20);
     FLUID_REGULATOR_SERV = registerComponent("serv_fluid_regulator", "SERV Fluid Regulator", GTCovers.FLUID_REGULATORS[12], "item.gtceu.fluid_regulator.tooltip", "gtceu.universal.tooltip.fluid_transfer_rate", 1280 * 64 * 64 * 4 / 20);
 
-    CONCVEYOR_MODULE_MAX = registerComponent("max_conveyor_module", "MAX Conveyor Module", GTCovers.CONVEYORS[12], "item.gtceu.conveyor.module.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "conveyor", GTCompassNodes.COVER);
-    CONCVEYOR_MODULE_ERV = registerComponent("erv_conveyor_module", "ERV Conveyor Module", GTCovers.CONVEYORS[12], "item.gtceu.conveyor.module.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "conveyor", GTCompassNodes.COVER);
-    CONCVEYOR_MODULE_SERV = registerComponent("serv_conveyor_module", "SERV Conveyor Module", GTCovers.CONVEYORS[12], "item.gtceu.conveyor.module.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "conveyor", GTCompassNodes.COVER);
+    CONCVEYOR_MODULE_MAX = registerComponent("max_conveyor_module", "MAX Conveyor Module", GTCovers.CONVEYORS[12], "item.gtceu.conveyor.module.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "conveyor");
+    CONCVEYOR_MODULE_ERV = registerComponent("erv_conveyor_module", "ERV Conveyor Module", GTCovers.CONVEYORS[12], "item.gtceu.conveyor.module.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "conveyor");
+    CONCVEYOR_MODULE_SERV = registerComponent("serv_conveyor_module", "SERV Conveyor Module", GTCovers.CONVEYORS[12], "item.gtceu.conveyor.module.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "conveyor");
 
-    ROBOT_ARM_MAX = registerComponent("max_robot_arm", "MAX Robot Arm", GTCovers.ROBOT_ARMS[12], "item.gtceu.robot.arm.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "robot_arm", GTCompassNodes.COVER);
-    ROBOT_ARM_ERV = registerComponent("erv_robot_arm", "ERV Robot Arm", GTCovers.ROBOT_ARMS[12], "item.gtceu.robot.arm.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "robot_arm", GTCompassNodes.COVER);
-    ROBOT_ARM_SERV = registerComponent("serv_robot_arm", "SERV Robot Arm", GTCovers.ROBOT_ARMS[12], "item.gtceu.robot.arm.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "robot_arm", GTCompassNodes.COVER);
+    ROBOT_ARM_MAX = registerComponent("max_robot_arm", "MAX Robot Arm", GTCovers.ROBOT_ARMS[12], "item.gtceu.robot.arm.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "robot_arm");
+    ROBOT_ARM_ERV = registerComponent("erv_robot_arm", "ERV Robot Arm", GTCovers.ROBOT_ARMS[12], "item.gtceu.robot.arm.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "robot_arm");
+    ROBOT_ARM_SERV = registerComponent("serv_robot_arm", "SERV Robot Arm", GTCovers.ROBOT_ARMS[12], "item.gtceu.robot.arm.tooltip", "gtceu.universal.tooltip.item_transfer_rate_stacks", 16, "robot_arm");
   }
 }

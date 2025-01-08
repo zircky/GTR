@@ -4,7 +4,7 @@ import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
-import static com.zircky.gtceuadd.api.data.material.GTRMaterialIconSet.*;
+import static com.zircky.gtceuadd.api.data.chemical.info.material.GTRMaterialIconSet.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.Builder;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 

@@ -9,7 +9,6 @@ import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.Predicates;
 import com.gregtechceu.gtceu.api.pattern.TraceabilityPredicate;
 import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
-import com.gregtechceu.gtceu.common.data.GTCompassSections;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
 import com.gregtechceu.gtceu.common.machine.multiblock.electric.AssemblyLineMachine;
 import com.gregtechceu.gtceu.config.ConfigHolder;
@@ -23,7 +22,6 @@ import static com.gregtechceu.gtceu.api.pattern.util.RelativeDirection.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.CASING_GRATE;
 import static com.gregtechceu.gtceu.common.data.GTMachines.ITEM_IMPORT_BUS;
-import static com.gregtechceu.gtceu.common.data.GTMachines.registerSimpleMachines;
 import static com.gregtechceu.gtceu.common.registry.GTRegistration.REGISTRATE;
 import static com.zircky.gtceuadd.common.data.GTRMachines.CIRCUIT_ASSEMBLER_R_M;
 
@@ -60,8 +58,6 @@ public class CircuitAssembler {
             .build())
         .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_solid_steel"),
             GTCEu.id("block/multiblock/assembly_line"))
-        .compassSections(GTCompassSections.TIER[IV])
-        .compassNodeSelf()
         .register();
   }
 

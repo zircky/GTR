@@ -14,7 +14,6 @@ import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 import com.hollingsworth.arsnouveau.setup.registry.BlockRegistry;
-import com.lowdragmc.lowdraglib.side.fluid.forge.FluidHelperImpl;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -24,7 +23,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.fluids.FluidUtil;
 import org.jetbrains.annotations.NotNull;
 import vazkii.botania.common.block.BotaniaBlocks;
 
@@ -486,10 +484,7 @@ public class RecipeWood {
               .build(),
           new WoodTypeEntryDop.Builder("divinerpg", "divine")
               .planks(byBlock(divinerpg.registries.BlockRegistry.divinePlanks.get()), "divine_planks")
-              .log(byBlock(divinerpg.registries.BlockRegistry.divineLog.get())).removeCharcoalRecipe()
-              .strippedLog(byBlock(divinerpg.registries.BlockRegistry.strippedDivineLog.get()))
-              .wood(byBlock(divinerpg.registries.BlockRegistry.divineWood.get()))
-              .strippedWood(byBlock(divinerpg.registries.BlockRegistry.strippedDivineWood.get()))
+              .logTag(TagUtil.createItemTag("wood/divine")).removeCharcoalRecipe()
               .door(byBlock(divinerpg.registries.BlockRegistry.divineDoor.get()), "divine_door")
               .trapdoor(byBlock(divinerpg.registries.BlockRegistry.divineTrapdoor.get()), "divine_trapdoor")
               .slab(byBlock(divinerpg.registries.BlockRegistry.divineSlab.get()), "divine_slab")

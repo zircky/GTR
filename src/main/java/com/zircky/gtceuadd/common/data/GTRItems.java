@@ -4,8 +4,6 @@ import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.item.ComponentItem;
 import com.gregtechceu.gtceu.api.item.component.ElectricStats;
 import com.gregtechceu.gtceu.api.item.component.IItemComponent;
-import com.gregtechceu.gtceu.api.registry.registrate.CompassSection;
-import com.gregtechceu.gtceu.common.data.GTCompassSections;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.nullness.NonNullConsumer;
 import com.zircky.gtceuadd.common.data.items.Circuit;
@@ -161,8 +159,6 @@ public class GTRItems {
 
 
 
-
-
   public static ItemEntry<Item> registerItem(String name, String langName) {
     return REGISTRATE.item(name, Item::new)
      .lang(langName)
@@ -176,10 +172,9 @@ public class GTRItems {
         .defaultModel()
         .register();
   }
-  public static ItemEntry<Item> registerItem(String name, String langName, CompassSection section, String node) {
+  public static ItemEntry<Item> registerItem(String name, String langName, String node) {
     return REGISTRATE.item(name, Item::new)
         .lang(langName)
-        .onRegister(compassNodeExist(section, node))
         .register();
   }
 
@@ -187,7 +182,6 @@ public class GTRItems {
     return REGISTRATE.item(name, ComponentItem::create)
         .lang(langName)
         .model(overrideModel(GTCEu.id("battery"), 8))
-        .onRegister(compassNodeExist(GTCompassSections.BATTERIES, node))
         .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
         .onRegister(attach(ElectricStats.createRechargeableBattery(maxBattery, energy)))
         .register();

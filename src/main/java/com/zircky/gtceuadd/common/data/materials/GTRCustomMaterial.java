@@ -10,8 +10,8 @@ import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import static com.gregtechceu.gtceu.api.GTValues.MAX;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.DECOMPOSITION_BY_ELECTROLYZING;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
-import static com.zircky.gtceuadd.api.data.material.GTRMateralFlags.GENERATE_TRIPLE;
-import static com.zircky.gtceuadd.api.data.material.GTRMaterialIconSet.*;
+import static com.zircky.gtceuadd.api.data.chemical.info.material.GTRMateralFlags.*;
+import static com.zircky.gtceuadd.api.data.chemical.info.material.GTRMaterialIconSet.*;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.Builder;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.SNDART_FLAGS;
@@ -21,7 +21,7 @@ public class GTRCustomMaterial {
   public static final void register() {
     Infinity = Builder("infinity")
         .ingot().fluid(FluidStorageKeys.LIQUID, new FluidBuilder().temperature(35200).customStill()).ore().dust()
-        .appendFlags(SNDART_FLAGS, DECOMPOSITION_BY_ELECTROLYZING, GENERATE_TRIPLE)
+        .appendFlags(SNDART_FLAGS, DECOMPOSITION_BY_ELECTROLYZING)
         .color(0xFFFFFF).iconSet(InfinityIcon)
         .fluidPipeProperties(10000000, 200000, true)
         .blastTemp(10800, BlastProperty.GasTier.HIGHEST, GTValues.VA[GTValues.UHV], 54562)

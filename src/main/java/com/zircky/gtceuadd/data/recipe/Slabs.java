@@ -8,7 +8,7 @@ import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 import divinerpg.registries.BlockRegistry;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.world.item.ItemStack;
-import vazkii.botania.common.block.BotaniaBlocks;
+//import vazkii.botania.common.block.BotaniaBlocks;
 
 import java.util.function.Consumer;
 
@@ -30,7 +30,7 @@ public class Slabs {
     recipeSlabs(provider, "ae2/shaped/slabs/smooth_quartz_block", new ItemStack(AEBlocks.SMOOTH_QUARTZ_SLAB), new ItemStack(AEBlocks.SMOOTH_QUARTZ_BLOCK));
     recipeSlabs(provider, "ae2/shaped/slabs/smooth_sky_stone_block", new ItemStack(AEBlocks.SMOOTH_SKY_STONE_SLAB), new ItemStack(AEBlocks.SMOOTH_SKY_STONE_BLOCK));
 
-    recipeSlabs(provider, "botania/livingrock", new ItemStack(BotaniaBlocks.livingrockSlab), new ItemStack(BotaniaBlocks.livingrock));
+    /*recipeSlabs(provider, "botania/livingrock", new ItemStack(BotaniaBlocks.livingrockSlab), new ItemStack(BotaniaBlocks.livingrock));
     recipeSlabs(provider, "botania/polished_livingrock", new ItemStack(BotaniaBlocks.livingrockPolishedSlab), new ItemStack(BotaniaBlocks.livingrockPolished));
     recipeSlabs(provider, "botania/livingrock_bricks", new ItemStack(BotaniaBlocks.livingrockBrickSlab), new ItemStack(BotaniaBlocks.livingrockBrick));
     recipeSlabs(provider, "botania/mossy_livingrock_bricks", new ItemStack(BotaniaBlocks.livingrockBrickMossySlab), new ItemStack(BotaniaBlocks.livingrockBrickMossy));
@@ -79,7 +79,7 @@ public class Slabs {
     recipeSlabs(provider, "botania/yellow_pavement", new ItemStack(BotaniaBlocks.yellowPavementSlab), new ItemStack(BotaniaBlocks.yellowPavement));
     recipeSlabs(provider, "botania/red_pavement", new ItemStack(BotaniaBlocks.redPavementSlab), new ItemStack(BotaniaBlocks.redPavement));
     recipeSlabs(provider, "botania/green_pavement", new ItemStack(BotaniaBlocks.greenPavementSlab), new ItemStack(BotaniaBlocks.greenPavement));
-
+*/
     recipeSlabs(provider, "divinerpg/shaped/frozen_slab", new ItemStack(BlockRegistry.frozenSlab.get()), new ItemStack(BlockRegistry.frozenStone.get()));
     recipeSlabs(provider, "divinerpg/shaped/cobbled_frozen_slab", new ItemStack(BlockRegistry.cobbledFrozenSlab.get()), new ItemStack(BlockRegistry.cobbledFrozenStone.get()));
     recipeSlabs(provider, "divinerpg/shaped/cobaltite_slab", new ItemStack(BlockRegistry.cobaltiteSlab.get()), new ItemStack(BlockRegistry.cobaltite.get()));

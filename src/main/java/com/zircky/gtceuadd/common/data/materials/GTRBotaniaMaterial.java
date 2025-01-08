@@ -7,7 +7,7 @@ import com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
 import static com.gregtechceu.gtceu.api.item.tool.GTToolType.MORTAR;
-import static com.zircky.gtceuadd.api.data.material.GTRMaterialIconSet.*;
+import static com.zircky.gtceuadd.api.data.chemical.info.material.GTRMaterialIconSet.*;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.*;
 

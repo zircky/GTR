@@ -2,8 +2,6 @@ package com.zircky.gtceuadd.common.data;
 
 import com.gregtechceu.gtceu.api.cover.CoverDefinition;
 import com.gregtechceu.gtceu.api.item.ComponentItem;
-import com.gregtechceu.gtceu.api.registry.registrate.CompassNode;
-import com.gregtechceu.gtceu.common.data.GTCompassSections;
 import com.gregtechceu.gtceu.common.item.CoverPlaceBehavior;
 import com.gregtechceu.gtceu.common.item.TooltipBehavior;
 import com.tterrag.registrate.util.entry.ItemEntry;
@@ -33,7 +31,7 @@ public class Covers {
   public static ItemEntry<ComponentItem> ROBOT_ARM_SERV;
 
 
-  public static ItemEntry<ComponentItem> registerComponent(String name, String langName, CoverDefinition coverDefinition, String tooltip, String tooltipInfo, int num, String node, CompassNode... preNodes) {
+  public static ItemEntry<ComponentItem> registerComponent(String name, String langName, CoverDefinition coverDefinition, String tooltip, String tooltipInfo, int num, String node) {
     return REGISTRATE.item(name, ComponentItem::create)
         .lang(langName)
         .onRegister(attach(new CoverPlaceBehavior(coverDefinition)))
@@ -41,7 +39,6 @@ public class Covers {
           lines.add(Component.translatable(tooltip));
           lines.add(Component.translatable(tooltipInfo, num));
         })))
-        .onRegister(compassNodeExist(GTCompassSections.COVERS, node, preNodes))
         .register();
   }
   public static ItemEntry<ComponentItem> registerComponent(String name, String langName, CoverDefinition coverDefinition, String tooltip, String tooltipInfo, int num) {

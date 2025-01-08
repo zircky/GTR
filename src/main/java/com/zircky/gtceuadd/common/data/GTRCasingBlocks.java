@@ -6,11 +6,9 @@ import com.gregtechceu.gtceu.api.block.SimpleCoilType;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.gregtechceu.gtceu.common.block.CoilBlock;
-import com.gregtechceu.gtceu.common.data.GTCompassSections;
 import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
-import com.zircky.gtceuadd.GTCEuAdd;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
@@ -20,14 +18,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static com.gregtechceu.gtceu.common.data.GTBlocks.compassNodeExist;
-import static com.gregtechceu.gtceu.common.registry.GTRegistration.REGISTRATE;
 import static com.zircky.gtceuadd.GTCEuAdd.id;
 
 @SuppressWarnings("unused")
@@ -80,15 +74,14 @@ public class GTRCasingBlocks {
     SimpleCoilType coilType = new SimpleCoilType(
         name, coilTemperature, levels, energyDiscount, tier,
         () -> material, texture);
-    BlockEntry<CoilBlock> coilBlock = REGISTRATE
+    BlockEntry<CoilBlock> coilBlock = GTRRegistries.REGISTRATE
         .block("%s_coil_block".formatted(coilType.getName()), p -> new CoilBlock(p, coilType))
         .initialProperties(() -> Blocks.IRON_BLOCK)
         .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
         .addLayer(() -> RenderType::cutoutMipped)
-        .blockstate(GTModels.createCoilModel("%s_coil_block".formatted(coilType.getName()), coilType))
+        .blockstate(GTRModels.createCoilModel("%s_coil_block".formatted(coilType.getName()), coilType))
         .tag(GTToolType.WRENCH.harvestTags.get(0), BlockTags.MINEABLE_WITH_PICKAXE)
         .item(BlockItem::new)
-        .onRegister(compassNodeExist(GTCompassSections.BLOCKS, "coil_block"))
         .build()
         .register();
     GTCEuAPI.HEATING_COILS.put(coilType, coilBlock);

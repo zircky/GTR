@@ -39,12 +39,12 @@ dependencyResolutionManagement {
     def vineFlowerVersion = "1.11.0"
     def macheteVersion = "1.+"
     def configurationVersion = "2.2.0"
-    def gtCeuVersion = "1.5.1"
+    def gtCeuVersion = "1.6.1"
     def ldLibVersion = "1.0.31"
     def mixinExtrasVersion = "0.2.0"
     def mixinVersion = "0.8.6-SNAPSHOT"
     def geckoLibVersion = "4.4.9"
-    def patchouliVersion = "1.20.1-83-FORGE"
+    def patchouliVersion = "1.20.1-84-FORGE"
     def curiosVersion = "5.7.0+1.20.1"
 
     forge {
@@ -123,6 +123,8 @@ dependencyResolutionManagement {
 
       def mixin = version("mixin", mixinVersion)
       library("mixin", "org.spongepowered", "mixin").versionRef(mixin)
+
+
 
     }
   }

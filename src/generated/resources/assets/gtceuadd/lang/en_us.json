@@ -1,4 +1,12 @@
 {
+  "tagprefix.singularity": "%s Singularity",
+  "tagprefix.nanite": "%s Nanites",
+  "tagprefix.superdense": "Superdense %s Plate",
+  "tagprefix.polymer.triple_plates": "Dense %s Sheet",
+  "tagprefix.polymer.quadruple_plates": "Double %s Sheet",
+  "tagprefix.polymer.quintuple_plates": "Dense %s Sheet",
+  "tagprefix.polymer.superdense": "Double %s Sheet",
+
   "block.gtceuadd.component_assembly_line": "Component Assembly Line",
   "item.gtceuadd.logic_chip": "Logic Chip",
   "item.gtceuadd.fluid_logic_chip": "Fluid Logic Chip",

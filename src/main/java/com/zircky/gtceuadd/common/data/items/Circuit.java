@@ -1,11 +1,6 @@
 package com.zircky.gtceuadd.common.data.items;
 
-import com.gregtechceu.gtceu.api.registry.registrate.CompassSection;
-import com.gregtechceu.gtceu.common.data.GTCompassSections;
-import com.gregtechceu.gtceu.common.data.GTItems;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
-import com.lowdragmc.lowdraglib.gui.texture.ItemStackTexture;
-
 import static com.zircky.gtceuadd.common.data.GTRItems.*;
 import static com.zircky.gtceuadd.data.recipe.CustemTags.ERV_CIRCUITS;
 

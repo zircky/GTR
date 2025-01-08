@@ -6,6 +6,7 @@ import com.gregtechceu.gtceu.api.addon.events.KJSRecipeKeyEvent;
 import com.gregtechceu.gtceu.api.addon.events.MaterialCasingCollectionEvent;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+import com.zircky.gtceuadd.api.data.tag.GTRTagPrefix;
 import com.zircky.gtceuadd.api.recipe.CompAssLineCondition;
 import com.zircky.gtceuadd.api.registries.GTRRegistries;
 import com.zircky.gtceuadd.common.data.*;
@@ -34,6 +35,7 @@ public class GTCEuRAddon implements IGTAddon {
 
     @Override
     public void registerTagPrefixes() {
+        GTRTagPrefix.init();
         IGTAddon.super.registerTagPrefixes();
     }
 
