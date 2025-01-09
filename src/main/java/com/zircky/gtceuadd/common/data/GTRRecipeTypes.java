@@ -18,7 +18,7 @@ import static com.lowdragmc.lowdraglib.gui.texture.ProgressTexture.FillDirection
 public class GTRRecipeTypes {
   public static final String ELECTRIC = "electric";
 
-  public static final GTRecipeType COMPRESSED_BLOCKS_RECIPES = register("compressed_blocks", MULTIBLOCK).setMaxIOSize(2, 2, 2, 2).setEUIO(IO.IN)
+  public static final GTRecipeType NEUTRONIUM_COMPRESSED_RECIPES = register("compressed_blocks", MULTIBLOCK).setMaxIOSize(2, 2, 2, 2).setEUIO(IO.IN)
       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, LEFT_TO_RIGHT)
       .setSound(GTSoundEntries.COMPRESSOR);
 

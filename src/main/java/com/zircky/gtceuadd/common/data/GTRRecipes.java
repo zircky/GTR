@@ -4,6 +4,7 @@ import com.zircky.gtceuadd.data.recipe.GTRCustomeRecipes;
 import com.zircky.gtceuadd.data.recipe.RecipeWood;
 import com.zircky.gtceuadd.data.recipe.addition.RecipeVanilla;
 import com.zircky.gtceuadd.data.recipe.addition.ae2.AppliedEnergistics2Recipe;
+import com.zircky.gtceuadd.data.recipe.generated.GTRPartsRecipeHandler;
 import com.zircky.gtceuadd.data.recipe.generator.GTRGenerator;
 import com.zircky.gtceuadd.data.recipe.remove.*;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -23,6 +24,7 @@ public class GTRRecipes {
     GTRGenerator.init(provider);
     RecipeVanilla.init(provider);
     RecipeWood.init(provider);
+    GTRPartsRecipeHandler.init(provider);
   }
 
 

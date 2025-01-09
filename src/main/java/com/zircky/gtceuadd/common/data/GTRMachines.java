@@ -114,7 +114,7 @@ public class GTRMachines {
 
   public final static MultiblockMachineDefinition CompressedBlocks = GTRRegistries.REGISTRATE.multiblock("compressed_blocks", WorkableElectricMultiblockMachine::new)
       .rotationState(RotationState.NON_Y_AXIS)
-      .recipeType(GTRRecipeTypes.COMPRESSED_BLOCKS_RECIPES)
+      .recipeType(GTRRecipeTypes.NEUTRONIUM_COMPRESSED_RECIPES)
       .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
       .appearanceBlock(CASING_ATOMIC)
       .pattern(definition -> FactoryBlockPattern.start()

@@ -1,13 +1,11 @@
 package com.zircky.gtceuadd.api.data.tag;
 
 import com.gregtechceu.gtceu.api.GTValues;
-import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconType;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.zircky.gtceuadd.api.data.chemical.info.material.GTRMateralFlags;
 import com.zircky.gtceuadd.api.data.chemical.info.material.GTRMaterialIconType;
 
-import static com.gregtechceu.gtceu.api.data.tag.TagPrefix.Conditions.hasIngotProperty;
 
 public class GTRTagPrefix {
 

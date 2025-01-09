@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "label0": "gtceu:item/material_sets/bright/singularity",
+    "layer1": "gtceu:item/material_sets/bright/singularity_overlay"
+  }
+}
