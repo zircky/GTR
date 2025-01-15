@@ -63,7 +63,7 @@ public class GTRCustomMaterial {
     Draconium = Builder("draconium")
         .ingot().dust()
         .color(0x7A44B0).secondaryColor(0x7851A9)
-        .appendFlags(SNDART_FLAGS)
+        .appendFlags(SNDART_FLAGS, GENERATE_SINGULARITY)
         .cableProperties(GTValues.V[GTValues.UEV], 8, 4)
         .buildAndRegister()
         .setFormula("D", true);
@@ -71,7 +71,7 @@ public class GTRCustomMaterial {
     AwakenedDraconium = Builder("awakened_draconium")
         .ingot().dust()
         .color(0xF44E00).secondaryColor(0xD84F13)
-        .appendFlags(SNDART_FLAGS)
+        .appendFlags(SNDART_FLAGS, GENERATE_SINGULARITY)
         .fluidPipeProperties(10000000, 150000, true)
         .cableProperties(GTValues.V[GTValues.UIV], 8192, 32, true, 3)
         .buildAndRegister()
@@ -80,7 +80,7 @@ public class GTRCustomMaterial {
     ChaoticDraconium = Builder("chaotic_draconium")
         .ingot().dust().fluid()
         .color(0x030302).secondaryColor(0x0F110E).iconSet(METALLIC)
-        .appendFlags(SNDART_FLAGS)
+        .appendFlags(SNDART_FLAGS, GENERATE_SINGULARITY)
         .cableProperties(GTValues.V[GTValues.UXV], 32768, 16, true, 3)
         .buildAndRegister()
         .setFormula("CD*", true);

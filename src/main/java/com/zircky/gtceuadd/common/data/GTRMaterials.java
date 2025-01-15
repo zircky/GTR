@@ -11,8 +11,11 @@ import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.zircky.gtceuadd.common.data.materials.*;
 import net.minecraft.world.item.enchantment.Enchantments;
+import vazkii.botania.common.item.BotaniaItems;
 
 import java.util.Collection;
+
+import static com.gregtechceu.gtceu.api.data.tag.TagPrefix.*;
 
 
 @SuppressWarnings("unused")
@@ -29,6 +32,12 @@ public class GTRMaterials {
     NucC.register();
     MaterialsUEVPlus.register();
 //    GTRFluid.register();
+
+//    ingot.setIgnored(ManaSteel, BotaniaItems.manaSteel);
+//    ingot.setIgnored(Terrasteel, BotaniaItems.terrasteel);
+//
+//    gem.setIgnored(ManaDiamond, BotaniaItems.manaDiamond);
+
   }
 
   public static void modifyMaterials () {

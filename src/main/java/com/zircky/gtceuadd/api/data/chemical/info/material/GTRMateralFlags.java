@@ -29,5 +29,23 @@ public class GTRMateralFlags {
       .requireProps(PropertyKey.INGOT)
       .build();
 
+  public static final MaterialFlag GENERATE_BLOCK_ONE = new MaterialFlag.Builder("generate_bolck_one")
+      .build();
+
+  public static final MaterialFlag GENERATE_BLOCK_TWO = new MaterialFlag.Builder("generate_block_two").build();
+
+  public static final MaterialFlag GENERATE_BLOCK_THREE = new MaterialFlag.Builder("generate_block_three").build();
+
+  public static final MaterialFlag GENERATE_BLOCK_FOUR = new MaterialFlag.Builder("generate_block_four").build();
+
+  public static final MaterialFlag GENERATE_BLOCK_FIVE = new MaterialFlag.Builder("generate_block_five").build();
+
+  public static final MaterialFlag GENERATE_BLOCK_SIX = new MaterialFlag.Builder("generate_block_six").build();
+
+  public static final MaterialFlag GENERATE_BLOCK_SEVEN = new MaterialFlag.Builder("generate_block_seven").build();
+
+  public static final MaterialFlag GENERATE_BLOCK_EIGHT = new MaterialFlag.Builder("generate_block_eight").build();
+
+  public static final MaterialFlag GENERATE_BLOCK_NINE = new MaterialFlag.Builder("generate_block_nine").build();
 
 }

@@ -103,15 +103,6 @@ public class GTRPartsRecipeHandler {
         .duration((int) Math.max(material.getMass() * 64L, 1L))
         .EUt(GTValues.UIV)
         .save(provider);
-
-    if (material.hasProperty(PropertyKey.INGOT)) {
-      COMPRESSOR_RECIPES.recipeBuilder("compressor_" + material.getName() + "_ingot_to_superdense_plate")
-          .inputItems(ingot, material, 64)
-          .outputItems(tagPrefix, magMaterial)
-          .duration((int) Math.max(material.getMass() * 64L, 1L))
-          .EUt(GTValues.UIV)
-          .save(provider);
-    }
   }
 
   private static void processSingularity(TagPrefix tagPrefix, Material material, DustProperty property, Consumer<FinishedRecipe> provider) {

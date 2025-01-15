@@ -60,7 +60,6 @@ public class GTRTagPrefix {
       .generateItem(true)
       .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_QUINTULE));
 
-
   public static final TagPrefix superdense = new TagPrefix("superdense")
       .idPattern("superdense_%s_plate")
       .defaultTagPath("superdense_plates/%s")
@@ -72,6 +71,86 @@ public class GTRTagPrefix {
       .generateItem(true)
       .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_SUPERDENSE));
 
+  public static final TagPrefix bolckOne = new TagPrefix("bolckOne")
+      .defaultTagPath("bolckOnes/%s")
+      .unformattedTagPath("bolckOnes")
+      .materialAmount(GTValues.M)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_ONE));
+
+  public static final TagPrefix bolckTwo = new TagPrefix("bolckTwo")
+      .defaultTagPath("bolckTwos/%s")
+      .unformattedTagPath("bolckTwos")
+      .materialAmount(GTValues.M*2)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_TWO));
+
+  public static final TagPrefix bolckThree = new TagPrefix("bolckThree")
+      .defaultTagPath("bolckThrees/%s")
+      .unformattedTagPath("bolckThrees")
+      .materialAmount(GTValues.M*3)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_THREE));
+
+  public static final TagPrefix bolckFour = new TagPrefix("bolckFour")
+      .defaultTagPath("bolckFours/%s")
+      .unformattedTagPath("bolckFours")
+      .materialAmount(GTValues.M*4)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_FOUR));
+
+  public static final TagPrefix bolckFive = new TagPrefix("bolckFive")
+      .defaultTagPath("bolckFives/%s")
+      .unformattedTagPath("bolckFives")
+      .materialAmount(GTValues.M*5)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_FIVE));
+
+  public static final TagPrefix bolckSix = new TagPrefix("bolckSix")
+      .defaultTagPath("bolckSixs/%s")
+      .unformattedTagPath("bolckSixs")
+      .materialAmount(GTValues.M*6)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_SIX));
+
+  public static final TagPrefix bolckSeven = new TagPrefix("bolckSeven")
+      .defaultTagPath("bolckSevens/%s")
+      .unformattedTagPath("bolckSevens")
+      .materialAmount(GTValues.M*7)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_SEVEN));
+
+  public static final TagPrefix bolckEight = new TagPrefix("bolckEight")
+      .defaultTagPath("bolckEights/%s")
+      .unformattedTagPath("bolckEights")
+      .materialAmount(GTValues.M*8)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_EIGHT));
+
+  public static final TagPrefix bolckNine = new TagPrefix("bolckNine")
+      .defaultTagPath("bolckNines/%s")
+      .unformattedTagPath("bolckNines")
+      .materialAmount(GTValues.M*9)
+      .materialIconType(GTRMaterialIconType.nanite)
+      .unificationEnabled(true)
+      .generateItem(true)
+      .generationCondition(mat -> mat.hasFlag(GTRMateralFlags.GENERATE_BLOCK_NINE));
 
   public static void init() {
 

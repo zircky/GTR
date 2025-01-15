@@ -7,6 +7,7 @@ import com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
 import static com.gregtechceu.gtceu.api.item.tool.GTToolType.MORTAR;
+import static com.zircky.gtceuadd.api.data.chemical.info.material.GTRMateralFlags.GENERATE_SINGULARITY;
 import static com.zircky.gtceuadd.api.data.chemical.info.material.GTRMaterialIconSet.*;
 import static com.zircky.gtceuadd.common.data.GTRMaterials.*;
 import static com.zircky.gtceuadd.common.data.materials.GTRMaterialBase.*;
@@ -19,7 +20,7 @@ public class GTRBotaniaMaterial {
     ManaSteel = Builder("mana_steel")
         .ingot().dust().fluid()
         .color(0xabe2fd).iconSet(METALLIC)
-        .appendFlags(REF)
+        .appendFlags(REF, GENERATE_SINGULARITY)
         .toolStats(ToolProperty.Builder.of(8.0f, 4, 5120, 4).enchantability(14).addTypes(MORTAR).build())
         .blastTemp(1500, GasTier.LOW, GTValues.VA[GTValues.MV])
         .buildAndRegister()
