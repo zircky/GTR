@@ -1,0 +1,7 @@
+{
+  "parent": "gtceu:item/material_sets/shiny/singularity",
+  "textures": {
+    "label0": "gtceu:item/material_sets/geologic/singularity",
+    "layer1": "gtceu:item/material_sets/geologic/singularity_overlay"
+  }
+}

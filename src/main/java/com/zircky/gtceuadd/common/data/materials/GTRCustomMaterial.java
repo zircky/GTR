@@ -95,10 +95,13 @@ public class GTRCustomMaterial {
 
     WhiteDwarfMatter = IngotBuilder("white_dwarf_matter", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, WhiteDwarfMatterIcon, "");
     Eternity = IngotBuilder("eternity", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, EternityIcon, "");
-    SupercriticalSteam = FluidBuilder("sc_steam", 0x1C1C1C, 0x1C1C1C, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(650), SHINY);
+//    SupercriticalSteam = FluidBuilder("sc_steam", 0x1C1C1C, 0x1C1C1C, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(650), SHINY);
     MagnetohydrodynamicallyConstrainedStarMatter = IngotBuilder("magnetohydrodynamically_constrained_star_matter", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, MagnetohydrodynamicallyConstrainedStarMatterIcon, FluidStorageKeys.LIQUID, new FluidBuilder().temperature(1870).customStill(), "");
     MonolithAlloy = IngotBuilder("monolith_alloy", 0xFFFFFF, 0xFFFFFF, SNDART_FLAGS, METALLIC, "");
 
     SkySteel = IngotBuilder("sky_steel", 0x000000, 0xFFFFFF, SNDART_FLAGS, METALLIC, "SkFe");
+
+
+
   }
 }

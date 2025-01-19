@@ -106,12 +106,14 @@ public class GTRPartsRecipeHandler {
   }
 
   private static void processSingularity(TagPrefix tagPrefix, Material material, DustProperty property, Consumer<FinishedRecipe> provider) {
-    NEUTRONIUM_COMPRESSED_RECIPES.recipeBuilder("neutron_" + material.getName() + "_block_to_singularity")
-        .inputItems(block, material, 15000)
-        .outputItems(tagPrefix, material)
-        .duration(20*60*10)
-        .EUt(GTValues.V[GTValues.UEV])
-        .save(provider);
+    if (block != null) {
+      NEUTRONIUM_COMPRESSED_RECIPES.recipeBuilder("neutron_" + material.getName() + "_block_to_singularity")
+          .inputItems(block, material, 15000)
+          .outputItems(tagPrefix, material)
+          .duration(20 * 60 * 10)
+          .EUt(GTValues.V[GTValues.UEV])
+          .save(provider);
+    }
   }
 
 

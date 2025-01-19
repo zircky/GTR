@@ -10,12 +10,9 @@ import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.zircky.gtceuadd.common.data.materials.*;
-import net.minecraft.world.item.enchantment.Enchantments;
-import vazkii.botania.common.item.BotaniaItems;
+import com.zircky.gtceuadd.common.data.singularity.GTRCustomSingularity;
 
 import java.util.Collection;
-
-import static com.gregtechceu.gtceu.api.data.tag.TagPrefix.*;
 
 
 @SuppressWarnings("unused")
@@ -31,6 +28,7 @@ public class GTRMaterials {
     GTRBotaniaMaterial.register();
     NucC.register();
     MaterialsUEVPlus.register();
+    GTRCustomSingularity.register();
 //    GTRFluid.register();
 
 //    ingot.setIgnored(ManaSteel, BotaniaItems.manaSteel);
@@ -312,6 +310,24 @@ public class GTRMaterials {
   public static Material ExcitedDTEC; //Excited Dimensionally Transcendent Exotic Catalyst
   public static Material ExcitedDTSC; //Excited Dimensionally Transcendent Stellar Catalyst
   public static Material DimensionallyTranscendentResidue; //Dimensionally Transcendent Residue
+
+  // Singularity
+  public static Material Nitronic;
+  public static Material Psychotic;
+  public static Material Sphaghettic;
+  public static Material Pneumatic;
+  public static Material Cryptic;
+  public static Material Historic;
+  public static Material Meteoric;
+  public static Material Gastronomic;
+  public static Material Chromatic;
+  public static Material Prismatic;
+  public static Material Robotic;
+  public static Material Galactic;
+  public static Material Hydrolic;
+  public static Material Geologic;
+  public static Material Angelic;
+  public static Material Chronic;
 
 
 
